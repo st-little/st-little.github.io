@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="LanCache.NET を導入してゲームをローカル環境にキャッシュすることで、ゲームのインストールを高速化します。" />
+        <meta name="twitter:description" content="LanCache.NET を導入してゲームをローカル環境にキャッシュすることで、ゲームのインストールを高速化します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="ゲームをローカル環境にキャッシュする">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          ゲームをローカル環境にキャッシュする
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/lancache/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "ゲームをローカル環境にキャッシュする",
+      "image": [],
+      "datePublished": "2024-01-03T00:00:00+00:00",
+      "dateModified": "2024-01-03T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ゲームをローカル環境にキャッシュする",
+          "item": "https://site.little-method.com/blog/cache-games-in-the-local-environment/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>ゲームをローカル環境にキャッシュする</h1>
+    <small>
+      Published on 2024&#x2F;01&#x2F;03
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/lancache/">lancache</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://lancache.net/">LanCache.NET</a> を導入してゲームをローカル環境にキャッシュすることで、ゲームのインストールを高速化します。<br>
+今回は Steam のゲームをキャッシュしますが、他にもさまざまなゲームをキャッシュすることができます。<br>
+サポートされているサービスについては、 <a href="https://github.com/uklans/cache-domains">uklans/cache-domains</a> を参照してください。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li>ホストマシンで <a href="https://git-scm.com/">Git</a> が使用できる必要があります。</li>
+<li>ホストマシンで <a href="https://www.docker.com/">Docker</a>, <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が使用できる必要があります。</li>
+</ul>
+<h1 id="huan-jing">環境</h1>
+<h2 id="hosutomasin">ホストマシン</h2>
+<p>LanCache.NET を導入してゲームをキャッシュする PC です。</p>
+<h3 id="hadouea">ハードウェア</h3>
+<ul>
+<li>CPU: AMD Ryzen 7 5700G</li>
+<li>Memory: 128GB</li>
+<li>Storage: Samsung SSD 970 EVO Plus 2TB</li>
+<li>Network: <a href="https://www.ankerjapan.com/products/a8316">Anker PowerExpand USB-C &amp; 2.5Gbps イーサネットアダプタ</a></li>
+</ul>
+<h3 id="sohutouea">ソフトウェア</h3>
+<ul>
+<li>OS: Ubuntu 22.04.3 LTS</li>
+<li>Docker: version 20.10.24</li>
+<li>Docker Compose: version v2.17.2</li>
+<li>LanCache.NET: lancache-dns, monolithic</li>
+</ul>
+<h2 id="kuraiantomasin">クライアントマシン</h2>
+<p>ゲームをインストールしてプレイする PC です。</p>
+<h3 id="hadouea-1">ハードウェア</h3>
+<ul>
+<li>CPU: AMD Ryzen 7 6800U</li>
+<li>Memory: 32GB</li>
+<li>Storage: WD_Black SN770 2TB</li>
+<li>Network: <a href="https://www.planex.co.jp/products/usb-lan2500r/">Planex USB-LAN2500R</a></li>
+</ul>
+<h3 id="sohutouea-1">ソフトウェア</h3>
+<ul>
+<li>OS: Windwos 11 Home (23H2)</li>
+<li>Steam: version 1702079146</li>
+</ul>
+<h1 id="dao-ru-shou-shun">導入手順</h1>
+<h2 id="hosutomasin-1">ホストマシン</h2>
+<p>公式ドキュメントの <a href="https://lancache.net/docs/#the-simplest-method">The Simplest Method</a> を参考に導入します。</p>
+<ol>
+<li>
+<p>次のコマンドで docker-compose を lancache フォルダにダウンロードします。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">git</span><span> clone https://github.com/lancachenet/docker-compose/ lancache
+</span></code></pre>
+</li>
+<li>
+<p>lancache フォルダの .env をエディターで開いて編集します。今回は vim で編集します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">cd</span><span> lancache
+</span><span style="color:#bf616a;">vim</span><span> .env
+</span></code></pre>
+</li>
+<li>
+<p><a href="https://lancache.net/docs/#more-detail">More Detail</a> を参考に .env を編集します。</p>
+<ul>
+<li>LANCACHE_IP: LanCache.NET の IP アドレスです。通常はホストマシンの IP アドレスを設定します。</li>
+<li>DNS_BIND_IP: DNSコンテナの IP アドレスです。LANCACHE_IP と同じ値を設定します。</li>
+<li>UPSTREAM_DNS: 上流の DNS サーバーです。複数のアップストリーム DNS サーバーをセミコロン (またはスペース) で区切って設定できます。</li>
+<li>CACHE_ROOT: キャッシュデータを保存する場所です。</li>
+<li>CACHE_DISK_SIZE: キャッシュするボリュームのサイズです。</li>
+<li>TZ: Docker コンテナのタイムゾーンです。日本にする場合は Asia/Tokyo を設定します。</li>
+</ul>
+</li>
+<li>
+<p>次のコマンドで LanCache.NET(lancache-dns, monolithic) を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> docker-compose up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+<p>LanCache.NET を終了する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> docker-compose down
+</span></code></pre>
+</li>
+</ol>
+<h2 id="ruta">ルーター</h2>
+<p>DNS ポイズニングを行うために lancache-dns の IP アドレスを渡すようにルーターを設定します。<br>
+ルーターによって設定方法は異なりますが、多くの場合は LAN 設定から DNS サーバーの IP を変更することができます。<br>
+詳細は公式ドキュメントの <a href="https://lancache.net/docs/installation/docker-compose/#configuring-your-firewall">Configuring your firewall</a> を参照してください。<br>
+今回はクライアント側で DNS 設定を変更するためこの手順はスキップします。</p>
+<h2 id="kuraiantomasin-1">クライアントマシン</h2>
+<p>DNS を lancache-dns の IP アドレスに設定します。</p>
+<ol>
+<li>
+<p>設定画面を開きます。</p>
+</li>
+<li>
+<p>サイドメニューの「ネットワークとインターネット」から「イーサーネット」を開きます。<img src="/blog_images/2024-01-03-cache-games-in-the-local-environment/setting_network-ethernet.png" alt="" /></p>
+</li>
+<li>
+<p>「DNS サーバーの割り当て」の <code>編集</code> ボタンを押下します。<img src="/blog_images/2024-01-03-cache-games-in-the-local-environment/setting_ethernet.png" alt="" /></p>
+</li>
+<li>
+<p>「DNS 設定の編集」を <code>手動</code> に変更し次の設定を行います。<img src="/blog_images/2024-01-03-cache-games-in-the-local-environment/edit-dns-settings.png" alt="" /></p>
+<ul>
+<li>IPv4: オンにします。</li>
+<li>優先 DNS: lancache-dns の IP アドレスに設定します。</li>
+</ul>
+</li>
+</ol>
+<h1 id="jian-zheng">検証</h1>
+<p>Steam で <a href="https://store.steampowered.com/app/550/Left_4_Dead_2/?l=japanese">Left 4 Dead 2</a> (8.5GB) のインストールにかかる時間をキャッシュ前とキャッシュ後で比較します。</p>
+<table><thead><tr><th>テスト結果</th><th>最大ダウンロード速度</th><th>インストール時間</th></tr></thead><tbody>
+<tr><td>キャッシュ前</td><td>11.8 MB/s</td><td>29分30秒</td></tr>
+<tr><td>キャッシュ後</td><td>102.6MB/s</td><td>02分05秒</td></tr>
+</tbody></table>
+<p>キャッシュ後は大幅にインストール時間が短縮されました。</p>
+<h1 id="toraburusiyuteingu">トラブルシューティング</h1>
+<h2 id="lancache-net-gaqi-dong-sinai">LanCache.NET が起動しない</h2>
+<h3 id="xiang-xi">詳細</h3>
+<p>次のエラーが発生して起動に失敗します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">st-little@ap-server:~/lancache$</span><span> sudo docker-compose up</span><span style="color:#bf616a;"> -d
+</span><span style="color:#bf616a;">[+]</span><span> Running 2/3
+</span><span> </span><span style="color:#bf616a;">✔</span><span> Network lancache_default         Created                                                                                                                                                                                                                    0.1s 
+</span><span> </span><span style="color:#bf616a;">✔</span><span> Container lancache-monolithic-1  Started                                                                                                                                                                                                                    0.7s 
+</span><span> </span><span style="color:#bf616a;">⠿</span><span> Container lancache-dns-1         Starting                                                                                                                                                                                                                   0.7s 
+</span><span style="color:#bf616a;">Error</span><span> response from daemon: driver failed programming external connectivity on endpoint lancache-dns-1 (4b1ad8818c8767b6bc7d398368294be9e1a1cbd38a2e54ba7d96bdb6396ff446)</span><span style="color:#96b5b4;">:</span><span> Error starting userland proxy: listen tcp4 192.168.210.110:53: bind: cannot assign requested address
+</span></code></pre>
+<h3 id="yuan-yin">原因</h3>
+<p>既にポート 53 が systemd-resolved に使用されています。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">st-little@ap-server:~/lancache$</span><span> sudo lsof</span><span style="color:#bf616a;"> -i</span><span> :53
+</span><span style="color:#bf616a;">COMMAND</span><span>   PID            USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+</span><span style="color:#bf616a;">systemd-r</span><span> 571 systemd-resolve   13u  IPv4  23945      0t0  UDP localhost:domain 
+</span><span style="color:#bf616a;">systemd-r</span><span> 571 systemd-resolve   14u  IPv4  23946      0t0  TCP localhost:domain (LISTEN)
+</span></code></pre>
+<h3 id="jie-jue-fang-fa">解決方法</h3>
+<p>次のコマンドで systemd-resolved を無効にします。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> systemctl disable systemd-resolved
+</span><span style="color:#bf616a;">sudo</span><span> systemctl stop systemd-resolved
+</span></code></pre>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

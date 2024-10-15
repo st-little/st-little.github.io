@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="CloudFlare Tunnel を使用して自宅のサーバーを公開します。" />
+        <meta name="twitter:description" content="CloudFlare Tunnel を使用して自宅のサーバーを公開します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="CloudFlare Tunnel で自宅サーバーを公開する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          CloudFlare Tunnel で自宅サーバーを公開する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/cloudflare/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/tunnel/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "CloudFlare Tunnel で自宅サーバーを公開する",
+      "image": [],
+      "datePublished": "2024-01-19T00:00:00+00:00",
+      "dateModified": "2024-01-19T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CloudFlare Tunnel で自宅サーバーを公開する",
+          "item": "https://site.little-method.com/blog/publish-home-server-with-cloudflare-tunnel/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>CloudFlare Tunnel で自宅サーバーを公開する</h1>
+    <small>
+      Published on 2024&#x2F;01&#x2F;19
+      
+      , Last updated 2024&#x2F;02&#x2F;08
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/cloudflare/">cloudflare</a>
+          
+            <a href="https://site.little-method.com/tags/tunnel/">tunnel</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">CloudFlare Tunnel</a> を使用して自宅のサーバーを公開します。<br />
+Tunnel を構築して自宅のサーバーを公開するその他の方法は <a href="/tags/tunnel/">こちら</a> を参照してください。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li>CloudFlare のアカウントが必要です。</li>
+<li>Domain が必要です。今回は Google Domains で取得済みです。</li>
+<li><a href="https://www.docker.com/">Docker</a>, <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が使用できる必要があります。</li>
+</ul>
+<h1 id="shou-shun">手順</h1>
+<h2 id="google-domains-nikasutamunemusabawodeng-lu">Google Domains にカスタムネームサーバーを登録</h2>
+<ol>
+<li>
+<p>CloudFlare にログインします。</p>
+</li>
+<li>
+<p>ホームの <code>始める</code> ボタンを押下します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/cloudflare-home.png" alt="" /></p>
+</li>
+<li>
+<p>Domain を入力して <code>続行</code> ボタンを押下します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/add-domain.png" alt="" /></p>
+</li>
+<li>
+<p>プランを選択します。今回は <code>Free</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/free-plan.png" alt="" /></p>
+</li>
+<li>
+<p><code>DNS レコードを確認する</code> 画面で <code>続行</code> ボタンを押下します。</p>
+</li>
+<li>
+<p><code>ネームサーバーを変更する</code> 画面で CloudFlare のネームサーバーをコピーします。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/cloudflare-ns.png" alt="" /></p>
+</li>
+<li>
+<p>Google Domains のドメイン管理画面から CloudFlare のネームサーバーを追加します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/management-dns.png" alt="" /><img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/edit-ns.png" alt="" /></p>
+</li>
+<li>
+<p><code>ネームサーバーを変更する</code> 画面の <code>続行</code> ボタンを押下します。</p>
+</li>
+</ol>
+<h2 id="zero-trust-noli-yong-kai-shi">Zero Trust の利用開始</h2>
+<ol>
+<li>
+<p>CloudFlare にログインします。</p>
+</li>
+<li>
+<p>サイドメニューから <code>Zero Trust</code> を選択します。</p>
+</li>
+<li>
+<p>チーム名を入力して <code>Next</code> ボタンを押下します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/choose-your-team-name.png" alt="" /></p>
+<ul>
+<li>1 アカウントに 1 つのチームドメインが紐付きます。</li>
+<li>チーム名は他のアカウントのチーム名と同一のものは設定することができません。</li>
+</ul>
+</li>
+<li>
+<p>任意のプランの <code>Select plan</code> ボタンを押下します。今回は Free を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/choose-a-plan.png" alt="" /></p>
+</li>
+<li>
+<p><code>Proceed to payment</code> ボタンを押下して支払い画面に進みます。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/zero-trust-free.png" alt="" /></p>
+</li>
+<li>
+<p>支払い方法を追加して Zero Trust の利用を開始します。</p>
+</li>
+</ol>
+<h2 id="tonnerunozhui-jia">トンネルの追加</h2>
+<ol>
+<li>
+<p>CloudFlare にログインします。</p>
+</li>
+<li>
+<p>サイドメニューから <code>Zero Trust</code> を選択します。</p>
+</li>
+<li>
+<p>サイドメニューから <code>Zero Trust</code> &gt; <code>Access</code> &gt; <code>Tunnels</code> を選択します。</p>
+</li>
+<li>
+<p><code>Add a tunnel</code> ボタンを押下して新しいトンネルを追加します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/add-a-tunnel.png" alt="" /></p>
+</li>
+<li>
+<p>トンネル名を入力して <code>Save tunnel</code> ボタンを押下します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/create-a-tunnel.png" alt="" /></p>
+</li>
+<li>
+<p>トンネルの追加が完了したら <code>Choose your environment</code> を選択します。今回は <code>Docker</code> を選択します。</p>
+</li>
+<li>
+<p>docker run コマンドと Token が表示されます。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/configure-test-tunnel.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="zi-zhai-sabanogong-kai">自宅サーバーの公開</h2>
+<ol>
+<li>
+<p>自宅サーバーと Tunnel の <code>docker-compose.yaml</code> を作成します。今回の自宅サーバーは nginx を使用します。<br />
+<code>services</code> &gt; <code>tunnel</code> &gt; <code>environment</code> &gt; <code>TUNNEL_TOKEN</code> の値はトンネルを追加した画面に表示された Token に書き換えます。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span style="color:#65737e;"># https://hub.docker.com/_/nginx
+</span><span style="color:#bf616a;">home-sever</span><span>:
+</span><span>  </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>  </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">nginx:latest
+</span><span>  </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>    - &quot;</span><span style="color:#a3be8c;">80:80</span><span>&quot;
+</span><span style="color:#65737e;"># https://hub.docker.com/r/cloudflare/cloudflared
+</span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>  </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>  </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">cloudflare/cloudflared:latest
+</span><span>  </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">tunnel --no-autoupdate run
+</span><span>  </span><span style="color:#bf616a;">environment</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">TUNNEL_TOKEN=トンネルを追加した画面に表示された Token
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーと Tunnel を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+<p>停止する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> down
+</span></code></pre>
+<p>削除する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> rm
+</span></code></pre>
+</li>
+<li>
+<p>Tunnel が接続されると Connectors に Connectors ID が表示されるので、 <code>Next</code> ボタンを押下します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/connectors.png" alt="" /></p>
+</li>
+<li>
+<p>Public Hostname を入力し <code>Save hostname</code> を押下します。</p>
+<ul>
+<li>Service &gt; Type: HTTP</li>
+<li>Service &gt; URL: home-sever:80</li>
+</ul>
+</li>
+<li>
+<p>自宅サーバーにアクセスできることを確認します。<img src="/blog_images/2024-01-19-publish-home-server-with-cloudflare-tunnel/welcome-to-nginx.png" alt="" /></p>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

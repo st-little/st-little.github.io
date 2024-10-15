@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Rust プラグインに構成を設定し JSON ファイルから設定を読み込みます。" />
+        <meta name="twitter:description" content="Rust プラグインに構成を設定し JSON ファイルから設定を読み込みます。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Rust プラグインに構成を設定する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Rust プラグインに構成を設定する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/mod/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/plugin/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/oxide/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Rust プラグインに構成を設定する",
+      "image": [],
+      "datePublished": "2024-09-16T00:00:00+00:00",
+      "dateModified": "2024-09-16T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust プラグインに構成を設定する",
+          "item": "https://site.little-method.com/blog/set-up-configuration-for-rust-plugin/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Rust プラグインに構成を設定する</h1>
+    <small>
+      Published on 2024&#x2F;09&#x2F;16
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/mod/">mod</a>
+          
+            <a href="https://site.little-method.com/tags/plugin/">plugin</a>
+          
+            <a href="https://site.little-method.com/tags/oxide/">oxide</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p>Rust プラグインに構成を設定し JSON ファイルから設定を読み込みます。</p>
+<h1 id="can-kao-qing-bao">参考情報</h1>
+<ul>
+<li><a href="https://umod.org/guides/architecture/plugin-lifecycle">Plugin lifecycle</a></li>
+<li><a href="https://docs.oxidemod.com/guides/developers/my-first-plugin#step-6-implementing-configuration">Step 6: Implementing Configuration</a></li>
+</ul>
+<h1 id="guan-lian-qing-bao">関連情報</h1>
+<ul>
+<li><a href="/blog/setup-server-for-rust/">Rust のサーバーを構築する</a></li>
+<li><a href="/blog/build-development-environment-for-rust-mods-with-vscode/">VSCode に Rust の Mod の開発環境を構築する</a></li>
+<li><a href="/blog/how-to-implement-chat-commands-in-rust-plugin/">Rust プラグインのチャットコマンドを実装する</a></li>
+</ul>
+<h1 id="quan-xian-noshe-ding">権限の設定</h1>
+<p><a href="/blog/how-to-implement-chat-commands-in-rust-plugin/">Rust プラグインのチャットコマンドを実装する</a> で作成した <code>ActivePlayers.cs</code> ファイルに構成を設定します。</p>
+<ol>
+<li>
+<p>ファイルの先頭に名前空間への参照を追加します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Newtonsoft.Json;
+</span></code></pre>
+</li>
+<li>
+<p>configuration class を定義し構成クラスへの参照となるフィールドを定義します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private </span><span>Configuration </span><span style="color:#bf616a;">_configuration</span><span>;
+</span><span>
+</span><span style="color:#b48ead;">private class </span><span style="color:#ebcb8b;">Configuration
+</span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public string </span><span style="color:#bf616a;">ActivePlayerNameMessage</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+</li>
+<li>
+<p>デフォルトの設定値を使用して新しいプラグイン設定を作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private </span><span>Configuration </span><span style="color:#8fa1b3;">GetDefaultConfig</span><span>()
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">return </span><span>new Configuration
+</span><span>    {
+</span><span>        </span><span style="color:#bf616a;">ActivePlayerNameMessage </span><span>= &quot;</span><span style="color:#a3be8c;">Active Player: </span><span style="color:#d08770;">{0}</span><span>&quot;
+</span><span>    };
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p>既存のプラグイン設定ファイルをロードします。設定ファイルが見つからない場合は、 LoadDefaultConfig メソッドを呼び出して作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">protected </span><span>override </span><span style="color:#bf616a;">void LoadConfig</span><span>(</span><span style="background-color:#bf616a;color:#2b303b;">)</span><span>
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">base</span><span>.</span><span style="color:#bf616a;">LoadConfig</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">try
+</span><span>    {
+</span><span>        </span><span style="color:#bf616a;">_configuration </span><span>= </span><span style="color:#bf616a;">Config</span><span>.</span><span style="color:#bf616a;">ReadObject</span><span>&lt;Configuration&gt;();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">_configuration </span><span>== </span><span style="color:#d08770;">null</span><span>)
+</span><span>            </span><span style="color:#bf616a;">LoadDefaultConfig</span><span>();
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">catch
+</span><span>    {
+</span><span>        </span><span style="color:#bf616a;">PrintError</span><span>(&quot;</span><span style="color:#a3be8c;">Configuration file is corrupt! Check your config file at https://jsonlint.com/</span><span>&quot;);
+</span><span>        </span><span style="color:#bf616a;">LoadDefaultConfig</span><span>();
+</span><span>        </span><span style="color:#b48ead;">return</span><span>;
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">SaveConfig</span><span>();
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">protected </span><span>override </span><span style="color:#bf616a;">void LoadDefaultConfig</span><span>(</span><span style="background-color:#bf616a;color:#2b303b;">)</span><span> =&gt; </span><span style="color:#bf616a;">_configuration </span><span>= </span><span style="color:#bf616a;">GetDefaultConfig</span><span>();
+</span></code></pre>
+</li>
+<li>
+<p>プラグインの設定を oxide/config ディレクトリの JSON ファイルに書き込みます。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">protected </span><span>override </span><span style="color:#bf616a;">void SaveConfig</span><span>(</span><span style="background-color:#bf616a;color:#2b303b;">)</span><span> =&gt; </span><span style="color:#bf616a;">Config</span><span>.</span><span style="color:#bf616a;">WriteObject</span><span>(</span><span style="color:#bf616a;">_configuration</span><span>);
+</span></code></pre>
+</li>
+<li>
+<p>チャットコマンドを実行して表示するメッセージを設定ファイルから取得します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">PrintToChat</span><span>(</span><span style="color:#bf616a;">player</span><span>, </span><span style="color:#b48ead;">string</span><span>.</span><span style="color:#bf616a;">Format</span><span>(</span><span style="color:#bf616a;">_configuration</span><span>.</span><span style="color:#bf616a;">ActivePlayerNameMessage</span><span>, </span><span style="color:#bf616a;">activePlayer</span><span>.</span><span style="color:#bf616a;">displayName</span><span>));
+</span></code></pre>
+</li>
+<li>
+<p>全てのソースコードは次の通りです。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Newtonsoft.Json;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>    [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">Active Players</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Unknown Author</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>    [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">This plugin displays all active usernames in the chat.</span><span>&quot;)]
+</span><span>    </span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">ActivePlayers </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">RustPlugin
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private </span><span style="color:#eff1f5;">Configuration </span><span style="color:#bf616a;">_configuration</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private class </span><span style="color:#ebcb8b;">Configuration
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">public string </span><span style="color:#bf616a;">ActivePlayerNameMessage</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private </span><span style="color:#eff1f5;">Configuration </span><span style="color:#8fa1b3;">GetDefaultConfig</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">return </span><span>new </span><span style="color:#eff1f5;">Configuration
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">ActivePlayerNameMessage </span><span>= &quot;</span><span style="color:#a3be8c;">Active Player: </span><span style="color:#d08770;">{0}</span><span>&quot;
+</span><span style="color:#eff1f5;">            };
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">protected override void </span><span style="color:#8fa1b3;">LoadConfig</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">base</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">LoadConfig</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">try
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">_configuration </span><span>= </span><span style="color:#bf616a;">Config</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">ReadObject</span><span style="color:#eff1f5;">&lt;Configuration&gt;();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">                </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">_configuration </span><span>== </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">                    </span><span style="color:#bf616a;">LoadDefaultConfig</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">catch
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">PrintError</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">Configuration file is corrupt! Check your config file at https://jsonlint.com/</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">LoadDefaultConfig</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">                </span><span style="color:#b48ead;">return</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">SaveConfig</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">protected override void </span><span style="color:#8fa1b3;">LoadDefaultConfig</span><span style="color:#eff1f5;">() </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">_configuration </span><span>= </span><span style="color:#bf616a;">GetDefaultConfig</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">protected override void </span><span style="color:#8fa1b3;">SaveConfig</span><span style="color:#eff1f5;">() </span><span style="color:#b48ead;">=&gt; </span><span style="color:#bf616a;">Config</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">WriteObject</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">_configuration</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Init</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">ChatCommand</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">activeplayers</span><span>&quot;</span><span style="color:#eff1f5;">)]
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">ActivePlayersCommand</span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">command</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">foreach </span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">activePlayer </span><span style="color:#b48ead;">in </span><span style="color:#bf616a;">BasePlayer</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">activePlayerList</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">PrintToChat</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Format</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">_configuration</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">ActivePlayerNameMessage</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">activePlayer</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">displayName</span><span style="color:#eff1f5;">));
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">    }
+</span><span>}
+</span></code></pre>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

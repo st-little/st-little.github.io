@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Proxmox VE 8.1 の環境を構築します。" />
+        <meta name="twitter:description" content="Proxmox VE 8.1 の環境を構築します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Proxmox VE 8.1 の環境を構築する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Proxmox VE 8.1 の環境を構築する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/proxmox/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/nfs/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Proxmox VE 8.1 の環境を構築する",
+      "image": [],
+      "datePublished": "2024-01-23T00:00:00+00:00",
+      "dateModified": "2024-01-23T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Proxmox VE 8.1 の環境を構築する",
+          "item": "https://site.little-method.com/blog/building-a-proxmox-ve-8-1-environment/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Proxmox VE 8.1 の環境を構築する</h1>
+    <small>
+      Published on 2024&#x2F;01&#x2F;23
+      
+      , Last updated 2024&#x2F;02&#x2F;03
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/proxmox/">proxmox</a>
+          
+            <a href="https://site.little-method.com/tags/nfs/">nfs</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p>Proxmox VE 8.1 の環境を構築します。</p>
+<h1 id="huan-jing">環境</h1>
+<h2 id="hadouea">ハードウェア</h2>
+<ul>
+<li>ベアボーン: ASRock DeskMeet X300</li>
+<li>CPU: AMD Ryzen 7 5700G</li>
+<li>Memory: SanMax DDR4-3200 32GB x4</li>
+<li>Storage: SAMSUNG 970 EVO Plus 2TB</li>
+<li>Network: Anker PowerExpand USB-C &amp; 2.5Gbps イーサネットアダプタ</li>
+<li>GPU: NVIDIA RTX 4000 SFF Ada</li>
+</ul>
+<h2 id="sohutouea">ソフトウェア</h2>
+<ul>
+<li>Proxmox VE 8.1</li>
+<li>Rufus 4.3</li>
+</ul>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li>ブータブル USB メモリ用の USB メモリが必要です。</li>
+<li>ブータブル USB メモリを作成するための Windows マシンガ必要です。</li>
+</ul>
+<h1 id="proxmox-ve-nohuan-jing-gou-zhu">Proxmox VE の環境構築</h1>
+<h2 id="insutoranodaunrodo">インストーラーのダウンロード</h2>
+<p>Proxmox VE の ISO インストーラーをダウンロードします。</p>
+<ol>
+<li>
+<p>インストーラーの <a href="https://www.proxmox.com/en/downloads/proxmox-virtual-environment/iso">ダウロードサイト</a> を開きます。</p>
+</li>
+<li>
+<p><code>Proxmox VE 8.1 ISO Installer</code> の Download ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/download-proxmox.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="butaburu-usb-memorinozuo-cheng">ブータブル USB メモリの作成</h2>
+<p>Rufus を使用して Proxmox VE をインストールするためのブータブル USB メモリの作成を作成します。</p>
+<ol>
+<li>
+<p><a href="https://rufus.ie/ja/">Rufus</a> を開きます。</p>
+</li>
+<li>
+<p><code>ダウンロード</code> から exe ファイルのリンクを選択して Rufus をダウロードします。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/download-rufus.png" alt="" /></p>
+</li>
+<li>
+<p>ダウンロードした Rufus を起動します。</p>
+</li>
+<li>
+<p>ドライブプロパティを設定します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/rufus.png" alt="" /></p>
+<ul>
+<li>デバイス: USB メモリを選択します。</li>
+<li>ブートの種類: <code>選択</code> ボタンを押下して Proxmox VE の ISO インストーラーを選択します。</li>
+</ul>
+</li>
+<li>
+<p><code>スタート</code> ボタンを押下してブータブル USB メモリの作成を開始します。</p>
+</li>
+</ol>
+<h2 id="proxmox-ve-noinsutoru">Proxmox VE のインストール</h2>
+<p><strong>注意事項</strong></p>
+<ul>
+<li>Secure Boot を無効にする必要があります。</li>
+<li>グラフィックボードが刺さった状態だとインストールに失敗したので抜く必要があるようです。</li>
+</ul>
+<ol>
+<li>
+<p>Proxmox VE をインストールするマシンにブータブル USB メモリを挿します。</p>
+</li>
+<li>
+<p>マシンの電源を入れて UEFI を開き、ブータブル USB メモリからブートするように設定し再起動ます。</p>
+</li>
+<li>
+<p>Proxmox VE の インストーラーが起動したら <code>Install Proxmox VE (Graphical)</code> を選択しインストールを開始します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/welcome-proxmox.jpg" alt="" /></p>
+</li>
+<li>
+<p><code>I Agree</code> ボタンを押下してライセンスに同意します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/agree-license.jpg" alt="" /></p>
+</li>
+<li>
+<p>Proxmox VE をインストールするドライブを選択して <code>Next</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/target-harddisk.jpg" alt="" /></p>
+</li>
+<li>
+<p>国、タイムゾーン、キーボードレイアウトを選択して <code>Next</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/location-timezone.jpg" alt="" /></p>
+</li>
+<li>
+<p>パスワード、メールアドレスを入力して <code>Next</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/pw-email.jpg" alt="" /></p>
+</li>
+<li>
+<p>ネットワークの設定を行い <code>Next</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/management-nw.jpg" alt="" /></p>
+<ul>
+<li>Management Interface: 使用するイーサネットアダプタを選択します。</li>
+<li>Hostname (FQDN): 任意の FQDN を入力します。</li>
+<li>IP Address (CIDR): 任意のアドレスを入力します。</li>
+<li>Gateway: ルーターのアドレスを入力します。</li>
+<li>DNS Server: ルーターのアドレスを入力します。</li>
+</ul>
+</li>
+<li>
+<p>Summary 画面で問題なければインストールを開始します。</p>
+</li>
+<li>
+<p>インストールが完了したら管理画面にアクセスするための URL が表示されます。</p>
+</li>
+</ol>
+<h2 id="enterprise-ripozitorinowu-xiao-hua">Enterprise リポジトリの無効化</h2>
+<p>アップデートの参照先リポジトリが Enterprise リポジトリになっているので無効にします。</p>
+<ol>
+<li>
+<p>管理画面の URL を開きます。</p>
+</li>
+<li>
+<p>Login ダイアログでパスワードの入力と言語を選択しログインします。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/login-dialog.png" alt="" /></p>
+</li>
+<li>
+<p>アップデート &gt; リポジトリ から Enterprise リポジトリを選択し <code>Disable</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/disable-enterprise.png" alt="" /></p>
+</li>
+<li>
+<p><code>追加</code> ボタンを押下してリポジトリの追加ダイアログを開きます。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/add-no-subscription.png" alt="" /></p>
+</li>
+<li>
+<p>リポジトリ <code>No-Subscription</code> を選択し <code>追加</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/add-repository-dialog.png" alt="" /></p>
+</li>
+<li>
+<p>アップデートの <code>&gt;_ アップグレード</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/update-proxmox.png" alt="" /></p>
+</li>
+<li>
+<p>アップグレードを実行します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/upgrade-proxmox.png" alt="" /></p>
+</li>
+</ol>
+<h1 id="vm-jia-xiang-masin-nogou-zhu">VM (仮想マシン) の構築</h1>
+<p>Windows 11 の VM を構築します。</p>
+<h2 id="insutoranodaunrodo-1">インストーラーのダウンロード</h2>
+<p>Windows 11 の ISO インストーラーをダウンロードします。</p>
+<ol>
+<li>
+<p>Windows 11 の <a href="https://www.microsoft.com/ja-jp/software-download/windows11">ダウンロードサイト</a> を開き <code>Windows 11 ディスク イメージ (ISO) をダウンロードする</code> に移動します。</p>
+</li>
+<li>
+<p>ダウンロードを選択 を <code>Windows 11 (multi-edition ISO)</code> に変更して <code>ダウンロード</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/download-win11-iso-1.png" alt="" /></p>
+</li>
+<li>
+<p>製品の言語の選択 を <code>日本語</code> に変更して <code>確認</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/download-win11-iso-2.png" alt="" /></p>
+</li>
+<li>
+<p><code>64-bit ダウンロード</code> ボタンを押下してダウンロードを開始します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/download-win11-iso-3.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="insutoranoatupurodo">インストーラーのアップロード</h2>
+<p>Windows 11 の ISO インストーラーを Proxmox VE のストレージにアップロードします。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; local &gt; ISO イメージ を開き <code>アップロード</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-iso-image.png" alt="" /></p>
+</li>
+<li>
+<p>アップロードダイアログで <code>ファイルを選択</code> からダウンロードした ISO ファイルを選択し <code>アップロード</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/iso-upload-dialog.png" alt="" /></p>
+</li>
+<li>
+<p>アップロードが完了したら Task viewer を閉じます。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/iso-upload-finished-dialog.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="vm-nozuo-cheng">VM の作成</h2>
+<p>Windows 11 の VM を作成します。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; local-lvm を開き <code>VMを作成</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-lvm-create-vm.png" alt="" /></p>
+</li>
+<li>
+<p>全般の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-general.png" alt="" /></p>
+<ul>
+<li>名前: 仮想マシンの名前を入力します。</li>
+</ul>
+</li>
+<li>
+<p>OS の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-os.png" alt="" /></p>
+<ul>
+<li>CD/DVD イメージファイル (iso) を使用する
+<ul>
+<li>ISO イメージ: Windows 11 の ISO ファイルを選択します。</li>
+</ul>
+</li>
+<li>ゲスト OS
+<ul>
+<li>種類: <code>Microsoft Windows</code> を選択します。</li>
+<li>バージョン: <code>11/2022</code> を選択します。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>システム の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-system.png" alt="" /></p>
+<ul>
+<li>EFI ストレージ: <code>local-lvm</code> を選択します。</li>
+<li>TPM ストレージ: <code>local-lvm</code> を選択します。</li>
+</ul>
+</li>
+<li>
+<p>ディスク の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-disck.png" alt="" /></p>
+<ul>
+<li>ディスクサイズ (GiB): 任意のサイズを入力します。</li>
+</ul>
+</li>
+<li>
+<p>CPU の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-cpu.png" alt="" /></p>
+<ul>
+<li>コア: 任意のコア数を入力します。</li>
+</ul>
+</li>
+<li>
+<p>メモリ の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-memory.png" alt="" /></p>
+<ul>
+<li>メモリ (MiB): 任意のメモリ容量を入力します。</li>
+</ul>
+</li>
+<li>
+<p>確認 で問題なければ <code>完了</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-vm-confirm.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="vm-noqi-dong">VM の起動</h2>
+<p>Windows 11 の VM を起動します。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; 100 (win-11) &gt; ハードウェア から <code>CD/DVD ドライブ</code> を選択します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-summary.png" alt="" /></p>
+</li>
+<li>
+<p>CD/DVD Drive ダイアログで ISO イメージを選択し <code>追加</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-add-drive-dialog.png" alt="" /></p>
+<ul>
+<li>CD/DVD イメージファイル (iso) を使用する
+<ul>
+<li>ストレージ: <code>local</code> を選択します。</li>
+<li>ISO イメージ: Windows 11 の ISO ファイルを選択します。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>データセンター &gt; 100 (win-11) から <code>開始</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-start.png" alt="" /></p>
+</li>
+<li>
+<p>データセンター &gt; 100 (win-11) &gt; コンソール から <code>noVNC</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-novnc.png" alt="" /></p>
+</li>
+<li>
+<p>noVNC の画面で Proxmox のロゴが表示されたらなんでもいいのでキーを入力します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-setup-logo.png" alt="" /></p>
+<p><strong>注意: VM を起動してからこの操作まで時間がかかるとネットワークブートになってしまうので、できるだけ早く実施してください。</strong></p>
+</li>
+<li>
+<p>Windwos 11 のセットアップ画面が表示されるので後は通常の手順通りにセットアップを完了します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-setup-1.png" alt="" /></p>
+</li>
+<li>
+<p>セットアップが完了したら Windows 11 が起動します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-desktop.png" alt="" /></p>
+</li>
+</ol>
+<h1 id="ct-kontena-nogou-zhu">CT (コンテナ) の構築</h1>
+<p>Linux の CT を構築します。</p>
+<h2 id="tenpuretonodaunrodo">テンプレートのダウンロード</h2>
+<p>CT のテンプレートをダウンロードします。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; local &gt; CT テンプレート を開き <code>テンプレート</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-ct-template.png" alt="" /></p>
+</li>
+<li>
+<p>テンプレートダイアログで任意のテンプレート w 選択し <code>ダウンロード</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-ct-template-dialog.png" alt="" /></p>
+</li>
+<li>
+<p>ダウンロードが完了したら Task viewer を閉じます。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-ct-template-download.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="ct-wozuo-cheng">CT を作成</h2>
+<p>Linux の CT を作成します。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; local-lvm を開き <code>CTを作成</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-lvm-create-ct.png" alt="" /></p>
+</li>
+<li>
+<p>全般の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-general.png" alt="" /></p>
+<ul>
+<li>ホスト名: 任意のホスト名を入力します。</li>
+<li>パスワード: 任意のパスワードを入力します。</li>
+<li>パスワードの確認: 任意のパスワードを入力します。</li>
+</ul>
+</li>
+<li>
+<p>テンプレートの情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-template.png" alt="" /></p>
+<ul>
+<li>テンプレート: ダウンロードしたテンプレートを選択します。</li>
+</ul>
+</li>
+<li>
+<p>ディスク の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-disck.png" alt="" /></p>
+<ul>
+<li>ディスクサイズ (GiB): 任意のサイズを入力します。</li>
+</ul>
+</li>
+<li>
+<p>CPU の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-cpu.png" alt="" /></p>
+<ul>
+<li>コア: 任意のコア数を入力します。</li>
+</ul>
+</li>
+<li>
+<p>メモリ の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-memory.png" alt="" /></p>
+<ul>
+<li>メモリ (MiB): 任意のメモリ容量を入力します。</li>
+<li>スワップ (MiB): 任意のスワップ容量を入力します。</li>
+</ul>
+</li>
+<li>
+<p>ネットワークの情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-network.png" alt="" /></p>
+<ul>
+<li>IPv4: IP アドレスを固定したいので <code>静的</code> を選択します。</li>
+<li>IPv4/CIDR: 任意のアドレスを入力します。</li>
+<li>ゲートウェイ (IPv4): ルーターのアドレスを入力します。</li>
+<li>IPv6: 自動で設定したいので <code>SLAAC</code> を選択します。</li>
+</ul>
+</li>
+<li>
+<p>DNS の情報を入力して <code>次へ</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-dns.png" alt="" /></p>
+<ul>
+<li>DNS サーバ: ルーターのアドレスを入力します。</li>
+</ul>
+</li>
+<li>
+<p>確認 で問題なければ <code>完了</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/create-ct-confirm.png" alt="" /></p>
+</li>
+<li>
+<p>CT の作成が完了したら Task viewer を閉じます。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/local-lvm-create-ct-done.png" alt="" /></p>
+</li>
+</ol>
+<h2 id="ct-noqi-dong">CT の起動</h2>
+<p>Linux の CT を起動します。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; 101 (linux-ubuntu) &gt; から <code>開始</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/linux-ubuntu-start.png" alt="" /></p>
+</li>
+<li>
+<p>データセンター &gt; 101 (linux-ubuntu) &gt; コンソール から <code>noVNC</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/linux-ubuntu-novnc.png" alt="" /></p>
+</li>
+<li>
+<p>noVNC の画面で Linux の CT にログインすることができます。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/linux-ubuntu-login.png" alt="" /></p>
+</li>
+</ol>
+<h1 id="nfs-sutorezinozhui-jia">NFS ストレージの追加</h1>
+<p><a href="/blog/using-qnap-nas-as-an-nfs-datastore/">こちら</a> で作成した NFS 共有フォルダを追加します。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンター &gt; ストレージ &gt; 作成 を開き <code>NFS</code> を押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/datasenter-storage-nfs.png" alt="" /></p>
+</li>
+<li>
+<p>追加する NFS の情報を入力し <code>追加</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/add-nfs-dialog.png" alt="" /></p>
+<ul>
+<li>ID: 任意の値を入力します。</li>
+<li>サーバ: NFS 共有フォルダのアドレスを入力します。</li>
+<li>Export: 任意の値を選択します。</li>
+</ul>
+</li>
+</ol>
+<h1 id="gpu-pasusuru">GPU パススルー</h1>
+<p><a href="https://pve.proxmox.com/wiki/PCI_Passthrough#Verifying_IOMMU_parameters">PCI Passthrough</a> を参考に GPU パススルーの設定を行います。</p>
+<ol>
+<li>
+<p>Proxmox VE の管理画面を開きます。</p>
+</li>
+<li>
+<p>データセンターからノード <code>pvehome</code> を選択し <code>シェル</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/proxmox-node-shell.png" alt="" /></p>
+</li>
+<li>
+<p>別ウィンドウでシェルが開きます。以降のコマンド入力はシェルで行います。</p>
+</li>
+<li>
+<p>エディタで設定ファイル <code>/etc/default/grub</code> を開きます。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">vi</span><span> /etc/default/grub
+</span></code></pre>
+</li>
+<li>
+<p>GRUB_CMDLINE_LINUX_DEFAULT に <code>amd_iommu=on</code> を追記しエディタを閉じます。</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;"># GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet&quot;
+</span><span style="color:#bf616a;">GRUB_CMDLINE_LINUX_DEFAULT</span><span>=&quot;</span><span style="color:#a3be8c;">quiet amd_iommu=on</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>次のコマンドで IOMMU が有効になっていることを確認します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dmesg </span><span>| </span><span style="color:#bf616a;">grep -e</span><span> DMAR</span><span style="color:#bf616a;"> -e</span><span> IOMMU
+</span></code></pre>
+<details><summary>実行ログ</summary><div>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">root@pvehome:~#</span><span> dmesg | </span><span style="color:#bf616a;">grep -e</span><span> DMAR</span><span style="color:#bf616a;"> -e</span><span> IOMMU
+</span><span style="color:#96b5b4;">[</span><span>    0.581615] pci 0000:00:00.2: AMD-Vi: IOMMU performance counters supported
+</span><span style="color:#96b5b4;">[</span><span>    0.582941] pci 0000:00:00.2: AMD-Vi: Found IOMMU cap 0x40
+</span><span style="color:#96b5b4;">[</span><span>    0.676068] perf/amd_iommu: Detected AMD IOMMU </span><span style="color:#65737e;">#0 (2 banks, 4 counters/bank).
+</span></code></pre>
+</div></details>
+</li>
+<li>
+<p>次のコマンドで IOMMU 割り込みの再マッピングが有効になっていることを確認します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dmesg </span><span>| </span><span style="color:#bf616a;">grep </span><span>&#39;</span><span style="color:#a3be8c;">remapping</span><span>&#39;
+</span></code></pre>
+<details><summary>実行ログ</summary><div>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">root@pvehome:~#</span><span> dmesg | </span><span style="color:#bf616a;">grep </span><span>&#39;</span><span style="color:#a3be8c;">remapping</span><span>&#39;
+</span><span style="color:#96b5b4;">[</span><span>    0.582950] AMD-Vi: Interrupt remapping enabled
+</span></code></pre>
+</div></details>
+</li>
+<li>
+<p>次のコマンドで IOMMU 分離を確認します。<code>pvehome</code> のノード名は適時変更してください。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">pvesh</span><span> get /nodes/pvehome/hardware/pci</span><span style="color:#bf616a;"> --pci-class-blacklist </span><span>&quot;&quot;
+</span></code></pre>
+<details><summary>実行ログ</summary><div>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">root@pvehome:~#</span><span> pvesh get /nodes/pvehome/hardware/pci</span><span style="color:#bf616a;"> --pci-class-blacklist </span><span>&quot;&quot;
+</span><span style="color:#bf616a;">┌──────────┬────────┬──────────────┬────────────┬────────┬────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> class    │ device │ id           │ iommugroup │ vendor │ device_name
+</span><span style="color:#bf616a;">╞══════════╪════════╪══════════════╪════════════╪════════╪════════════════════════════
+</span><span style="color:#bf616a;">│</span><span> 0x010601 │ 0x7901 │ 0000:05:00.0 │          2 │ 0x1022 │ FCH SATA Controller [AHCI m
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x010802 │ 0xa808 │ 0000:02:00.0 │          1 │ 0x144d │ NVMe SSD Controller SM981/P
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x020000 │ 0x8168 │ 0000:03:00.0 │          1 │ 0x10ec │ RTL8111/8168/8411 PCI Expre
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x030000 │ 0x27b0 │ 0000:01:00.0 │          0 │ 0x10de │ AD104GL [RTX 4000 SFF Ada G
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x040300 │ 0x22bc │ 0000:01:00.1 │          0 │ 0x10de │
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x040300 │ 0x1637 │ 0000:04:00.1 │          2 │ 0x1002 │ Renoir Radeon High Definiti
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x040300 │ 0x15e3 │ 0000:04:00.6 │          2 │ 0x1022 │ Family 17h/19h HD Audio Con
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x1630 │ 0000:00:00.0 │</span><span style="color:#bf616a;">         -1</span><span> │ 0x1022 │ Renoir/Cezanne Root Complex
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x1632 │ 0000:00:01.0 │          0 │ 0x1022 │ Renoir PCIe Dummy Host Brid
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x1632 │ 0000:00:02.0 │          1 │ 0x1022 │ Renoir PCIe Dummy Host Brid
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x1632 │ 0000:00:08.0 │          2 │ 0x1022 │ Renoir PCIe Dummy Host Brid
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x166a │ 0000:00:18.0 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x166b │ 0000:00:18.1 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x166c │ 0000:00:18.2 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x166d │ 0000:00:18.3 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x166e │ 0000:00:18.4 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x166f │ 0000:00:18.5 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x1670 │ 0000:00:18.6 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060000 │ 0x1671 │ 0000:00:18.7 │          4 │ 0x1022 │ Cezanne Data Fabric; </span><span style="color:#bf616a;">Functi
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060100 │ 0x790e │ 0000:00:14.3 │          3 │ 0x1022 │ FCH LPC Bridge
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060400 │ 0x1633 │ 0000:00:01.1 │          0 │ 0x1022 │ Renoir PCIe GPP Bridge
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060400 │ 0x1634 │ 0000:00:02.1 │          1 │ 0x1022 │ Renoir/Cezanne PCIe GPP Bri
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060400 │ 0x1634 │ 0000:00:02.3 │          1 │ 0x1022 │ Renoir/Cezanne PCIe GPP Bri
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060400 │ 0x1635 │ 0000:00:08.1 │          2 │ 0x1022 │ Renoir Internal PCIe GPP Br
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x060400 │ 0x1635 │ 0000:00:08.2 │          2 │ 0x1022 │ Renoir Internal PCIe GPP Br
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x080600 │ 0x1631 │ 0000:00:00.2 │</span><span style="color:#bf616a;">         -1</span><span> │ 0x1022 │ Renoir/Cezanne IOMMU
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x0c0330 │ 0x1639 │ 0000:04:00.3 │          2 │ 0x1022 │ Renoir/Cezanne USB 3.1
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x0c0330 │ 0x1639 │ 0000:04:00.4 │          2 │ 0x1022 │ Renoir/Cezanne USB 3.1
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x0c0500 │ 0x790b │ 0000:00:14.0 │          3 │ 0x1022 │ FCH SMBus Controller
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x108000 │ 0x15df │ 0000:04:00.2 │          2 │ 0x1022 │ Family 17h (Models 10h-1fh)
+</span><span style="color:#bf616a;">├──────────┼────────┼──────────────┼────────────┼────────┼────────────────────────────
+</span><span style="color:#bf616a;">│</span><span> 0x130000 │ 0x145a │ 0000:04:00.0 │          2 │ 0x1022 │ Zeppelin/Raven/Raven2 PCIe
+</span><span style="color:#bf616a;">└──────────┴────────┴──────────────┴────────────┴────────┴────────────────────────────
+</span></code></pre>
+</div></details>
+</li>
+<li>
+<p>次のコマンドでドライバーのブラックリストへの登録を行います。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">blacklist nouveau</span><span>&quot; &gt;&gt; /etc/modprobe.d/blacklist.conf
+</span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">blacklist nvidia*</span><span>&quot; &gt;&gt; /etc/modprobe.d/blacklist.conf
+</span></code></pre>
+<details><summary>実行ログ</summary><div>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">root@pvehome:~#</span><span> echo &quot;</span><span style="color:#a3be8c;">blacklist nouveau</span><span>&quot; &gt;&gt; /etc/modprobe.d/blacklist.conf
+</span><span style="color:#bf616a;">root@pvehome:~#</span><span> echo &quot;</span><span style="color:#a3be8c;">blacklist nvidia*</span><span>&quot; &gt;&gt; /etc/modprobe.d/blacklist.conf
+</span></code></pre>
+</div></details>
+</li>
+<li>
+<p>Proxmox VE を再起動します。</p>
+</li>
+<li>
+<p>データセンター &gt; 100 (win-11) &gt; ハードウェア から <code>追加</code> ボタンを押下し <code>PCI デバイス</code> を選択します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-hardware-pci.png" alt="" /></p>
+</li>
+<li>
+<p>追加する PCI デバイスを設定し <code>追加</code> ボタンを押下します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-add-pci-dialog.png" alt="" /></p>
+<ul>
+<li>Raw Device
+<ul>
+<li>デバイス: パススルーする GPU を選択します。</li>
+<li>全機能: チェックを入れます。</li>
+</ul>
+</li>
+<li>詳細設定
+<ul>
+<li>PCI-Express: チェックを入れます。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>ノード <code>100 (win-11)</code> を起動してリモートデスクトップ接続します。</p>
+</li>
+<li>
+<p>GPU のドライバーをインストールして GPU を認識していることを確認します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-device-mng.png" alt="" /><img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-gpuz.png" alt="" /></p>
+</li>
+<li>
+<p>動作確認のために <code>サイバーパンク2077</code> のベンチマークを実行します。<img src="/blog_images/2024-01-23-building-a-proxmox-ve-8-1-environment/win-11-cyberpunk2077.png" alt="" /></p>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

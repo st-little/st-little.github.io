@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Rust のサーバーを構築します。" />
+        <meta name="twitter:description" content="Rust のサーバーを構築します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Rust のサーバーを構築する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Rust のサーバーを構築する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/mod/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Rust のサーバーを構築する",
+      "image": [],
+      "datePublished": "2023-06-03T00:00:00+00:00",
+      "dateModified": "2023-06-03T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust のサーバーを構築する",
+          "item": "https://site.little-method.com/blog/setup-server-for-rust/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Rust のサーバーを構築する</h1>
+    <small>
+      Published on 2023&#x2F;06&#x2F;03
+      
+      , Last updated 2024&#x2F;02&#x2F;08
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/mod/">mod</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://github.com/Didstopia/rust-server">didstopia/rust-server</a> を使用して <a href="https://rust.facepunch.com/">Rust</a> のサーバーを構築します。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a>, <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が使用できる必要があります。</li>
+</ul>
+<h1 id="can-kao-qing-bao">参考情報</h1>
+<ul>
+<li><a href="https://wiki.facepunch.com/rust/Creating-a-server">Rust Wiki - Creating a server</a></li>
+<li><a href="https://www.rustafied.com/how-to-host-your-own-rust-server/">Rustafied - Host your own Rust Dedicated Server</a></li>
+</ul>
+<h1 id="sabanogou-zhu">サーバーの構築</h1>
+<p>Rust のサーバーを構築します。</p>
+<ol>
+<li>
+<p>サーバーに必要なフォルダを作成します。</p>
+<table><thead><tr><th>フォルダ名</th><th>備考</th></tr></thead><tbody>
+<tr><td>data</td><td>Rust データ用のフォルダ</td></tr>
+</tbody></table>
+</li>
+<li>
+<p>サーバーに必要な環境変数を記述したファイル「rust.env」を作成します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>RUST_SERVER_STARTUP_ARGUMENTS=-batchmode -load -logfile - +server.secure 1 +fps.limit 30
+</span><span>RUST_SERVER_IDENTITY=private_rust_server
+</span><span>RUST_SERVER_SEED=2107922314
+</span><span>RUST_SERVER_WORLDSIZE=2500
+</span><span>RUST_SERVER_NAME=Private Rust Server
+</span><span>RUST_SERVER_DESCRIPTION=Private Rust Server
+</span><span>RUST_RCON_PASSWORD=mypw
+</span><span>RUST_OXIDE_ENABLED=1
+</span><span>RUST_SERVER_MAXPLAYERS=5
+</span></code></pre>
+<p>環境変数の補足</p>
+<table><thead><tr><th>環境変数</th><th>補足</th></tr></thead><tbody>
+<tr><td>RUST_SERVER_STARTUP_ARGUMENTS</td><td><code>+fps.limit</code> でサーバー側の FPS を制限します。</td></tr>
+<tr><td>RUST_SERVER_SEED</td><td>シード値を設定します。</td></tr>
+<tr><td>RUST_SERVER_WORLDSIZE</td><td>マップの広さを設定します。</td></tr>
+<tr><td>RUST_RCON_PASSWORD</td><td>パスワードはできるだけ複雑な値にします。</td></tr>
+<tr><td>RUST_OXIDE_ENABLED</td><td>MOD を使用するため <code>1</code> を設定します。</td></tr>
+<tr><td>RUST_SERVER_MAXPLAYERS</td><td>サーバーに接続できるプレイヤーの人数の上限を設定します。</td></tr>
+</tbody></table>
+</li>
+<li>
+<p><code>docker-compose.yaml</code> を作成します。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &#39;</span><span style="color:#a3be8c;">3.7</span><span>&#39;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://hub.docker.com/r/didstopia/rust-server
+</span><span>  </span><span style="color:#bf616a;">rust</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">didstopia/rust-server
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      </span><span style="color:#65737e;"># Rust クライアント接続ポート
+</span><span>      - </span><span style="color:#a3be8c;">28015:28015
+</span><span>      - </span><span style="color:#a3be8c;">28015:28015/udp
+</span><span>      </span><span style="color:#65737e;"># Rcon クライアント接続ポート
+</span><span>      - </span><span style="color:#a3be8c;">28016:28016
+</span><span>      </span><span style="color:#65737e;"># Steam Networking
+</span><span>      - </span><span style="color:#a3be8c;">28017:28017/udp
+</span><span>      </span><span style="color:#65737e;"># Web Console
+</span><span>      - </span><span style="color:#a3be8c;">28018:8080
+</span><span>    </span><span style="color:#bf616a;">env_file</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">/Users/st-little/Documents/rust/rust.env
+</span><span>   </span><span style="color:#bf616a;">stdin_open</span><span>: </span><span style="color:#d08770;">true
+</span><span>   </span><span style="color:#bf616a;">tty</span><span>: </span><span style="color:#d08770;">true
+</span><span>   </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">/Users/st-little/Documents/rust/data:/steamcmd/rust
+</span></code></pre>
+</li>
+</ol>
+<h1 id="sabanoqi-dong-ting-zhi">サーバーの起動/停止</h1>
+<ul>
+<li>
+<p>コンテナを起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+</li>
+<li>
+<p>コンテナを停止します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> down
+</span></code></pre>
+</li>
+<li>
+<p>コンテナを削除します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> rm
+</span></code></pre>
+</li>
+</ul>
+<h1 id="sabahejie-sok">サーバへ接続</h1>
+<p>クライアントからサーバーに接続します。</p>
+<ol>
+<li>
+<p>Rust が起動したら <code>F1</code> キーを押します。</p>
+</li>
+<li>
+<p>次のコマンドを入力してエンターキーを押します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>client.connect myserver:28015
+</span></code></pre>
+</li>
+</ol>
+<h1 id="sabanogong-kai">サーバーの公開</h1>
+<p><a href="/tags/tunnel/">Tunnel を構築して自宅サーバーを公開する方法</a> を参考にしてください。<br />
+<strong>次のように nginx を Rust に読み替えてください。</strong></p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># server.toml
+</span><span>[server]
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:2333</span><span>&quot;
+</span><span>
+</span><span>[server.services.rust-tcp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:28015</span><span>&quot;
+</span><span>
+</span><span>[server.services.rust-udp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">udp</span><span>&quot;
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:28015</span><span>&quot;
+</span><span>
+</span><span>[server.services.rust-rcon]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:28016</span><span>&quot;
+</span><span>
+</span><span>[server.services.rust-steam]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">udp</span><span>&quot;
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:28017</span><span>&quot;
+</span></code></pre>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># client.toml
+</span><span>[client]
+</span><span style="color:#bf616a;">remote_addr </span><span>= &quot;</span><span style="color:#a3be8c;">myserver:2333</span><span>&quot;
+</span><span>
+</span><span>[client.services.rust-tcp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">rust:28015</span><span>&quot;
+</span><span>
+</span><span>[client.services.rust-udp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">udp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">rust:28015</span><span>&quot;
+</span><span>
+</span><span>[client.services.rust-rcon]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">rust:28016</span><span>&quot;
+</span><span>
+</span><span>[client.services.rust-steam]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">udp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">rust:28017</span><span>&quot;
+</span></code></pre>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#65737e;"># docker-compose.yaml &gt; services &gt; tunnel
+</span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>  </span><span style="color:#bf616a;">depends_on</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">rust
+</span><span>  </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>  </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--client</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/client.toml</span><span>&quot;]
+</span><span>  </span><span style="color:#bf616a;">tty</span><span>: </span><span style="color:#d08770;">true
+</span><span>  </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">/Users/st-little/Documents/rust/client.toml:/app/client.toml
+</span></code></pre>
+<h1 id="mod">MOD</h1>
+<p><a href="https://umod.org/plugins?page=1&amp;sort=downloads&amp;sortdir=desc&amp;categories=rust">uMod Plugins</a> で Rust 用の Mod を探すことができます。</p>
+<h2 id="whitelist"><a href="https://umod.org/plugins/whitelist">Whitelist</a></h2>
+<p>ホワイトリストに登録されたプレイヤーのうち、許可を得た人にサーバーへのアクセスを制限します。</p>
+<ol>
+<li>
+<p>「Download」ボタンを選択し <code>Whitelist.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>Whitelist.cs</code> を data/oxide/plugins にコピーします。</p>
+</li>
+<li>
+<p>ブラウザで管理画面 <code>myserver:28018/</code> を開きます。</p>
+</li>
+<li>
+<p>Console を開いて一番下にある入力フィールドに次のコマンドを入力しエンターキーを押します。<code>myid</code> は SteamID64 です。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>oxide.grant user myid whitelist.allow
+</span></code></pre>
+</li>
+</ol>
+<h2 id="backpacks"><a href="https://umod.org/plugins/backpacks">Backpacks</a></h2>
+<p>バックパックを持つことで、インベントリを増やすことができます。</p>
+<ol>
+<li>
+<p>「Download」ボタンを選択し <code>Backpacks.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>Backpacks.cs</code> を data/oxide/plugins にコピーします。</p>
+</li>
+<li>
+<p>ブラウザで管理画面 <code>myserver:28018/</code> を開きます。</p>
+</li>
+<li>
+<p>Console を開いて一番下にある入力フィールドに次のコマンドを入力しエンターキーを押します。</p>
+<p>すべてのプレイヤーがバックパックを使用できるようにします。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>o.grant group default backpacks.use
+</span></code></pre>
+<p>すべてのプレイヤーがバックパック GUI ボタン ​​ を表示できるようにします。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>o.grant group default backpacks.gui
+</span></code></pre>
+<p>バックアップ容量をデフォルトの <code>6</code> から <code>24</code> に変更します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>o.grant group default backpacks.size.24
+</span></code></pre>
+</li>
+</ol>
+<h2 id="recycler-speed"><a href="https://umod.org/plugins/recycler-speed">Recycler Speed</a></h2>
+<p>リサイクラーのスピードを変更します。</p>
+<ol>
+<li>
+<p>「Download」ボタンを選択し <code>RecyclerSpeed.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>RecyclerSpeed.cs</code> を data/oxide/plugins にコピーします。</p>
+</li>
+<li>
+<p>data/oxide/config/RecyclerSpeed.json の <code>Recyler Speed</code> でスピードを設定します。</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">Recyler Speed (Lower = Faster) (Seconds)</span><span>&quot;: </span><span style="color:#d08770;">1.0
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p>ブラウザで管理画面 <code>myserver:28018/</code> を開きます。</p>
+</li>
+<li>
+<p>Console を開いて一番下にある入力フィールドに次のコマンドを入力しエンターキーを押します。</p>
+<p>すべてのプレイヤーが Recycler Speed を使用できるようにします。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>o.grant group default recyclerspeed.use
+</span></code></pre>
+</li>
+</ol>
+<h2 id="discord-messages"><a href="https://umod.org/plugins/discord-messages">Discord Messages</a></h2>
+<p>メッセージを Discord に送信します。</p>
+<ol>
+<li>
+<p>「Download」ボタンを選択し <code>DiscordMessages.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>DiscordMessages.cs</code> を data/oxide/plugins にコピーします。</p>
+</li>
+</ol>
+<h2 id="inbound"><a href="https://umod.org/plugins/inbound">Inbound</a></h2>
+<p>パトロールヘリや補給物資の投下、貨物船などの入港を Discord でお知らせします。</p>
+<p><em>前提条件</em></p>
+<ul>
+<li>Discord Messages のインストールが必要です。</li>
+<li>Discord の <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks">Webhook</a> が必要です。</li>
+</ul>
+<ol>
+<li>
+<p>「Download」ボタンを選択し <code>Inbound.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>Inbound.cs</code> を data/oxide/plugins にコピーします。</p>
+</li>
+<li>
+<p>data/oxide/config/Inbound.json を修正します。</p>
+<p>Discord Messages の有効化、Webhook URL の設定を行います。</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">Discord Messages</span><span>&quot;: {
+</span><span>    &quot;</span><span style="color:#a3be8c;">Enabled</span><span>&quot;: </span><span style="color:#d08770;">true</span><span>,
+</span><span>    &quot;</span><span style="color:#a3be8c;">Webhook URL</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">my Webhook url</span><span>&quot;
+</span><span>  }
+</span><span>}
+</span></code></pre>
+</li>
+</ol>
+<h2 id="ingame-clock-gui"><a href="https://umod.org/plugins/ingame-clock-gui">Ingame Clock GUI</a></h2>
+<p>ゲーム内の時刻を表示します。</p>
+<ol>
+<li>
+<p>「Download」ボタンを選択し <code>IngameClockGUI.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>IngameClockGUI.cs</code> を data/oxide/plugins にコピーします。</p>
+</li>
+<li>
+<p>data/oxide/config/IngameClockGUI.json で設定を変更します。</p>
+<p>時刻のフォントサイズ、表示位置を変更します。</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>  &quot;</span><span style="color:#a3be8c;">FontSize</span><span>&quot;: </span><span style="color:#d08770;">16</span><span>,
+</span><span>  &quot;</span><span style="color:#a3be8c;">Position</span><span>&quot;: {
+</span><span>    &quot;</span><span style="color:#a3be8c;">Bottom</span><span>&quot;: </span><span style="color:#d08770;">0.015</span><span>,
+</span><span>    &quot;</span><span style="color:#a3be8c;">Left</span><span>&quot;: </span><span style="color:#d08770;">0.3
+</span><span>  }
+</span><span>}
+</span></code></pre>
+</li>
+</ol>
+<h1 id="wipe">Wipe</h1>
+<p>ワイプの確認、変更ができます。詳細は <a href="https://wiki.facepunch.com/rust/server-wipe-timer">Rust Wiki - Server Wipe Timer</a> を参照してください。</p>
+<p><code>PrintWipe</code> コマンドでワイプの確認ができます。</p>
+<h2 id="taimuzonnobian-geng">タイムゾーンの変更</h2>
+<p>デフォルトのタイムゾーンは <code>wipetimer.wipetimezone: &quot;Europe/London&quot;</code> です。次のコマンドで日本に変更します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wipeTimezone Japan
+</span></code></pre>
+<h2 id="waipuri-nozhi-ding">ワイプ日の指定</h2>
+<p>UNIX タイムスタンプを使用して、正確なワイプ日時を設定できます。<code>2023/7/31 15:00:00 GMT+0</code> を指定する場合は次のコマンドを実行します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>wipeUnixTimestampOverride 1690815600
+</span></code></pre>
+<h1 id="misc">Misc</h1>
+<ul>
+<li><code>spawn f15e</code> コマンドで F-15E 戦闘機をスポーンすることができます。</li>
+<li><code>spawn bradleyapc</code> コマンドで Bradley APC をスポーンすることができます。</li>
+</ul>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

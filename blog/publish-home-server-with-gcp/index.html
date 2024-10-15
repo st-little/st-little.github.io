@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="GCP と rathole を使用して Tunnel を構築し自宅のサーバーを公開します。" />
+        <meta name="twitter:description" content="GCP と rathole を使用して Tunnel を構築し自宅のサーバーを公開します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="GCP で自宅サーバーを公開する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          GCP で自宅サーバーを公開する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/gcp/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/tunnel/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rathole/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "GCP で自宅サーバーを公開する",
+      "image": [],
+      "datePublished": "2024-01-19T00:00:00+00:00",
+      "dateModified": "2024-01-19T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GCP で自宅サーバーを公開する",
+          "item": "https://site.little-method.com/blog/publish-home-server-with-gcp/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>GCP で自宅サーバーを公開する</h1>
+    <small>
+      Published on 2024&#x2F;01&#x2F;19
+      
+      , Last updated 2024&#x2F;02&#x2F;12
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/gcp/">gcp</a>
+          
+            <a href="https://site.little-method.com/tags/tunnel/">tunnel</a>
+          
+            <a href="https://site.little-method.com/tags/rathole/">rathole</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/">GCP</a> と <a href="https://github.com/rapiz1/rathole">rathole</a> を使用して Tunnel を構築し自宅のサーバーを公開します。<br />
+Tunnel を構築して自宅のサーバーを公開するその他の方法は <a href="/tags/tunnel/">こちら</a> を参照してください。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li>GCP のアカウントが必要です。</li>
+<li>Domain が必要です。今回は Google Domains で取得済みです。</li>
+<li><a href="https://www.docker.com/">Docker</a>, <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が使用できる必要があります。</li>
+</ul>
+<h1 id="shou-shun">手順</h1>
+<h2 id="tunnel-nogou-zhu">Tunnel の構築</h2>
+<p>GCP のファイアウォール、Tunnel、DNS を設定します。</p>
+<h3 id="huaiauorunoshe-ding">ファイアウォールの設定</h3>
+<p>VPC ファイアウォールのルールを作成します。</p>
+<ol>
+<li>
+<p>GCP にログインします。</p>
+</li>
+<li>
+<p>サイドメニューから <code>VPC ネットワーク</code> の <code>ファイアウォール</code> 選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-firewalls-on-side-menu.png" alt="" /></p>
+</li>
+<li>
+<p><code>ファイアウォール ルールを作成</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-create-firewall-button.png" alt="" /></p>
+</li>
+<li>
+<p>項目に次の値を入力し <code>作成</code> ボタンを選択します。</p>
+<table><thead><tr><th>項目名</th><th>入力値</th><th>備考</th></tr></thead><tbody>
+<tr><td>名前</td><td>home-server</td><td>任意の値</td></tr>
+<tr><td>説明</td><td>home-server のルール</td><td>任意の値</td></tr>
+<tr><td>ターゲットタグ</td><td>home-server</td><td>任意の値</td></tr>
+<tr><td>送信元 IPV4 範囲</td><td>0.0.0.0/0</td><td></td></tr>
+<tr><td>プロトコルとポート &gt; 指定したプロトコルとポート &gt; TCP</td><td>80</td><td>TCP チェックボックスにチェックを入れます。今回は自宅サーバーを port 80 で公開します。</td></tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="tunnel-noshe-ding">Tunnel の設定</h3>
+<p>Compute Engine で <a href="https://github.com/rapiz1/rathole">rathole</a> を起動して Tunnel を構築します。</p>
+<p>Compute Engine のインスタンスは <a href="https://cloud.google.com/free/docs/gcp-free-tier/?hl=ja#compute">Google Cloud の無料プログラム</a> を参考に設定します。</p>
+<ol>
+<li>
+<p>サイドメニューから <code>Compute Engine</code> の <code>VM インスタンス</code> 選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-compute-engine-on-side-menu.png" alt="" /></p>
+</li>
+<li>
+<p><code>インスタンスを作成</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-create-instance-button.png" alt="" /></p>
+</li>
+<li>
+<p>項目に次の値を入力し <code>作成</code> ボタンを選択します。</p>
+<table><thead><tr><th>項目名</th><th>入力値</th><th>備考</th></tr></thead><tbody>
+<tr><td>名前</td><td>instance-1</td><td>任意の値</td></tr>
+<tr><td>リージョン</td><td>オレゴン: us-west1</td><td></td></tr>
+<tr><td>マシン構成 &gt; シリーズ</td><td>E2</td><td></td></tr>
+<tr><td>マシン構成 &gt; マシンタイプ</td><td>e2-micro</td><td></td></tr>
+<tr><td>ブートディスク &gt; OS</td><td>Ubuntu</td><td></td></tr>
+<tr><td>ブートディスク &gt; バージョン</td><td>Ubuntu 18.04 LTS</td><td></td></tr>
+<tr><td>ブートディスク &gt; ブートディスクの種類</td><td>標準永続ディスク</td><td></td></tr>
+<tr><td>ブートディスク &gt; サイズ (GB)</td><td>30</td><td></td></tr>
+<tr><td>ファイアウォール &gt; HTTP トラフィックを許可する</td><td>許可</td><td>チェックボックスにチェックを入れる</td></tr>
+<tr><td>ファイアウォール &gt; HTTPS トラフィックを許可する</td><td>許可</td><td>チェックボックスにチェックを入れる</td></tr>
+<tr><td>詳細オプション &gt; ネットワーキング &gt; ネットワーク タグ</td><td>home-server</td><td>ファイアウォールのターゲットタグを入力する</td></tr>
+</tbody></table>
+</li>
+<li>
+<p>作成したインスタンスの <code>SSH</code> を選択し SSH 接続します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-ssh.png" alt="" /></p>
+</li>
+<li>
+<p>インスタンスのポートを開放します。</p>
+<p>ufw を有効にします。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw enable
+</span></code></pre>
+<p>開放するポートを追加します。<code>2333</code> は rathole 、 <code>80</code> は自宅サーバーのポート番号です。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw allow 2333
+</span><span style="color:#bf616a;">sudo</span><span> ufw allow 80
+</span></code></pre>
+<p>ufw をリロードします。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw reload
+</span></code></pre>
+</li>
+<li>
+<p>インスタンスに docker と docker-compose をインストールします。</p>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu</a></li>
+<li><a href="https://docs.docker.com/compose/install/linux/#install-using-the-repository">Install the Compose plugin</a></li>
+</ul>
+</li>
+<li>
+<p>rathole の設定ファイル <code>server.toml</code> を作成します。詳細は <a href="https://github.com/rapiz1/rathole#readme">readme</a> を参照してください。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span> </span><span style="color:#65737e;"># server.toml
+</span><span> [server]
+</span><span> </span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:2333</span><span>&quot;
+</span><span>
+</span><span> [server.services.home-server]
+</span><span> </span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">home-server-token</span><span>&quot;
+</span><span> </span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span> </span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:80</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>rathole の <code>docker-compose.yaml</code> を作成します。<code>2333</code> は rathole 、 <code>80</code> は自宅サーバーのポート番号です。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://github.com/rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>  </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>  </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--server</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/server.toml</span><span>&quot;]
+</span><span>  </span><span style="color:#bf616a;">tty</span><span>: </span><span style="color:#d08770;">true
+</span><span>  </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>    </span><span style="color:#65737e;"># rathole
+</span><span>    - </span><span style="color:#a3be8c;">2333:2333
+</span><span>    </span><span style="color:#65737e;"># home server
+</span><span>    - </span><span style="color:#a3be8c;">80:80
+</span><span>  </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">/home/st-little/server.toml:/app/server.toml
+</span></code></pre>
+</li>
+<li>
+<p>インスタンスで rathole を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+</li>
+</ol>
+<h3 id="yu-suan-noshe-ding">予算の設定</h3>
+<ol>
+<li>
+<p>サイドメニューから <code>お支払い</code> を選択します。</p>
+</li>
+<li>
+<p>お支払いのサイドメニューから <code>請求先アカウント</code> を選択します。</p>
+</li>
+<li>
+<p>お支払いのサイドメニューから <code>予算とアラート</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-budget-alerts-on-side-menu.png" alt="" /></p>
+</li>
+<li>
+<p><code>予算を作成</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-create-budget-alerts-button.png" alt="" /></p>
+</li>
+<li>
+<p>項目に次の値を入力し <code>終了</code> ボタンを選択します。</p>
+<table><thead><tr><th>項目名</th><th>入力値</th><th>備考</th></tr></thead><tbody>
+<tr><td>範囲 &gt; 名前</td><td>home-server</td><td>任意の値</td></tr>
+<tr><td>金額 &gt; 目標金額</td><td>1000</td><td>予算の上限金額</td></tr>
+</tbody></table>
+</li>
+</ol>
+<h3 id="dns-noshe-ding">DNS の設定</h3>
+<p><a href="https://cloud.google.com/dns/docs/tutorials/create-domain-tutorial?hl=ja">Cloud DNS を使用してドメインを設定します。</a></p>
+<ol>
+<li>
+<p>サイドメニューから <code>ネットワーキング</code> の <code>Cloud DNS</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-cloud-dns-on-side-menu.png" alt="" /></p>
+</li>
+<li>
+<p><code>ゾーンを作成</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-create-zone-button.png" alt="" /></p>
+</li>
+<li>
+<p>項目に次の値を入力し <code>作成</code> ボタンを選択します。</p>
+<table><thead><tr><th>項目名</th><th>入力値</th><th>備考</th></tr></thead><tbody>
+<tr><td>ゾーンのタイプ</td><td>公開</td><td></td></tr>
+<tr><td>ゾーン名</td><td>mc-zone</td><td>任意の値</td></tr>
+<tr><td>DNS 名</td><td>DNS 名の接尾辞</td><td></td></tr>
+<tr><td>説明</td><td>home-server DNS</td><td>任意の値</td></tr>
+</tbody></table>
+</li>
+<li>
+<p>作成したゾーンを選択し <code>ゾーンの詳細</code> を表示します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-zone.png" alt="" /></p>
+</li>
+<li>
+<p><code>レコードセットの追加</code> を選択します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/select-add-record-button.png" alt="" /></p>
+</li>
+<li>
+<p>項目に次の値を入力し <code>作成</code> ボタンを選択します。</p>
+<table><thead><tr><th>項目名</th><th>入力値</th><th>備考</th></tr></thead><tbody>
+<tr><td>DNS 名</td><td>DNS ゾーンのサブドメイン</td><td></td></tr>
+<tr><td>リソース レコードのタイプ</td><td>A</td><td></td></tr>
+<tr><td>IPv4 アドレス</td><td>VM インスタンスの外部 IP</td><td><code>Tunnel の設定</code> で作成した Compute Engine のインスタンス</td></tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="zi-zhai-sabanogong-kai">自宅サーバーの公開</h2>
+<ol>
+<li>
+<p>rathole の設定ファイル <code>client.toml</code> を作成します。詳細は <a href="https://github.com/rapiz1/rathole#readme">readme</a> を参照してください。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># client.toml
+</span><span>[client]
+</span><span style="color:#bf616a;">remote_addr </span><span>= &quot;</span><span style="color:#a3be8c;">myserver:2333</span><span>&quot;
+</span><span>
+</span><span>[client.services.home-server]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">home-server-token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">home-sever:80</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーと Tunnel の <code>docker-compose.yaml</code> を作成します。今回の自宅サーバーは nginx を使用します。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://hub.docker.com/_/nginx
+</span><span>  </span><span style="color:#bf616a;">home-sever</span><span>:
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">nginx:latest
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - &quot;</span><span style="color:#a3be8c;">80:80</span><span>&quot;
+</span><span>  </span><span style="color:#65737e;"># https://github.com/rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole:latest
+</span><span>    </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--client</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/client.toml</span><span>&quot;]
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./client.toml:/app/client.toml
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーと Tunnel を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+<p>停止する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> down
+</span></code></pre>
+<p>削除する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> rm
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーにアクセスできることを確認します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/welcome-to-nginx.png" alt="" /></p>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

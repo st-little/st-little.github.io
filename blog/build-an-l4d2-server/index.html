@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="l4d2-docker を使用して Left 4 Dead 2 のサーバーを構築します。" />
+        <meta name="twitter:description" content="l4d2-docker を使用して Left 4 Dead 2 のサーバーを構築します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Left 4 Dead 2 のサーバーを構築する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Left 4 Dead 2 のサーバーを構築する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/l4d2/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/addon/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Left 4 Dead 2 のサーバーを構築する",
+      "image": [],
+      "datePublished": "2024-03-06T00:00:00+00:00",
+      "dateModified": "2024-03-06T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Left 4 Dead 2 のサーバーを構築する",
+          "item": "https://site.little-method.com/blog/build-an-l4d2-server/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Left 4 Dead 2 のサーバーを構築する</h1>
+    <small>
+      Published on 2024&#x2F;03&#x2F;06
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/l4d2/">l4d2</a>
+          
+            <a href="https://site.little-method.com/tags/addon/">addon</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://github.com/Left4DevOps/l4d2-docker">l4d2-docker</a> を使用して <a href="https://store.steampowered.com/app/550/Left_4_Dead_2/?l=japanese">Left 4 Dead 2</a> のサーバーを構築します。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a>, <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が使用できる必要があります。</li>
+</ul>
+<h1 id="can-kao-qing-bao">参考情報</h1>
+<ul>
+<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=276173458">Left 4 Dead 2 Dedicated Server Guide (Detailed)</a></li>
+</ul>
+<h1 id="sabanogou-zhu">サーバーの構築</h1>
+<p>Left 4 Dead 2 のサーバーを構築します。</p>
+<ol>
+<li>
+<p>サーバーに必要なフォルダを作成します。</p>
+<table><thead><tr><th>フォルダ名</th><th>備考</th></tr></thead><tbody>
+<tr><td>addons</td><td>Left 4 Dead に追加する addon 用のフォルダ<br>addon のダウンロード方法は <a href="/blog/how-to-download-content-from-steam-workshop/">こちら</a> を参照して下さい。</td></tr>
+</tbody></table>
+</li>
+<li>
+<p><a href="https://github.com/Left4DevOps/l4d2-docker?tab=readme-ov-file#environment-variables">Environment variables</a> を参考に <code>server.cfg</code> を作成します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>hostname &quot;L4D2 Server&quot;
+</span><span>sv_region 4
+</span><span>sv_logecho 1
+</span><span>motd_enabled 0
+</span><span>rcon_password &quot;mypassword&quot;
+</span></code></pre>
+</li>
+<li>
+<p><a href="https://github.com/Left4DevOps/l4d2-docker/blob/master/docker-compose.yml">Docker Compose</a> を参考に <code>docker-compose.yaml</code> を作成します。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.8</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://github.com/Left4DevOps/l4d2-docker
+</span><span>  </span><span style="color:#bf616a;">l4d2</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">left4devops/l4d2
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - &quot;</span><span style="color:#a3be8c;">27015:27015</span><span>&quot;
+</span><span>      - &quot;</span><span style="color:#a3be8c;">27015:27015/udp</span><span>&quot;
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./addons:/addons/
+</span><span>      - </span><span style="color:#a3be8c;">./server.cfg:/cfg/server.cfg
+</span></code></pre>
+</li>
+</ol>
+<h1 id="sabanoqi-dong-ting-zhi">サーバーの起動/停止</h1>
+<ul>
+<li>
+<p>コンテナを起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+</li>
+<li>
+<p>コンテナを停止します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose down
+</span></code></pre>
+</li>
+<li>
+<p>コンテナを削除します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose rm
+</span></code></pre>
+</li>
+</ul>
+<h1 id="sabahejie-sok">サーバへ接続</h1>
+<p>クライアントからサーバーに接続してキャンペーンをプレイします。</p>
+<ol>
+<li>
+<p>設定 &gt; キーボード/マウス に進み <code>開発者コンソールを許可</code> を有効にします。<img src="/blog_images/2024-03-06-build-an-l4d-server/setting-keybord-mouse.png" alt="" /></p>
+</li>
+<li>
+<p><strong>`</strong> キーを押下し Console を開きます。</p>
+</li>
+<li>
+<p>次のコマンドを入力し接続するサーバーを指定します。</p>
+<ul>
+<li>ipaddress: サーバーの IP アドレスを設定します。</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>mm_dedicated_force_servers {ipaddress}:27015
+</span></code></pre>
+</li>
+<li>
+<p>キャンペーンのロビーを作成します。</p>
+<ul>
+<li>キャンペーン: 任意のキャンペーンを選択します。</li>
+<li>難易度: 任意の難易度を選択します。</li>
+<li>ゲームの公開レベル: <code>フレンド専用ゲーム</code> を選択します。</li>
+<li>サーバーのタイプ: <code>最適な専用サーバー</code> を選択します。</li>
+</ul>
+<p><img src="/blog_images/2024-03-06-build-an-l4d-server/new-lobby.png" alt="" /></p>
+</li>
+</ol>
+<h1 id="sabanogong-kai">サーバーの公開</h1>
+<p><a href="/tags/tunnel/">Tunnel を構築して自宅サーバーを公開する方法</a> を参考にしてください。<br />
+<strong>次のように nginx を Left 4 Dead 2 に読み替えてください。</strong></p>
+<h2 id="tunnel-nogou-zhu">Tunnel の構築</h2>
+<h3 id="huaiauorunoshe-ding">ファイアウォールの設定</h3>
+<p>Left 4 Dead 2 用のファイアウォールルールを作成します。</p>
+<ul>
+<li>名前: l4d2</li>
+<li>プロトコルとポート
+<ul>
+<li>27015/TCP</li>
+<li>27015/UDP</li>
+</ul>
+</li>
+</ul>
+<h3 id="tunnel-noshe-ding">Tunnel の設定</h3>
+<ul>
+<li>
+<p>インスタンスの <code>ネットワーク タグ</code> に <code>l4d2</code> を設定します。</p>
+</li>
+<li>
+<p>インスタンスのポートを解放します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw allow 27015
+</span><span style="color:#bf616a;">sudo</span><span> ufw allow 27015/udp
+</span></code></pre>
+</li>
+<li>
+<p>rathole の設定ファイル server.toml を作成します。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># server.toml
+</span><span>[server]
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:2333</span><span>&quot;
+</span><span>
+</span><span>[server.services.l4d2-tcp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">l4d2-token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:27015</span><span>&quot;
+</span><span>
+</span><span>[server.services.l4d2-udp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">l4d2-token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">udp</span><span>&quot;
+</span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:27015</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>rathole の docker-compose.yaml を作成します。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://github.com/rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>    </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--server</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/server.toml</span><span>&quot;]
+</span><span>    </span><span style="color:#bf616a;">tty</span><span>: </span><span style="color:#d08770;">true
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      </span><span style="color:#65737e;"># rathole
+</span><span>      - </span><span style="color:#a3be8c;">2333:2333
+</span><span>      </span><span style="color:#65737e;"># # Left 4 Dead 2
+</span><span>      - </span><span style="color:#a3be8c;">27015:27015
+</span><span>      - </span><span style="color:#a3be8c;">27015:27015/udp
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./server.toml:/app/server.toml
+</span></code></pre>
+</li>
+</ul>
+<h2 id="zi-zhai-sabanogong-kai">自宅サーバーの公開</h2>
+<ul>
+<li>
+<p>rathole の設定ファイル client.toml を作成します。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># client.toml
+</span><span>[client]
+</span><span style="color:#bf616a;">remote_addr </span><span>= &quot;</span><span style="color:#a3be8c;">myserver:2333</span><span>&quot;
+</span><span>
+</span><span>[client.services.l4d2-tcp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">l4d2-token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">l4d2:27015</span><span>&quot;
+</span><span>
+</span><span>[client.services.l4d2-udp]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">l4d2-token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">udp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">l4d2:27015</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーと Tunnel の docker-compose.yaml を作成します。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#65737e;"># docker-compose.yaml &gt; services &gt; tunnel
+</span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>  </span><span style="color:#bf616a;">depends_on</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">l4d2
+</span><span>  </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>  </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--client</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/client.toml</span><span>&quot;]
+</span><span>  </span><span style="color:#bf616a;">tty</span><span>: </span><span style="color:#d08770;">true
+</span><span>  </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>    - </span><span style="color:#a3be8c;">./client.toml:/app/client.toml
+</span></code></pre>
+</li>
+</ul>
+<h1 id="rcon">RCON</h1>
+<p>rcon を使用してサーバーを設定します。もしかしたら間違ってるかもしれません...</p>
+<ol>
+<li>
+<p><strong>`</strong> キーを押下し Console を開きます。</p>
+</li>
+<li>
+<p>次のコマンドを入力し rcon を実行します。</p>
+<ul>
+<li>password: server.cfg &gt; rcon_password を設定します。</li>
+<li>command: 実行するコマンドを設定します。</li>
+</ul>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>rcon_password {password} {command}
+</span></code></pre>
+<p>例えば rcon で <code>sv_cheats 1</code> を実行する場合は次のコマンドになります。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>rcon_password password sv_cheats 1
+</span></code></pre>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

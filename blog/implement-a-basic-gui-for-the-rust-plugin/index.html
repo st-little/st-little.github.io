@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Rust プラグインの基本的な GUI を実装し、チャットコマンドを実行すると文字を表示します。" />
+        <meta name="twitter:description" content="Rust プラグインの基本的な GUI を実装し、チャットコマンドを実行すると文字を表示します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Rust プラグインの基本的な GUI を実装する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Rust プラグインの基本的な GUI を実装する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/mod/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/plugin/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/oxide/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Rust プラグインの基本的な GUI を実装する",
+      "image": [],
+      "datePublished": "2024-09-01T00:00:00+00:00",
+      "dateModified": "2024-09-01T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust プラグインの基本的な GUI を実装する",
+          "item": "https://site.little-method.com/blog/implement-a-basic-gui-for-the-rust-plugin/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Rust プラグインの基本的な GUI を実装する</h1>
+    <small>
+      Published on 2024&#x2F;09&#x2F;01
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/mod/">mod</a>
+          
+            <a href="https://site.little-method.com/tags/plugin/">plugin</a>
+          
+            <a href="https://site.little-method.com/tags/oxide/">oxide</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p>Rust プラグインの基本的な GUI を実装し、チャットコマンドを実行すると文字を表示します。</p>
+<h1 id="can-kao-qing-bao">参考情報</h1>
+<ul>
+<li><a href="https://umod.org/index.php/guides/rust/basic-concepts-of-gui">Basic concepts of GUI</a></li>
+<li><a href="https://github.com/OxideMod/Oxide.Rust/blob/develop/src/RustCui.cs">RustCui</a></li>
+<li><a href="https://github.com/Kulltero/Rust.Community/tree/Docs?tab=readme-ov-file">Kulltero/Rust.Community</a></li>
+<li><a href="https://umod.org/documentation/api/timers">Timers</a></li>
+<li><a href="https://flamingmojo.wordpress.com/">FlamingMojo's Blog</a></li>
+</ul>
+<h1 id="guan-lian-qing-bao">関連情報</h1>
+<ul>
+<li><a href="/blog/how-to-implement-chat-commands-in-rust-plugin/">Rust プラグインのチャットコマンドを実装する</a></li>
+</ul>
+<h1 id="huan-jing">環境</h1>
+<ul>
+<li>Visual Studio Code 1.91.1</li>
+<li>Docker Desktop 4.33.1</li>
+<li>.NETFramework Standard 2.1</li>
+<li>Microsoft.NETFramework.ReferenceAssemblies 1.0.3</li>
+<li>OpenMod.Rust.Oxide 3.8.10</li>
+</ul>
+<h1 id="gui-noshi-zhuang">GUI の実装</h1>
+<p>チャットコマンド <code>gui</code> を実行すると <code>Hello World!</code> を 5 秒間表示するプラグインを実装します。</p>
+<ol>
+<li>
+<p>背景のコンポーネントを実装します。Color は正規化された RGBA で指定します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">imgComp </span><span>= new CuiImageComponent
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Color </span><span>= &quot;</span><span style="color:#a3be8c;">0.753 0.753 0.753 1</span><span>&quot;,  </span><span style="color:#65737e;">// silver: #c0c0c0
+</span><span>    </span><span style="color:#bf616a;">FadeIn </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f
+</span><span>};
+</span></code></pre>
+</li>
+<li>
+<p>文字のコンポーネントを実装します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">txtComp </span><span>= new CuiTextComponent
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Text </span><span>= &quot;</span><span style="color:#a3be8c;">Hello World!</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">Color </span><span>= &quot;</span><span style="color:#a3be8c;">0 0 0 1</span><span>&quot;,  </span><span style="color:#65737e;">// black: #000000
+</span><span>    </span><span style="color:#bf616a;">FadeIn </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span>,
+</span><span>    </span><span style="color:#bf616a;">Align </span><span>= </span><span style="color:#bf616a;">TextAnchor</span><span>.</span><span style="color:#bf616a;">MiddleCenter</span><span>,
+</span><span>    </span><span style="color:#bf616a;">FontSize </span><span>= </span><span style="color:#d08770;">24
+</span><span>};
+</span></code></pre>
+</li>
+<li>
+<p>位置のコンポーネントを実装します。Anchor は幅と高さを 0.0 (0%) から 1.0 (100%) までのパーセント (%) で表す数値です。Min 値はの左下隅の位置で、Max は右上隅の位置です。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">rectComp </span><span>= new CuiRectTransformComponent
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">AnchorMin </span><span>= &quot;</span><span style="color:#a3be8c;">0.2 0.8</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">AnchorMax </span><span>= &quot;</span><span style="color:#a3be8c;">0.8 0.95</span><span>&quot;
+</span><span>};
+</span></code></pre>
+</li>
+<li>
+<p>背景の要素を実装します。Parent は <a href="https://umod.org/index.php/guides/rust/basic-concepts-of-gui#layers">レイヤー</a> を指定します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">imgElem </span><span>= new CuiElement
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Name </span><span>= &quot;</span><span style="color:#a3be8c;">parentImageElement</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">Parent </span><span>= &quot;</span><span style="color:#a3be8c;">Hud</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">FadeOut </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span>,
+</span><span>};
+</span><span style="color:#bf616a;">imgElem</span><span>.</span><span style="color:#bf616a;">Components</span><span>.</span><span style="color:#bf616a;">Add</span><span>(</span><span style="color:#bf616a;">imgComp</span><span>);
+</span><span style="color:#bf616a;">imgElem</span><span>.</span><span style="color:#bf616a;">Components</span><span>.</span><span style="color:#bf616a;">Add</span><span>(</span><span style="color:#bf616a;">rectComp</span><span>);
+</span></code></pre>
+</li>
+<li>
+<p>文字の要素を実装します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">txtElem </span><span>= new CuiElement
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Name </span><span>= &quot;</span><span style="color:#a3be8c;">childTextElement</span><span>&quot;,
+</span><span>    </span><span style="color:#bf616a;">FadeOut </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span>,
+</span><span>};
+</span><span style="color:#bf616a;">txtElem</span><span>.</span><span style="color:#bf616a;">Components</span><span>.</span><span style="color:#bf616a;">Add</span><span>(</span><span style="color:#bf616a;">txtComp</span><span>);
+</span><span style="color:#bf616a;">txtElem</span><span>.</span><span style="color:#bf616a;">Components</span><span>.</span><span style="color:#bf616a;">Add</span><span>(</span><span style="color:#bf616a;">rectComp</span><span>);
+</span></code></pre>
+</li>
+<li>
+<p><code>CuiElementContainer</code> に要素を追加します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">var </span><span style="color:#bf616a;">elements </span><span>= new CuiElementContainer();
+</span><span style="color:#bf616a;">elements</span><span>.</span><span style="color:#bf616a;">Add</span><span>(</span><span style="color:#bf616a;">txtElem</span><span>);
+</span><span style="color:#bf616a;">elements</span><span>.</span><span style="color:#bf616a;">Add</span><span>(</span><span style="color:#bf616a;">imgElem</span><span>);
+</span></code></pre>
+</li>
+<li>
+<p>実装した GUI をプレイヤーに送信します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">CuiHelper</span><span>.</span><span style="color:#bf616a;">AddUi</span><span>(</span><span style="color:#bf616a;">player</span><span>, </span><span style="color:#bf616a;">elements</span><span>);
+</span></code></pre>
+</li>
+<li>
+<p>GUI が 5 秒後に消えるようにタイマーを実装します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">timer</span><span>.</span><span style="color:#bf616a;">Once</span><span>(</span><span style="color:#d08770;">5.0</span><span style="color:#b48ead;">f</span><span>, () </span><span style="color:#b48ead;">=&gt;
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">CuiHelper</span><span>.</span><span style="color:#bf616a;">DestroyUi</span><span>(</span><span style="color:#bf616a;">player</span><span>, &quot;</span><span style="color:#a3be8c;">parentImageElement</span><span>&quot;);
+</span><span>    </span><span style="color:#bf616a;">CuiHelper</span><span>.</span><span style="color:#bf616a;">DestroyUi</span><span>(</span><span style="color:#bf616a;">player</span><span>, &quot;</span><span style="color:#a3be8c;">childTextElement</span><span>&quot;);
+</span><span>});
+</span></code></pre>
+</li>
+</ol>
+<h1 id="quan-tenososukodo">全てのソースコード</h1>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Oxide.Game.Rust.Cui;
+</span><span style="color:#b48ead;">using </span><span>UnityEngine;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>    [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">Basic concepts of GUI</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Unknown Author</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>    [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">Basic GUI concepts such as anchors, offsets, etc.</span><span>&quot;)]
+</span><span>    </span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">BasicConceptsOfGUI </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">RustPlugin
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">Init</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">ChatCommand</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">gui</span><span>&quot;</span><span style="color:#eff1f5;">)]
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">void </span><span style="color:#8fa1b3;">GUICommand</span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">command</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">imgComp </span><span>= new </span><span style="color:#eff1f5;">CuiImageComponent
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Color </span><span>= &quot;</span><span style="color:#a3be8c;">0.753 0.753 0.753 1</span><span>&quot;</span><span style="color:#eff1f5;">,  </span><span style="color:#65737e;">// silver: #c0c0c0
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">FadeIn </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f
+</span><span style="color:#eff1f5;">            };
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">txtComp </span><span>= new </span><span style="color:#eff1f5;">CuiTextComponent
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Text </span><span>= &quot;</span><span style="color:#a3be8c;">Hello World!</span><span>&quot;</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Color </span><span>= &quot;</span><span style="color:#a3be8c;">0 0 0 1</span><span>&quot;</span><span style="color:#eff1f5;">,  </span><span style="color:#65737e;">// black: #000000
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">FadeIn </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Align </span><span>= </span><span style="color:#bf616a;">TextAnchor</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">MiddleCenter</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">FontSize </span><span>= </span><span style="color:#d08770;">24
+</span><span style="color:#eff1f5;">            };
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">rectComp </span><span>= new </span><span style="color:#eff1f5;">CuiRectTransformComponent
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">AnchorMin </span><span>= &quot;</span><span style="color:#a3be8c;">0.2 0.8</span><span>&quot;</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">AnchorMax </span><span>= &quot;</span><span style="color:#a3be8c;">0.8 0.95</span><span>&quot;
+</span><span style="color:#eff1f5;">            };
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">imgElem </span><span>= new </span><span style="color:#eff1f5;">CuiElement
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Name </span><span>= &quot;</span><span style="color:#a3be8c;">parentImageElement</span><span>&quot;</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Parent </span><span>= &quot;</span><span style="color:#a3be8c;">Hud</span><span>&quot;</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">FadeOut </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">            };
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">imgElem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Components</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Add</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">imgComp</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">imgElem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Components</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Add</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">rectComp</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">txtElem </span><span>= new </span><span style="color:#eff1f5;">CuiElement
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Name </span><span>= &quot;</span><span style="color:#a3be8c;">childTextElement</span><span>&quot;</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">FadeOut </span><span>= </span><span style="color:#d08770;">1.0</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">,
+</span><span style="color:#eff1f5;">            };
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">txtElem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Components</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Add</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">txtComp</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">txtElem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Components</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Add</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">rectComp</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">elements </span><span>= new </span><span style="color:#eff1f5;">CuiElementContainer();
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">elements</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Add</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">txtElem</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">elements</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Add</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">imgElem</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">CuiHelper</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">AddUi</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">elements</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">timer</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Once</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">5.0</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">, () </span><span style="color:#b48ead;">=&gt;
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">CuiHelper</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">DestroyUi</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span>&quot;</span><span style="color:#a3be8c;">parentImageElement</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">CuiHelper</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">DestroyUi</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span>&quot;</span><span style="color:#a3be8c;">childTextElement</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            });
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">    }
+</span><span>}
+</span></code></pre>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

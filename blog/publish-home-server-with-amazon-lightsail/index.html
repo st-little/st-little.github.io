@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Amazon Lightsail と rathole を使用して Tunnel を構築し自宅のサーバーを公開します。" />
+        <meta name="twitter:description" content="Amazon Lightsail と rathole を使用して Tunnel を構築し自宅のサーバーを公開します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Amazon Lightsail で自宅サーバーを公開する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Amazon Lightsail で自宅サーバーを公開する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/aws/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/lightsail/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/tunnel/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rathole/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Amazon Lightsail で自宅サーバーを公開する",
+      "image": [],
+      "datePublished": "2024-02-08T00:00:00+00:00",
+      "dateModified": "2024-02-08T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Amazon Lightsail で自宅サーバーを公開する",
+          "item": "https://site.little-method.com/blog/publish-home-server-with-amazon-lightsail/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Amazon Lightsail で自宅サーバーを公開する</h1>
+    <small>
+      Published on 2024&#x2F;02&#x2F;08
+      
+      , Last updated 2024&#x2F;02&#x2F;12
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/aws/">aws</a>
+          
+            <a href="https://site.little-method.com/tags/lightsail/">lightsail</a>
+          
+            <a href="https://site.little-method.com/tags/tunnel/">tunnel</a>
+          
+            <a href="https://site.little-method.com/tags/rathole/">rathole</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://aws.amazon.com/jp/lightsail/">Amazon Lightsail</a> と <a href="https://github.com/rapiz1/rathole">rathole</a> を使用して Tunnel を構築し自宅のサーバーを公開します。<br />
+Tunnel を構築して自宅のサーバーを公開するその他の方法は <a href="/tags/tunnel/">こちら</a> を参照してください。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li><a href="https://aws.amazon.com/jp/">AWS</a> のアカウントが必要です。</li>
+<li><a href="https://www.docker.com/">Docker</a>, <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が使用できる必要があります。</li>
+</ul>
+<h1 id="shou-shun">手順</h1>
+<h2 id="tonnerunogou-zhu">トンネルの構築</h2>
+<ol>
+<li>
+<p><a href="https://lightsail.aws.amazon.com/ls/webapp/home">Amazon Lightsail</a> を開き <code>インスタンスの作成</code> ボタンを選択します。<img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/home-instance-create.png" alt="" /></p>
+</li>
+<li>
+<p>インスタンスのイメージ、サイズなどを選択し <code>インスタンスの作成</code> ボタンを選択します。</p>
+<p><img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/create-instance-image.png" alt="" /></p>
+<ul>
+<li>インスタンスイメージの選択
+<ul>
+<li>プラットフォームの選択: <code>Linux/Unix</code> を選択します。</li>
+<li>設計図の選択: <code>オペレーティングシステム (OS) のみ</code> から <code>Ubuntu22.04 LTS</code> を選択します。</li>
+</ul>
+</li>
+</ul>
+<p><img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/create-instance-size.png" alt="" /></p>
+<ul>
+<li>サイズを選択: <code>$3.51 か月あたりの USD</code> を選択します。</li>
+</ul>
+<p><img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/create-instance-name.png" alt="" /></p>
+<ul>
+<li>インスタンスを確認: 任意のインスタンス名を入力します。</li>
+</ul>
+</li>
+<li>
+<p>インスタンスが <code>保留中</code> から <code>実行中</code> になるまで待ちます。<img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/home-instance-pending.png" alt="" /></p>
+</li>
+<li>
+<p>インスタンスが <code>実行中</code> になったらインスタンス名を選択し管理画面に進みます。</p>
+</li>
+<li>
+<p>管理画面の <code>ネットワーキング</code> タブ &gt; <code>IPv4 ファイアウォール</code> &gt; <code>ルールを追加</code> を選択し開放するポートを追加します。<img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/instance-networking-add-firewall.png" alt="" /></p>
+<ul>
+<li>TCP/2333: rathole のポート番号です。</li>
+<li>TCP/80: 自宅サーバーのポート番号です。</li>
+</ul>
+</li>
+<li>
+<p>インスタンスのコンソールアイコンを選択しインスタンスに接続します。以降の手順はインスタンス内で行います。<img src="/blog_images/2024-02-08-publish-home-server-with-amazon-lightsail/home-instance-console.png" alt="" /></p>
+</li>
+<li>
+<p>インスタンスのポートを開放します。</p>
+<p>ufw を有効にします。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw enable
+</span></code></pre>
+<p>開放するポートを追加します。<code>2333</code> は rathole 、 <code>80</code> は自宅サーバーのポート番号です。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw allow ssh
+</span><span style="color:#bf616a;">sudo</span><span> ufw allow 2333
+</span><span style="color:#bf616a;">sudo</span><span> ufw allow 80
+</span></code></pre>
+<p>ufw をリロードします。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> ufw reload
+</span></code></pre>
+</li>
+<li>
+<p>インスタンスに docker と docker-compose をインストールします。</p>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu</a></li>
+<li><a href="https://docs.docker.com/compose/install/linux/#install-using-the-repository">Install the Compose plugin</a></li>
+</ul>
+</li>
+<li>
+<p>rathole の設定ファイル <code>server.toml</code> を作成します。詳細は <a href="https://github.com/rapiz1/rathole#readme">readme</a> を参照してください。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span> </span><span style="color:#65737e;"># server.toml
+</span><span> [server]
+</span><span> </span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:2333</span><span>&quot;
+</span><span>
+</span><span> [server.services.home-server]
+</span><span> </span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">home-server-token</span><span>&quot;
+</span><span> </span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span> </span><span style="color:#bf616a;">bind_addr </span><span>= &quot;</span><span style="color:#a3be8c;">0.0.0.0:80</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>rathole の <code>docker-compose.yaml</code> を作成します。<code>2333</code> は rathole 、 <code>80</code> は自宅サーバーのポート番号です。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://github.com/rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>    </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--server</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/server.toml</span><span>&quot;]
+</span><span>    </span><span style="color:#bf616a;">tty</span><span>: </span><span style="color:#d08770;">true
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      </span><span style="color:#65737e;"># rathole
+</span><span>      - </span><span style="color:#a3be8c;">2333:2333
+</span><span>      </span><span style="color:#65737e;"># home server
+</span><span>      - </span><span style="color:#a3be8c;">80:80
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./server.toml:/app/server.toml
+</span></code></pre>
+</li>
+<li>
+<p>インスタンスで rathole を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> docker-compose up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+</li>
+</ol>
+<h2 id="zi-zhai-sabanogong-kai">自宅サーバーの公開</h2>
+<ol>
+<li>
+<p>rathole の設定ファイル <code>client.toml</code> を作成します。詳細は <a href="https://github.com/rapiz1/rathole#readme">readme</a> を参照してください。</p>
+<pre data-lang="toml" style="background-color:#2b303b;color:#c0c5ce;" class="language-toml "><code class="language-toml" data-lang="toml"><span style="color:#65737e;"># client.toml
+</span><span>[client]
+</span><span style="color:#bf616a;">remote_addr </span><span>= &quot;</span><span style="color:#a3be8c;">myserver:2333</span><span>&quot;
+</span><span>
+</span><span>[client.services.home-server]
+</span><span style="color:#bf616a;">token </span><span>= &quot;</span><span style="color:#a3be8c;">home-server-token</span><span>&quot;
+</span><span style="color:#bf616a;">type </span><span>= &quot;</span><span style="color:#a3be8c;">tcp</span><span>&quot;
+</span><span style="color:#bf616a;">local_addr </span><span>= &quot;</span><span style="color:#a3be8c;">home-sever:80</span><span>&quot;
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーと Tunnel の <code>docker-compose.yaml</code> を作成します。今回の自宅サーバーは nginx を使用します。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#65737e;"># https://hub.docker.com/_/nginx
+</span><span>  </span><span style="color:#bf616a;">home-sever</span><span>:
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">nginx:latest
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - &quot;</span><span style="color:#a3be8c;">80:80</span><span>&quot;
+</span><span>  </span><span style="color:#65737e;"># https://github.com/rapiz1/rathole
+</span><span>  </span><span style="color:#bf616a;">tunnel</span><span>:
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">rapiz1/rathole:latest
+</span><span>    </span><span style="color:#bf616a;">command</span><span>: [&quot;</span><span style="color:#a3be8c;">--client</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">/app/client.toml</span><span>&quot;]
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./client.toml:/app/client.toml
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーと Tunnel を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+<p>停止する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> down
+</span></code></pre>
+<p>削除する場合は次のコマンドを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker-compose</span><span> rm
+</span></code></pre>
+</li>
+<li>
+<p>自宅サーバーにアクセスできることを確認します。<img src="/blog_images/2024-01-19-publish-home-server-with-gcp/welcome-to-nginx.png" alt="" /></p>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

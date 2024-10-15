@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Rust プラグインでマップにマーカーを追加します。" />
+        <meta name="twitter:description" content="Rust プラグインでマップにマーカーを追加します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Rust プラグインでマップにマーカーを追加する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Rust プラグインでマップにマーカーを追加する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/mod/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/plugin/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/oxide/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Rust プラグインでマップにマーカーを追加する",
+      "image": [],
+      "datePublished": "2024-10-12T00:00:00+00:00",
+      "dateModified": "2024-10-12T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust プラグインでマップにマーカーを追加する",
+          "item": "https://site.little-method.com/blog/add-markers-to-map-with-rust-plugin/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Rust プラグインでマップにマーカーを追加する</h1>
+    <small>
+      Published on 2024&#x2F;10&#x2F;12
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/mod/">mod</a>
+          
+            <a href="https://site.little-method.com/tags/plugin/">plugin</a>
+          
+            <a href="https://site.little-method.com/tags/oxide/">oxide</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p>Rust プラグインでマップにマーカーを追加します。</p>
+<h1 id="guan-lian-qing-bao">関連情報</h1>
+<ul>
+<li><a href="/blog/setup-server-for-rust/">Rust のサーバーを構築する</a></li>
+<li><a href="/blog/build-development-environment-for-rust-mods-with-vscode/">VSCode に Rust の Mod の開発環境を構築する</a></li>
+</ul>
+<h1 id="marker-api-woshi-yong-surufang-fa">Marker API を使用する方法</h1>
+<p>Marker API を使用してマップにマーカーを追加します。</p>
+<h2 id="marker-api-noinsutoru">Marker API のインストール</h2>
+<ol>
+<li>
+<p><a href="https://codefling.com/plugins/marker-api?tab=details">Marker API</a> から <code>MarkerAPI.cs</code> をダウンロードします。</p>
+</li>
+<li>
+<p><code>MarkerAPI.cs</code> をサーバーの <code>oxide/plugins</code> フォルダにコピーします。</p>
+</li>
+</ol>
+<h2 id="api-createmarkerpublic">API_CreateMarkerPublic</h2>
+<p><code>API_CreateMarkerPublic</code> をコールしてプレイヤー全員に表示されるマーカーを追加します。マーカーの追加に成功した場合は true, マーカーが既に存在するため追加できなかった場合は false を返します。</p>
+<h3 id="makanowei-zhi-wozuo-biao-dezhi-ding-suru">マーカーの位置を座標で指定する</h3>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private bool </span><span style="color:#8fa1b3;">SpawnMarkerPublic</span><span>(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span>, Vector3 </span><span style="color:#bf616a;">position</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">duration </span><span>= </span><span style="color:#d08770;">30</span><span>;
+</span><span>    </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">refresh </span><span>= </span><span style="color:#d08770;">1</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">displayName </span><span>= &quot;</span><span style="color:#a3be8c;">Your public marker.</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorMarker </span><span>= &quot;</span><span style="color:#a3be8c;">EED382</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorOutline </span><span>= &quot;</span><span style="color:#a3be8c;">6A5ACD</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">MarkerAPI</span><span>.</span><span style="color:#bf616a;">Call</span><span>&lt;</span><span style="color:#b48ead;">bool</span><span>&gt;(&quot;</span><span style="color:#a3be8c;">API_CreateMarkerPublic</span><span>&quot;, </span><span style="color:#bf616a;">position</span><span>, </span><span style="color:#bf616a;">uname</span><span>, </span><span style="color:#bf616a;">duration</span><span>, </span><span style="color:#bf616a;">refresh</span><span>, </span><span style="color:#bf616a;">radius</span><span>, </span><span style="color:#bf616a;">displayName</span><span>, </span><span style="color:#bf616a;">colorMarker</span><span>, </span><span style="color:#bf616a;">colorOutline</span><span>);
+</span><span>}
+</span></code></pre>
+<h3 id="makanowei-zhi-woenteiteitoniu-dukeru">マーカーの位置をエンティティと紐づける</h3>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private bool </span><span style="color:#8fa1b3;">SpawnMarkerPublicEntity</span><span>(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span>, BaseEntity </span><span style="color:#bf616a;">entity</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">duration </span><span>= </span><span style="color:#d08770;">30</span><span>;
+</span><span>    </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">refresh </span><span>= </span><span style="color:#d08770;">1</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">displayName </span><span>= &quot;</span><span style="color:#a3be8c;">Your public entity marker.</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorMarker </span><span>= &quot;</span><span style="color:#a3be8c;">7FD773</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorOutline </span><span>= &quot;</span><span style="color:#a3be8c;">6A5ACD</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">MarkerAPI</span><span>.</span><span style="color:#bf616a;">Call</span><span>&lt;</span><span style="color:#b48ead;">bool</span><span>&gt;(&quot;</span><span style="color:#a3be8c;">API_CreateMarkerPublic</span><span>&quot;, </span><span style="color:#bf616a;">entity</span><span>, </span><span style="color:#bf616a;">uname</span><span>, </span><span style="color:#bf616a;">duration</span><span>, </span><span style="color:#bf616a;">refresh</span><span>, </span><span style="color:#bf616a;">radius</span><span>, </span><span style="color:#bf616a;">displayName</span><span>, </span><span style="color:#bf616a;">colorMarker</span><span>, </span><span style="color:#bf616a;">colorOutline</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="api-createmarkerprivate">API_CreateMarkerPrivate</h2>
+<p><code>API_CreateMarkerPrivate</code> をコールして特定のプレイヤーに表示されるマーカーを追加します。マーカーの追加に成功した場合は true, マーカーが既に存在するため追加できなかった場合は false を返します。</p>
+<h3 id="makanowei-zhi-wozuo-biao-dezhi-ding-suru-1">マーカーの位置を座標で指定する</h3>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private bool </span><span style="color:#8fa1b3;">SpawnMarkerPrivate</span><span>(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span>, </span><span style="color:#b48ead;">ulong </span><span style="color:#bf616a;">ownerID</span><span>, Vector3 </span><span style="color:#bf616a;">position</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">duration </span><span>= </span><span style="color:#d08770;">30</span><span>;
+</span><span>    </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">refresh </span><span>= </span><span style="color:#d08770;">1</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">displayName </span><span>= &quot;</span><span style="color:#a3be8c;">Your private marker.</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorMarker </span><span>= &quot;</span><span style="color:#a3be8c;">EE82EE</span><span>&quot;;
+</span><span>    </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorOutline </span><span>= &quot;</span><span style="color:#a3be8c;">6A5ACD</span><span>&quot;;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">MarkerAPI</span><span>.</span><span style="color:#bf616a;">Call</span><span>&lt;</span><span style="color:#b48ead;">bool</span><span>&gt;(&quot;</span><span style="color:#a3be8c;">API_CreateMarkerPrivate</span><span>&quot;, </span><span style="color:#bf616a;">position</span><span>, </span><span style="color:#bf616a;">uname</span><span>, </span><span style="color:#bf616a;">ownerID</span><span>, </span><span style="color:#bf616a;">duration</span><span>, </span><span style="color:#bf616a;">refresh</span><span>, </span><span style="color:#bf616a;">radius</span><span>, </span><span style="color:#bf616a;">displayName</span><span>, </span><span style="color:#bf616a;">colorMarker</span><span>, </span><span style="color:#bf616a;">colorOutline</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="api-removecachedmarker">API_RemoveCachedMarker</h2>
+<p><code>API_RemoveCachedMarker</code> をコールしてマーカーを削除します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">RemoveMarker</span><span>(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">MarkerAPI</span><span>.</span><span style="color:#bf616a;">Call</span><span>(&quot;</span><span style="color:#a3be8c;">API_RemoveCachedMarker</span><span>&quot;, </span><span style="color:#bf616a;">uname</span><span>);
+</span><span>}
+</span></code></pre>
+<h2 id="li">例</h2>
+<p>チャットコマンドでマーカーを追加する例</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>UnityEngine;
+</span><span style="color:#b48ead;">using </span><span>Oxide.Core;
+</span><span style="color:#b48ead;">using </span><span>Oxide.Core.Plugins;
+</span><span style="color:#b48ead;">using </span><span>Oxide.Core.Libraries.Covalence;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>    [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">Marker API Example</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">st-little</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>    [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">Marker API Example.</span><span>&quot;)]
+</span><span>    </span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">MarkerAPIExample </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">RustPlugin
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">        </span><span style="color:#65737e;">// https://codefling.com/plugins/marker-api?tab=details
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">PluginReference</span><span style="color:#eff1f5;">]
+</span><span style="color:#eff1f5;">        Plugin </span><span style="color:#bf616a;">MarkerAPI</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Commands
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">ChatCommand</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">markerapi.public</span><span>&quot;</span><span style="color:#eff1f5;">)]
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">MarkerPublicCommand</span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">command</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname </span><span>= $&quot;</span><span style="color:#a3be8c;">MarkerPublic.</span><span style="color:#eff1f5;">{</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">UserIDString</span><span style="color:#eff1f5;">}</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            Vector3 </span><span style="color:#bf616a;">position </span><span>= </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">transform</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">bool </span><span style="color:#bf616a;">result </span><span>= </span><span style="color:#bf616a;">SpawnMarkerPublic</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span>!</span><span style="color:#bf616a;">result</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">RemoveMarker</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">SpawnMarkerPublic</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">ChatCommand</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">markerapi.public.entity</span><span>&quot;</span><span style="color:#eff1f5;">)]
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">MarkerPublicEntityCommand</span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">command</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname </span><span>= $&quot;</span><span style="color:#a3be8c;">MarkerPublicEntity.</span><span style="color:#eff1f5;">{</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">UserIDString</span><span style="color:#eff1f5;">}</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            BaseEntity </span><span style="color:#bf616a;">entity </span><span>= </span><span style="color:#eff1f5;">(BaseEntity)</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">bool </span><span style="color:#bf616a;">result </span><span>= </span><span style="color:#bf616a;">SpawnMarkerPublicEntity</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">entity</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span>!</span><span style="color:#bf616a;">result</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">RemoveMarker</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">SpawnMarkerPublicEntity</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">entity</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">ChatCommand</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">markerapi.private</span><span>&quot;</span><span style="color:#eff1f5;">)]
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">MarkerPrivateCommand</span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">command</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname </span><span>= $&quot;</span><span style="color:#a3be8c;">MarkerPrivate.</span><span style="color:#eff1f5;">{</span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">UserIDString</span><span style="color:#eff1f5;">}</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">ulong </span><span style="color:#bf616a;">ownerID </span><span>= </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">userID</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            Vector3 </span><span style="color:#bf616a;">position </span><span>= </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">transform</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">bool </span><span style="color:#bf616a;">result </span><span>= </span><span style="color:#bf616a;">SpawnMarkerPrivate</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span>!</span><span style="color:#bf616a;">result</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">RemoveMarker</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">SpawnMarkerPrivate</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Marker
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private bool </span><span style="color:#8fa1b3;">SpawnMarkerPublic</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, Vector3 </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">duration </span><span>= </span><span style="color:#d08770;">30</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">refresh </span><span>= </span><span style="color:#d08770;">1</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">displayName </span><span>= &quot;</span><span style="color:#a3be8c;">Your public marker.</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorMarker </span><span>= &quot;</span><span style="color:#a3be8c;">EED382</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorOutline </span><span>= &quot;</span><span style="color:#a3be8c;">6A5ACD</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">MarkerAPI</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Call</span><span style="color:#eff1f5;">&lt;</span><span style="color:#b48ead;">bool</span><span style="color:#eff1f5;">&gt;(</span><span>&quot;</span><span style="color:#a3be8c;">API_CreateMarkerPublic</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">duration</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">refresh</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">radius</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">displayName</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">colorMarker</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">colorOutline</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private bool </span><span style="color:#8fa1b3;">SpawnMarkerPublicEntity</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, BaseEntity </span><span style="color:#bf616a;">entity</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">duration </span><span>= </span><span style="color:#d08770;">30</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">refresh </span><span>= </span><span style="color:#d08770;">1</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">displayName </span><span>= &quot;</span><span style="color:#a3be8c;">Your public entity marker.</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorMarker </span><span>= &quot;</span><span style="color:#a3be8c;">7FD773</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorOutline </span><span>= &quot;</span><span style="color:#a3be8c;">6A5ACD</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">MarkerAPI</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Call</span><span style="color:#eff1f5;">&lt;</span><span style="color:#b48ead;">bool</span><span style="color:#eff1f5;">&gt;(</span><span>&quot;</span><span style="color:#a3be8c;">API_CreateMarkerPublic</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">entity</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">duration</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">refresh</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">radius</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">displayName</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">colorMarker</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">colorOutline</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private bool </span><span style="color:#8fa1b3;">SpawnMarkerPrivate</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">ulong </span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">, Vector3 </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">int </span><span style="color:#bf616a;">duration </span><span>= </span><span style="color:#d08770;">30</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">refresh </span><span>= </span><span style="color:#d08770;">1</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">float </span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">displayName </span><span>= &quot;</span><span style="color:#a3be8c;">Your private marker.</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorMarker </span><span>= &quot;</span><span style="color:#a3be8c;">EE82EE</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">colorOutline </span><span>= &quot;</span><span style="color:#a3be8c;">6A5ACD</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">MarkerAPI</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Call</span><span style="color:#eff1f5;">&lt;</span><span style="color:#b48ead;">bool</span><span style="color:#eff1f5;">&gt;(</span><span>&quot;</span><span style="color:#a3be8c;">API_CreateMarkerPrivate</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">duration</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">refresh</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">radius</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">displayName</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">colorMarker</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">colorOutline</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">RemoveMarker</span><span style="color:#eff1f5;">(</span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">MarkerAPI</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Call</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">API_RemoveCachedMarker</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">uname</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">    }
+</span><span>}
+</span></code></pre>
+<h1 id="marker-api-woshi-yong-sinaifang-fa">Marker API を使用しない方法</h1>
+<p>Marker API を使用せずにマップにマーカーを追加します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">SpawnMarker</span><span>(Dictionary&lt;</span><span style="color:#b48ead;">ulong</span><span>, MapMarkerGenericRadius&gt; </span><span style="color:#bf616a;">spawnedMarkers</span><span>, </span><span style="color:#b48ead;">ulong </span><span style="color:#bf616a;">ownerID</span><span>, Vector3 </span><span style="color:#bf616a;">position</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#65737e;">// マーカーが既に存在する場合は削除する
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">spawnedMarkers</span><span>.</span><span style="color:#bf616a;">ContainsKey</span><span>(</span><span style="color:#bf616a;">ownerID</span><span>))
+</span><span>    {
+</span><span>        </span><span style="color:#bf616a;">spawnedMarkers</span><span>[</span><span style="color:#bf616a;">ownerID</span><span>].</span><span style="color:#bf616a;">Kill</span><span>();
+</span><span>        </span><span style="color:#bf616a;">spawnedMarkers</span><span>[</span><span style="color:#bf616a;">ownerID</span><span>].</span><span style="color:#bf616a;">SendUpdate</span><span>();
+</span><span>        </span><span style="color:#bf616a;">spawnedMarkers</span><span>.</span><span style="color:#bf616a;">Remove</span><span>(</span><span style="color:#bf616a;">ownerID</span><span>);
+</span><span>    }
+</span><span>
+</span><span>    MapMarkerGenericRadius </span><span style="color:#bf616a;">mapMarker </span><span>= </span><span style="color:#bf616a;">GameManager</span><span>.</span><span style="color:#bf616a;">server</span><span>.</span><span style="color:#bf616a;">CreateEntity</span><span>(&quot;</span><span style="color:#a3be8c;">assets/prefabs/tools/map/genericradiusmarker.prefab</span><span>&quot;, </span><span style="color:#bf616a;">position</span><span>) as MapMarkerGenericRadius;
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">mapMarker </span><span>== </span><span style="color:#d08770;">null</span><span>) </span><span style="color:#b48ead;">return</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">OwnerID </span><span>= </span><span style="color:#bf616a;">ownerID</span><span>;
+</span><span>    </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">tag </span><span>= &quot;</span><span style="color:#a3be8c;">MarkerExampleTag</span><span>&quot;;
+</span><span>    </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">alpha </span><span>= </span><span style="color:#d08770;">0.6</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span>;
+</span><span>    </span><span style="color:#bf616a;">ColorUtility</span><span>.</span><span style="color:#bf616a;">TryParseHtmlString</span><span>(&quot;</span><span style="color:#a3be8c;">#EED382</span><span>&quot;, </span><span style="color:#b48ead;">out </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">color1</span><span>);
+</span><span>    </span><span style="color:#bf616a;">ColorUtility</span><span>.</span><span style="color:#bf616a;">TryParseHtmlString</span><span>(&quot;</span><span style="color:#a3be8c;">#6A5ACD</span><span>&quot;, </span><span style="color:#b48ead;">out </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">color2</span><span>);
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">Spawn</span><span>();
+</span><span>    </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">SendUpdate</span><span>();
+</span><span>
+</span><span>    </span><span style="color:#bf616a;">spawnedMarkers</span><span>[</span><span style="color:#bf616a;">ownerID</span><span>] = </span><span style="color:#bf616a;">mapMarker</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// 30秒後にマーカーを削除する
+</span><span>    </span><span style="color:#bf616a;">timer</span><span>.</span><span style="color:#bf616a;">Once</span><span>(</span><span style="color:#d08770;">30</span><span style="color:#b48ead;">f</span><span>, () </span><span style="color:#b48ead;">=&gt;
+</span><span>    {
+</span><span>        </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">Kill</span><span>();
+</span><span>        </span><span style="color:#bf616a;">mapMarker</span><span>.</span><span style="color:#bf616a;">SendUpdate</span><span>();
+</span><span>        </span><span style="color:#bf616a;">spawnedMarkers</span><span>.</span><span style="color:#bf616a;">Remove</span><span>(</span><span style="color:#bf616a;">ownerID</span><span>);
+</span><span>    });
+</span><span>}
+</span></code></pre>
+<p><a href="https://umod.org/documentation/games/rust#cannetworkto">CanNetworkTo</a> Hook で自分が追加したマーカーのみ表示するようにします。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private bool? </span><span style="color:#8fa1b3;">CanNetworkTo</span><span>(BaseNetworkable </span><span style="color:#bf616a;">instance</span><span>, BasePlayer </span><span style="color:#bf616a;">player</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">instance </span><span>== </span><span style="color:#d08770;">null </span><span>|| </span><span style="color:#bf616a;">player </span><span>== </span><span style="color:#d08770;">null</span><span>) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">null</span><span>;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">switch </span><span>(</span><span style="color:#bf616a;">instance</span><span>.</span><span style="color:#bf616a;">PrefabName</span><span>)
+</span><span>    {
+</span><span>        </span><span style="color:#b48ead;">case </span><span>&quot;</span><span style="color:#a3be8c;">assets/prefabs/tools/map/genericradiusmarker.prefab</span><span>&quot;:
+</span><span>            </span><span style="color:#65737e;">// このプラグインで追加したマーカーのみ対象とする
+</span><span>            </span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">instance</span><span>.</span><span style="color:#bf616a;">tag </span><span>== &quot;</span><span style="color:#a3be8c;">MarkerExampleTag</span><span>&quot;)
+</span><span>            {
+</span><span>                </span><span style="color:#65737e;">// プレイヤー自身が追加したマーカーのみ表示する
+</span><span>                </span><span style="color:#b48ead;">if </span><span>((</span><span style="color:#bf616a;">instance </span><span>as MapMarkerGenericRadius).</span><span style="color:#bf616a;">OwnerID </span><span>!= </span><span style="color:#bf616a;">player</span><span>.</span><span style="color:#bf616a;">userID</span><span>) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">false</span><span>;
+</span><span>            };
+</span><span>            </span><span style="color:#b48ead;">break</span><span>;
+</span><span>    }
+</span><span>    </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">null</span><span>;
+</span><span>}
+</span></code></pre>
+<h2 id="li-1">例</h2>
+<p>チャットコマンドでマーカーを追加する例</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>System;
+</span><span style="color:#b48ead;">using </span><span>System.Collections.Generic;
+</span><span style="color:#b48ead;">using </span><span>UnityEngine;
+</span><span style="color:#b48ead;">using </span><span>Oxide.Core;
+</span><span style="color:#b48ead;">using </span><span>Oxide.Core.Plugins;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>    [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">Marker Example</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">st-little</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>    [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">Marker Example.</span><span>&quot;)]
+</span><span>    </span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">MarkerExample </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">RustPlugin
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private readonly </span><span style="color:#eff1f5;">Dictionary&lt;</span><span style="color:#b48ead;">ulong</span><span style="color:#eff1f5;">, MapMarkerGenericRadius&gt; </span><span style="color:#bf616a;">SpawnedMarkers </span><span>= new </span><span style="color:#eff1f5;">Dictionary&lt;</span><span style="color:#b48ead;">ulong</span><span style="color:#eff1f5;">, MapMarkerGenericRadius&gt;();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Oxide Hooks
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private bool? </span><span style="color:#8fa1b3;">CanNetworkTo</span><span style="color:#eff1f5;">(BaseNetworkable </span><span style="color:#bf616a;">instance</span><span style="color:#eff1f5;">, BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">instance </span><span>== </span><span style="color:#d08770;">null </span><span>|| </span><span style="color:#bf616a;">player </span><span>== </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">switch </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">instance</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">PrefabName</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#b48ead;">case </span><span>&quot;</span><span style="color:#a3be8c;">assets/prefabs/tools/map/genericradiusmarker.prefab</span><span>&quot;</span><span style="color:#eff1f5;">:
+</span><span style="color:#eff1f5;">                    </span><span style="color:#65737e;">// このプラグインで追加したマーカーのみ対象とする
+</span><span style="color:#eff1f5;">                    </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">instance</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">tag </span><span>== &quot;</span><span style="color:#a3be8c;">MarkerExampleTag</span><span>&quot;</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">                    {
+</span><span style="color:#eff1f5;">                        </span><span style="color:#65737e;">// プレイヤー自身が追加したマーカーのみ表示する
+</span><span style="color:#eff1f5;">                        </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">((</span><span style="color:#bf616a;">instance </span><span>as </span><span style="color:#eff1f5;">MapMarkerGenericRadius).</span><span style="color:#bf616a;">OwnerID </span><span>!= </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">userID</span><span style="color:#eff1f5;">) </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">false</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">                    };
+</span><span style="color:#eff1f5;">                    </span><span style="color:#b48ead;">break</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">return </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Commands
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        [</span><span style="color:#bf616a;">ChatCommand</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">marker.private</span><span>&quot;</span><span style="color:#eff1f5;">)]
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">MarkerPrivateCommand</span><span style="color:#eff1f5;">(BasePlayer </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string </span><span style="color:#bf616a;">command</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">[] </span><span style="color:#bf616a;">args</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">SpawnMarker</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">SpawnedMarkers</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">userID</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">player</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">transform</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Marker
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">SpawnMarker</span><span style="color:#eff1f5;">(Dictionary&lt;</span><span style="color:#b48ead;">ulong</span><span style="color:#eff1f5;">, MapMarkerGenericRadius&gt; </span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">ulong </span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">, Vector3 </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// マーカーが既に存在する場合は削除する
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">ContainsKey</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">))
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">[</span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">].</span><span style="color:#bf616a;">Kill</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">[</span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">].</span><span style="color:#bf616a;">SendUpdate</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Remove</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            MapMarkerGenericRadius </span><span style="color:#bf616a;">mapMarker </span><span>= </span><span style="color:#bf616a;">GameManager</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">server</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">CreateEntity</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">assets/prefabs/tools/map/genericradiusmarker.prefab</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">position</span><span style="color:#eff1f5;">) </span><span>as </span><span style="color:#eff1f5;">MapMarkerGenericRadius;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">mapMarker </span><span>== </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">) </span><span style="color:#b48ead;">return</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">OwnerID </span><span>= </span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">tag </span><span>= &quot;</span><span style="color:#a3be8c;">MarkerExampleTag</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">alpha </span><span>= </span><span style="color:#d08770;">0.6</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">radius </span><span>= </span><span style="color:#d08770;">0.4</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">ColorUtility</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">TryParseHtmlString</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">#EED382</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">out </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">color1</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">ColorUtility</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">TryParseHtmlString</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">#6A5ACD</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#b48ead;">out </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">color2</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Spawn</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">SendUpdate</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">[</span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">] </span><span>= </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// 30秒後にマーカーを削除する
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">timer</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Once</span><span style="color:#eff1f5;">(</span><span style="color:#d08770;">30</span><span style="color:#b48ead;">f</span><span style="color:#eff1f5;">, () </span><span style="color:#b48ead;">=&gt;
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Kill</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">mapMarker</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">SendUpdate</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">spawnedMarkers</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Remove</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">ownerID</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">            });
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">    }
+</span><span>}
+</span></code></pre>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

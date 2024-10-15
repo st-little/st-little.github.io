@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Visual Studio Code に Rust(ビデオゲーム) の Mod の開発環境を構築します。" />
+        <meta name="twitter:description" content="Visual Studio Code に Rust(ビデオゲーム) の Mod の開発環境を構築します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="VSCode に Rust の Mod の開発環境を構築する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          VSCode に Rust の Mod の開発環境を構築する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/mod/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/vscode/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "VSCode に Rust の Mod の開発環境を構築する",
+      "image": [],
+      "datePublished": "2024-02-29T00:00:00+00:00",
+      "dateModified": "2024-02-29T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "VSCode に Rust の Mod の開発環境を構築する",
+          "item": "https://site.little-method.com/blog/build-development-environment-for-rust-mods-with-vscode/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>VSCode に Rust の Mod の開発環境を構築する</h1>
+    <small>
+      Published on 2024&#x2F;02&#x2F;29
+      
+      , Last updated 2024&#x2F;10&#x2F;16
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/mod/">mod</a>
+          
+            <a href="https://site.little-method.com/tags/vscode/">vscode</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code">Visual Studio Code</a> に <a href="https://rust.facepunch.com/">Rust(ビデオゲーム)</a> の Mod の開発環境を構築します。</p>
+<h1 id="qian-ti-tiao-jian">前提条件</h1>
+<ul>
+<li>Visual Studio Code がインストールされている必要があります。
+<ul>
+<li><a href="https://code.visualstudio.com/docs/devcontainers/containers">Visual Studio Code Dev Containers</a> の <a href="https://code.visualstudio.com/docs/devcontainers/containers#_system-requirements">System requirements</a> を満たしている必要があります。</li>
+</ul>
+</li>
+<li>Rust のサーバーを構築している必要があります。サーバーの構築方法は <a href="/blog/setup-server-for-rust/">こちら</a> を参照して下さい。</li>
+</ul>
+<h1 id="huan-jing">環境</h1>
+<ul>
+<li>Visual Studio Code 1.94.2</li>
+<li>Docker Desktop 4.34.3</li>
+<li>.NET 8</li>
+<li>Oxide.Rust 2.0.6307</li>
+<li>OpenMod.UnityEngine.Redist 2021.3.29.1</li>
+</ul>
+<h1 id="huan-jing-gou-zhu">環境構築</h1>
+<h2 id="oxide-rust">Oxide.Rust</h2>
+<ol>
+<li>
+<p><a href="https://github.com/OxideMod/Oxide.Rust/releases">GitHub</a> から <code>Oxide.Rust-linux.zip</code> をダウンロードします。</p>
+</li>
+<li>
+<p>ダウンロードした <code>Oxide.Rust-linux.zip</code> を展開します。</p>
+</li>
+<li>
+<p>Oxide をインストール済みサーバーの <code>RustDedicated_Data/Managed/Rust.Data.dll</code> を <code>Oxide.Rust-linux/RustDedicated_Data/Managed</code> フォルダにコピーします。</p>
+</li>
+</ol>
+<h2 id="kai-fa-kontenagou-cheng-huairunozhui-jia">開発コンテナー構成ファイルの追加</h2>
+<p>C# の開発コンテナー構成ファイルを追加します。詳細は <a href="https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-try-a-development-container">Quick start: Try a development container</a> を参照して下さい。</p>
+<ol>
+<li>
+<p>Visual Studio Code を開いて 1F キーを押下しコマンドパレットを表示します。</p>
+</li>
+<li>
+<p>コマンドパレットに <code>Dev Containers: add Dev Container Configuration Files</code> を入力し <code>開発コンテナー: 開発コンテナー構成ファイルを追加</code> を選択します。<img src="/blog_images/2024-02-29-build-development-environment-for-rust-mods-with-vscode/add-devcontainer-config-files-1.png" alt="" /></p>
+</li>
+<li>
+<p><code>ワークスペースに構成を追加する</code> を選択します。<img src="/blog_images/2024-02-29-build-development-environment-for-rust-mods-with-vscode/add-devcontainer-config-files-2.png" alt="" /></p>
+</li>
+<li>
+<p>C# の開発コンテナー構成ファイル <code>C# (.NET)</code> を選択します。<img src="/blog_images/2024-02-29-build-development-environment-for-rust-mods-with-vscode/add-devcontainer-config-files-3.png" alt="" /></p>
+</li>
+<li>
+<p>既定の <code>.NET version</code> を選択します。<img src="/blog_images/2024-02-29-build-development-environment-for-rust-mods-with-vscode/add-devcontainer-config-files-4.png" alt="" /></p>
+</li>
+<li>
+<p>追加機能はインストールしないので未選択のまま <code>OK</code> を選択します。<img src="/blog_images/2024-02-29-build-development-environment-for-rust-mods-with-vscode/add-devcontainer-config-files-5.png" alt="" /></p>
+</li>
+<li>
+<p>開発コンテナー構成ファイル <code>.devcontainer/devcontainer.json</code> が追加されるので、<code>customizations</code> を編集します。</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>   &quot;</span><span style="color:#a3be8c;">customizations</span><span>&quot;: {
+</span><span>      &quot;</span><span style="color:#a3be8c;">vscode</span><span>&quot;: {
+</span><span>         &quot;</span><span style="color:#a3be8c;">settings</span><span>&quot;: {
+</span><span>            &quot;</span><span style="color:#a3be8c;">editor.formatOnSave</span><span>&quot;: </span><span style="color:#d08770;">true</span><span>,
+</span><span>            &quot;</span><span style="color:#a3be8c;">dotnet.server.useOmnisharp</span><span>&quot;: </span><span style="color:#d08770;">true</span><span>,
+</span><span>            &quot;</span><span style="color:#a3be8c;">[csharp]</span><span>&quot;: {
+</span><span>               &quot;</span><span style="color:#a3be8c;">editor.maxTokenizationLineLength</span><span>&quot;: </span><span style="color:#d08770;">2500</span><span>,
+</span><span>               &quot;</span><span style="color:#a3be8c;">editor.defaultFormatter</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">ms-dotnettools.csharp</span><span>&quot;,
+</span><span>               &quot;</span><span style="color:#a3be8c;">editor.codeActionsOnSave</span><span>&quot;: {
+</span><span>                  &quot;</span><span style="color:#a3be8c;">source.organizeImports</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">explicit</span><span>&quot;
+</span><span>               }
+</span><span>            }
+</span><span>         },
+</span><span>         &quot;</span><span style="color:#a3be8c;">extensions</span><span>&quot;: [
+</span><span>            &quot;</span><span style="color:#a3be8c;">ms-dotnettools.csdevkit</span><span>&quot;,
+</span><span>            &quot;</span><span style="color:#a3be8c;">icsharpcode.ilspy-vscode</span><span>&quot;
+</span><span>         ]
+</span><span>      }
+</span><span>   }
+</span></code></pre>
+</li>
+</ol>
+<h2 id="kai-fa-kontenawokai-ku">開発コンテナーを開く</h2>
+<p>C# の開発コンテナーを開きます。</p>
+<ol>
+<li>コマンドパレットに <code>Dev Containers: Reopen in Container</code> を入力し <code>開発コンテナー: コンテナーで再度開く</code> を選択します。<img src="/blog_images/2024-02-29-build-development-environment-for-rust-mods-with-vscode/reopen-in-devcontainer.png" alt="" /></li>
+</ol>
+<h1 id="mod-noshi-zhuang">Mod の実装</h1>
+<p>次のドキュメントを参考に Mod を実装します。今回は <a href="https://umod.org/documentation/api/getting-started">UMod Getting Started</a> のコードを参考にします。</p>
+<ul>
+<li><a href="https://umod.org/documentation/games/rust">UMod Documentation</a></li>
+<li><a href="https://umod.org/documentation/api/style-guide">UMod Style Guide</a></li>
+<li><a href="https://umod.org/documentation/api/approval-guide">UMod Approval Guide</a></li>
+</ul>
+<ol>
+<li>
+<p>開発コンテナーに <code>Oxide.Rust-linux</code> フォルダをコピーします。</p>
+</li>
+<li>
+<p>ソリューションファイルを作成します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> new sln
+</span></code></pre>
+</li>
+<li>
+<p><a href="https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-new-sdk-templates#classlib">クラスライブラリ</a> のプロジェクト <code>EpicStuff</code> を作成します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> new classlib</span><span style="color:#bf616a;"> -o</span><span> EpicStuff
+</span></code></pre>
+</li>
+<li>
+<p><code>EpicStuff/EpicStuff.csproj</code> に依存関係を追加します。</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;</span><span style="color:#bf616a;">Project </span><span style="color:#d08770;">Sdk</span><span>=&quot;</span><span style="color:#a3be8c;">Microsoft.NET.Sdk</span><span>&quot;&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">PropertyGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">TargetFramework</span><span>&gt;net8.0&lt;/</span><span style="color:#bf616a;">TargetFramework</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">ImplicitUsings</span><span>&gt;enable&lt;/</span><span style="color:#bf616a;">ImplicitUsings</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Nullable</span><span>&gt;enable&lt;/</span><span style="color:#bf616a;">Nullable</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">PropertyGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">PackageReference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">OpenMod.UnityEngine.Redist</span><span>&quot; </span><span style="color:#d08770;">Version</span><span>=&quot;</span><span style="color:#a3be8c;">2021.3.29.1</span><span>&quot; /&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Assembly-CSharp.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Console.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Network.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Rcon.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Sqlite.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.UnityEngine.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Mono.Data.Tds.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/MySql.Data.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Common.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Core.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.CSharp.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.MySql.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.References.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Rust.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.SQLite.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Unity.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Rust.Clans.Local.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Rust.Data.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Configuration.Install.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Data.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Data.SQLite.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Drawing.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Runtime.Serialization.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Transactions.dll</span><span>&quot; /&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;/</span><span style="color:#bf616a;">Project</span><span>&gt;
+</span></code></pre>
+</li>
+<li>
+<p><code>EpicStuff/EpicStuff.csproj</code> をソリューションファイルに追加します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> sln add EpicStuff/EpicStuff.csproj
+</span></code></pre>
+</li>
+<li>
+<p>クラスファイル <code>EpicStuff/Class1.cs</code> のファイル名を <code>EpicStuff.cs</code> に変更します。</p>
+</li>
+<li>
+<p>クラスファイル <code>EpicStuff/EpicStuff.cs</code> の内容を <a href="https://umod.org/documentation/api/getting-started">UMod Getting Started</a> を参考に書き換えます。</p>
+<pre data-lang="c#" style="background-color:#2b303b;color:#c0c5ce;" class="language-c# "><code class="language-c#" data-lang="c#"><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>   [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">Epic Stuff</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">Unknown Author</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>   [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">Makes epic stuff happen</span><span>&quot;)]
+</span><span>   </span><span style="color:#b48ead;">class </span><span style="color:#ebcb8b;">EpicStuff </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">CovalencePlugin
+</span><span style="color:#eff1f5;">   {
+</span><span style="color:#eff1f5;">      </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">Init</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">      {
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">Puts</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">GetMessage</span><span style="color:#eff1f5;">());
+</span><span style="color:#eff1f5;">      }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">      </span><span style="color:#b48ead;">private static string </span><span style="color:#8fa1b3;">GetMessage</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">      {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">return </span><span>&quot;</span><span style="color:#a3be8c;">A baby plugin is born!</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">      }
+</span><span style="color:#eff1f5;">   }
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p>ビルドが問題なく実行できることを確認します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> build
+</span></code></pre>
+</li>
+</ol>
+<h1 id="mod-noshi-xing">Mod の実行</h1>
+<ol>
+<li>
+<p>クラスファイル <code>EpicStuff/EpicStuff.cs</code> をサーバーの <code>oxide/plugins</code> フォルダにコピーします。</p>
+</li>
+<li>
+<p>サーバーを起動します。</p>
+</li>
+<li>
+<p>サーバーのログに <code>A baby plugin is born!</code> が出力されていることを確認します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>rust-1  | [Epic Stuff] A baby plugin is born!
+</span></code></pre>
+</li>
+</ol>
+<h1 id="unit-test-noshi-zhuang">Unit Test の実装</h1>
+<ol>
+<li>
+<p>テストプロジェクトを作成します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> new xunit</span><span style="color:#bf616a;"> -o</span><span> EpicStuffTests
+</span></code></pre>
+</li>
+<li>
+<p><code>EpicStuffTests/EpicStuffTests.csproj</code> に依存関係を追加します。</p>
+<pre data-lang="xml" style="background-color:#2b303b;color:#c0c5ce;" class="language-xml "><code class="language-xml" data-lang="xml"><span>&lt;</span><span style="color:#bf616a;">Project </span><span style="color:#d08770;">Sdk</span><span>=&quot;</span><span style="color:#a3be8c;">Microsoft.NET.Sdk</span><span>&quot;&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">PropertyGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">TargetFramework</span><span>&gt;net8.0&lt;/</span><span style="color:#bf616a;">TargetFramework</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">ImplicitUsings</span><span>&gt;enable&lt;/</span><span style="color:#bf616a;">ImplicitUsings</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Nullable</span><span>&gt;enable&lt;/</span><span style="color:#bf616a;">Nullable</span><span>&gt;
+</span><span>
+</span><span>   &lt;</span><span style="color:#bf616a;">IsPackable</span><span>&gt;false&lt;/</span><span style="color:#bf616a;">IsPackable</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">IsTestProject</span><span>&gt;true&lt;/</span><span style="color:#bf616a;">IsTestProject</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">PropertyGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">PackageReference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">coverlet.collector</span><span>&quot; </span><span style="color:#d08770;">Version</span><span>=&quot;</span><span style="color:#a3be8c;">6.0.0</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">PackageReference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">Microsoft.NET.Test.Sdk</span><span>&quot; </span><span style="color:#d08770;">Version</span><span>=&quot;</span><span style="color:#a3be8c;">17.8.0</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">PackageReference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">xunit</span><span>&quot; </span><span style="color:#d08770;">Version</span><span>=&quot;</span><span style="color:#a3be8c;">2.5.3</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">PackageReference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">xunit.runner.visualstudio</span><span>&quot; </span><span style="color:#d08770;">Version</span><span>=&quot;</span><span style="color:#a3be8c;">2.5.3</span><span>&quot; /&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Using </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">Xunit</span><span>&quot; /&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">PackageReference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">OpenMod.UnityEngine.Redist</span><span>&quot; </span><span style="color:#d08770;">Version</span><span>=&quot;</span><span style="color:#a3be8c;">2021.3.29.1</span><span>&quot; /&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Assembly-CSharp.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Console.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Network.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Rcon.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.Sqlite.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Facepunch.UnityEngine.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Mono.Data.Tds.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/MySql.Data.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Common.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Core.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.CSharp.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.MySql.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.References.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Rust.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.SQLite.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Oxide.Unity.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Rust.Clans.Local.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/Rust.Data.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Configuration.Install.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Data.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Data.SQLite.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Drawing.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Runtime.Serialization.dll</span><span>&quot; /&gt;
+</span><span>   &lt;</span><span style="color:#bf616a;">Reference </span><span style="color:#d08770;">Include</span><span>=&quot;</span><span style="color:#a3be8c;">/workspaces/rust-mod-dev/Oxide.Rust-linux/RustDedicated_Data/Managed/System.Transactions.dll</span><span>&quot; /&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">ItemGroup</span><span>&gt;
+</span><span>
+</span><span>&lt;/</span><span style="color:#bf616a;">Project</span><span>&gt;
+</span></code></pre>
+</li>
+<li>
+<p>テストプロジェクトの依存関係としてテスト対象の csproj ファイルを追加します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> add EpicStuffTests/EpicStuffTests.csproj reference EpicStuff/EpicStuff.csproj
+</span></code></pre>
+</li>
+<li>
+<p>ソリューションファイルにテストプロジェクトを追加します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> sln add EpicStuffTests/EpicStuffTests.csproj
+</span></code></pre>
+</li>
+<li>
+<p><code>EpicStuff/AssemblyInfo.cs</code> を作成し InternalsVisibleTo を追加してテストプロジェクトから internal メソッドの利用を許可します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>System.Runtime.CompilerServices;
+</span><span>
+</span><span>[</span><span style="color:#b48ead;">assembly</span><span>: </span><span style="color:#bf616a;">InternalsVisibleTo</span><span>(&quot;</span><span style="color:#a3be8c;">EpicStuffTests</span><span>&quot;)]
+</span></code></pre>
+</li>
+<li>
+<p><code>EpicStuff/EpicStuff.cs</code> にテスト対象のプライベートメソッドのラッパーを作成します。</p>
+<pre data-lang="c#" style="background-color:#2b303b;color:#c0c5ce;" class="language-c# "><code class="language-c#" data-lang="c#"><span style="color:#b48ead;">protected internal static string </span><span style="color:#8fa1b3;">GetMessageWrapper</span><span>()
+</span><span>{
+</span><span>   </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">GetMessage</span><span>();
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p><code>EpicStuffTests/UnitTest1.cs</code> にテストを実装します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Oxide.Plugins;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>EpicStuffTests
+</span><span>{
+</span><span>   </span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">UnitTest1
+</span><span style="color:#eff1f5;">   {
+</span><span style="color:#eff1f5;">      [</span><span style="color:#bf616a;">Fact</span><span style="color:#eff1f5;">]
+</span><span style="color:#eff1f5;">      </span><span style="color:#b48ead;">public void </span><span style="color:#8fa1b3;">Test1</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">      {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">expected </span><span>= &quot;</span><span style="color:#a3be8c;">A baby plugin is born!</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">var </span><span style="color:#bf616a;">actual </span><span>= </span><span style="color:#bf616a;">EpicStuff</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">GetMessageWrapper</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">Assert</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Equal</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">expected</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">actual</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">      }
+</span><span style="color:#eff1f5;">   }
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p>テストを実行します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">dotnet</span><span> test
+</span></code></pre>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

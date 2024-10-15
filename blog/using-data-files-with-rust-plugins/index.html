@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Rust プラグインのデータファイルを使用して任意のデータを保存します。" />
+        <meta name="twitter:description" content="Rust プラグインのデータファイルを使用して任意のデータを保存します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Rust プラグインのデータファイルを使用する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Rust プラグインのデータファイルを使用する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/mod/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/plugin/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/oxide/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Rust プラグインのデータファイルを使用する",
+      "image": [],
+      "datePublished": "2024-10-01T00:00:00+00:00",
+      "dateModified": "2024-10-01T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "st-little&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust プラグインのデータファイルを使用する",
+          "item": "https://site.little-method.com/blog/using-data-files-with-rust-plugins/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Rust プラグインのデータファイルを使用する</h1>
+    <small>
+      Published on 2024&#x2F;10&#x2F;01
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/mod/">mod</a>
+          
+            <a href="https://site.little-method.com/tags/plugin/">plugin</a>
+          
+            <a href="https://site.little-method.com/tags/oxide/">oxide</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p>Rust プラグインのデータファイルを使用して任意のデータを保存します。</p>
+<h1 id="can-kao-qing-bao">参考情報</h1>
+<ul>
+<li><a href="https://umod.org/documentation/api/data-files">Data Files</a></li>
+</ul>
+<h1 id="guan-lian-qing-bao">関連情報</h1>
+<ul>
+<li><a href="/blog/setup-server-for-rust/">Rust のサーバーを構築する</a></li>
+<li><a href="/blog/build-development-environment-for-rust-mods-with-vscode/">VSCode に Rust の Mod の開発環境を構築する</a></li>
+</ul>
+<h1 id="detahuairunoshi-yong">データファイルの使用</h1>
+<ol>
+<li>
+<p>ファイルの先頭に名前空間への参照を追加します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Oxide.Core.Configuration;
+</span></code></pre>
+</li>
+<li>
+<p>データファイルのフィールドを作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span>DynamicConfigFile </span><span style="color:#bf616a;">dataFile</span><span>;
+</span></code></pre>
+</li>
+<li>
+<p>データファイル <code>oxide/data/MyDataFile.json</code> がすでに存在する場合はロードします。データファイルが存在しない場合は作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">dataFile </span><span>= </span><span style="color:#bf616a;">Core</span><span>.</span><span style="color:#bf616a;">Interface</span><span>.</span><span style="color:#bf616a;">Oxide</span><span>.</span><span style="color:#bf616a;">DataFileSystem</span><span>.</span><span style="color:#bf616a;">GetDatafile</span><span>(&quot;</span><span style="color:#a3be8c;">MyDataFile</span><span>&quot;);
+</span></code></pre>
+</li>
+<li>
+<p>データファイルにデータを保存します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">dataFile</span><span>[&quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;] = &quot;</span><span style="color:#a3be8c;">EpicValue</span><span>&quot;;
+</span><span style="color:#bf616a;">dataFile</span><span>[&quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;] = </span><span style="color:#d08770;">42</span><span>;
+</span><span>
+</span><span style="color:#bf616a;">dataFile</span><span>.</span><span style="color:#bf616a;">Save</span><span>();
+</span></code></pre>
+</li>
+<li>
+<p>データファイル <code>oxide/data/MyDataFile.json</code> の内容は次の通りです。</p>
+<pre data-lang="json" style="background-color:#2b303b;color:#c0c5ce;" class="language-json "><code class="language-json" data-lang="json"><span>{
+</span><span>    &quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;: </span><span style="color:#d08770;">42</span><span>,
+</span><span>    &quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;: &quot;</span><span style="color:#a3be8c;">EpicValue</span><span>&quot;
+</span><span>}
+</span></code></pre>
+</li>
+<li>
+<p>データファイルからデータを取得します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#65737e;">// Check if the EpicString exists
+</span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">dataFile</span><span>[&quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;] != </span><span style="color:#d08770;">null</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Puts</span><span>(</span><span style="color:#bf616a;">dataFile</span><span>[&quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;] as </span><span style="color:#b48ead;">string</span><span>); </span><span style="color:#65737e;">// Outputs: EpicValue
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// Check if the EpicNumber exists
+</span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">dataFile</span><span>[&quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;] != </span><span style="color:#d08770;">null</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Puts</span><span>(</span><span style="color:#bf616a;">dataFile</span><span>[&quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;] as </span><span style="color:#b48ead;">string</span><span>); </span><span style="color:#65737e;">// Outputs: 42
+</span><span>}
+</span></code></pre>
+</li>
+</ol>
+<h2 id="li">例</h2>
+<p>プラグインの初期化時にデータファイルを作成し、初期化終了時にデータファイルの保存、取得を行う例です。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Oxide.Core.Configuration;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>    [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">DataFiles</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">st-little</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>    [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">DataFiles</span><span>&quot;)]
+</span><span>    </span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">DataFiles </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">RustPlugin
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">        DynamicConfigFile </span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Oxide Hooks
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">Init</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// データファイルの作成
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">dataFile </span><span>= </span><span style="color:#bf616a;">Core</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Interface</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Oxide</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">DataFileSystem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">GetDatafile</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">MyDataFile</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">OnServerInitialized</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// データファイルの保存
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">[</span><span>&quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;</span><span style="color:#eff1f5;">] </span><span>= &quot;</span><span style="color:#a3be8c;">EpicValue</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">[</span><span>&quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;</span><span style="color:#eff1f5;">] </span><span>= </span><span style="color:#d08770;">42</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Save</span><span style="color:#eff1f5;">();
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// データファイルの取得
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// Check if the EpicString exists
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">[</span><span>&quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;</span><span style="color:#eff1f5;">] </span><span>!= </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Puts</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">[</span><span>&quot;</span><span style="color:#a3be8c;">EpicString</span><span>&quot;</span><span style="color:#eff1f5;">] </span><span>as </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">); </span><span style="color:#65737e;">// Outputs: EpicValue
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// Check if the EpicNumber exists
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">[</span><span>&quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;</span><span style="color:#eff1f5;">] </span><span>!= </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Puts</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">dataFile</span><span style="color:#eff1f5;">[</span><span>&quot;</span><span style="color:#a3be8c;">EpicNumber</span><span>&quot;</span><span style="color:#eff1f5;">] </span><span>as </span><span style="color:#b48ead;">string</span><span style="color:#eff1f5;">); </span><span style="color:#65737e;">// Outputs: 42
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">    }
+</span><span>}
+</span></code></pre>
+<h1 id="detaobuziekutonoshi-yong">データオブジェクトの使用</h1>
+<ol>
+<li>
+<p>データオブジェクトのクラスを作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private class </span><span style="color:#ebcb8b;">StoredData
+</span><span style="color:#eff1f5;">{
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">EpicNumber</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public string </span><span style="color:#bf616a;">EpicString</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">    </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">StoredData</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">    }
+</span><span style="color:#eff1f5;">}
+</span></code></pre>
+</li>
+<li>
+<p>データオブジェクトのフィールドを作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">private </span><span>StoredData </span><span style="color:#bf616a;">storedData</span><span>;
+</span></code></pre>
+</li>
+<li>
+<p>データファイル <code>oxide/data/MyDataFile.json</code> がすでに存在する場合はロードします。データファイルが存在しない場合は作成します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">storedData </span><span>= </span><span style="color:#bf616a;">Core</span><span>.</span><span style="color:#bf616a;">Interface</span><span>.</span><span style="color:#bf616a;">Oxide</span><span>.</span><span style="color:#bf616a;">DataFileSystem</span><span>.</span><span style="color:#bf616a;">ReadObject</span><span>&lt;StoredData&gt;(&quot;</span><span style="color:#a3be8c;">MyDataFile</span><span>&quot;);
+</span></code></pre>
+</li>
+<li>
+<p>データオブジェクトでデータを保存します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#bf616a;">storedData</span><span>.</span><span style="color:#bf616a;">EpicNumber </span><span>= </span><span style="color:#d08770;">42</span><span>;
+</span><span style="color:#bf616a;">storedData</span><span>.</span><span style="color:#bf616a;">EpicString </span><span>= &quot;</span><span style="color:#a3be8c;">EpicValue</span><span>&quot;;
+</span><span style="color:#bf616a;">Core</span><span>.</span><span style="color:#bf616a;">Interface</span><span>.</span><span style="color:#bf616a;">Oxide</span><span>.</span><span style="color:#bf616a;">DataFileSystem</span><span>.</span><span style="color:#bf616a;">WriteObject</span><span>(&quot;</span><span style="color:#a3be8c;">MyDataFile</span><span>&quot;, </span><span style="color:#bf616a;">storedData</span><span>);
+</span></code></pre>
+</li>
+<li>
+<p>データオブジェクトからデータを取得します。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#65737e;">// Check if the EpicString exists
+</span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">storedData</span><span>.</span><span style="color:#bf616a;">EpicString </span><span>!= </span><span style="color:#d08770;">null</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Puts</span><span>(</span><span style="color:#bf616a;">storedData</span><span>.</span><span style="color:#bf616a;">EpicString</span><span>); </span><span style="color:#65737e;">// Outputs: EpicValue
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;">// Check if the EpicNumber exists
+</span><span style="color:#b48ead;">if </span><span>(</span><span style="color:#bf616a;">storedData</span><span>.</span><span style="color:#bf616a;">EpicNumber </span><span>!= </span><span style="color:#d08770;">null</span><span>)
+</span><span>{
+</span><span>    </span><span style="color:#bf616a;">Puts</span><span>(</span><span style="color:#bf616a;">storedData</span><span>.</span><span style="color:#bf616a;">EpicNumber</span><span>.</span><span style="color:#bf616a;">ToString</span><span>()); </span><span style="color:#65737e;">// Outputs: 42
+</span><span>}
+</span></code></pre>
+</li>
+</ol>
+<h2 id="li-1">例</h2>
+<p>プラグインの初期化時にデータファイルを作成し、初期化終了時にデータファイルの保存、取得を行う例です。</p>
+<pre data-lang="cs" style="background-color:#2b303b;color:#c0c5ce;" class="language-cs "><code class="language-cs" data-lang="cs"><span style="color:#b48ead;">using </span><span>Oxide.Core.Configuration;
+</span><span>
+</span><span style="color:#b48ead;">namespace </span><span>Oxide.Plugins
+</span><span>{
+</span><span>    [</span><span style="color:#bf616a;">Info</span><span>(&quot;</span><span style="color:#a3be8c;">DataFiles</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">st-little</span><span>&quot;, &quot;</span><span style="color:#a3be8c;">0.1.0</span><span>&quot;)]
+</span><span>    [</span><span style="color:#bf616a;">Description</span><span>(&quot;</span><span style="color:#a3be8c;">DataFiles</span><span>&quot;)]
+</span><span>    </span><span style="color:#b48ead;">public class </span><span style="color:#ebcb8b;">DataFiles </span><span style="color:#eff1f5;">: </span><span style="color:#a3be8c;">RustPlugin
+</span><span style="color:#eff1f5;">    {
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private class </span><span style="color:#ebcb8b;">StoredData
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">public int </span><span style="color:#bf616a;">EpicNumber</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">public string </span><span style="color:#bf616a;">EpicString</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">public </span><span style="color:#8fa1b3;">StoredData</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private </span><span style="color:#eff1f5;">StoredData </span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#region </span><span style="color:#8fa1b3;">Oxide Hooks
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">Init</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// ファイルの作成
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">storedData </span><span>= </span><span style="color:#bf616a;">Core</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Interface</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Oxide</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">DataFileSystem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">ReadObject</span><span style="color:#eff1f5;">&lt;StoredData&gt;(</span><span>&quot;</span><span style="color:#a3be8c;">MyDataFile</span><span>&quot;</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">private void </span><span style="color:#8fa1b3;">OnServerInitialized</span><span style="color:#eff1f5;">()
+</span><span style="color:#eff1f5;">        {
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// ファイルの保存
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">EpicNumber </span><span>= </span><span style="color:#d08770;">42</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">EpicString </span><span>= &quot;</span><span style="color:#a3be8c;">EpicValue</span><span>&quot;</span><span style="color:#eff1f5;">;
+</span><span style="color:#eff1f5;">            </span><span style="color:#bf616a;">Core</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Interface</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">Oxide</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">DataFileSystem</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">WriteObject</span><span style="color:#eff1f5;">(</span><span>&quot;</span><span style="color:#a3be8c;">MyDataFile</span><span>&quot;</span><span style="color:#eff1f5;">, </span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">);
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// データファイルの取得
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// Check if the EpicString exists
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">EpicString </span><span>!= </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Puts</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">EpicString</span><span style="color:#eff1f5;">); </span><span style="color:#65737e;">// Outputs: EpicValue
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">            </span><span style="color:#65737e;">// Check if the EpicNumber exists
+</span><span style="color:#eff1f5;">            </span><span style="color:#b48ead;">if </span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">EpicNumber </span><span>!= </span><span style="color:#d08770;">null</span><span style="color:#eff1f5;">)
+</span><span style="color:#eff1f5;">            {
+</span><span style="color:#eff1f5;">                </span><span style="color:#bf616a;">Puts</span><span style="color:#eff1f5;">(</span><span style="color:#bf616a;">storedData</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">EpicNumber</span><span style="color:#eff1f5;">.</span><span style="color:#bf616a;">ToString</span><span style="color:#eff1f5;">()); </span><span style="color:#65737e;">// Outputs: 42
+</span><span style="color:#eff1f5;">            }
+</span><span style="color:#eff1f5;">        }
+</span><span style="color:#eff1f5;">
+</span><span style="color:#eff1f5;">        </span><span style="color:#b48ead;">#endregion
+</span><span style="color:#eff1f5;">    }
+</span><span>}
+</span><span>
+</span></code></pre>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 st-little</p>
+
+      
+    
+    </footer>
+  </body>
+</html>
