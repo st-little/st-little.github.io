@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="7dtd-server を使って 7 Days to Die のサーバー構築手順をまとめます。" />
+        <meta name="twitter:description" content="7dtd-server を使って 7 Days to Die のサーバー構築手順をまとめます。">
+      
+    
+
+    
+      <meta name="twitter:title" content="7 Days to Die のサーバーを構築する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          7 Days to Die のサーバーを構築する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/7dtd/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "7 Days to Die のサーバーを構築する",
+      "image": [],
+      "datePublished": "2025-07-23T00:00:00+00:00",
+      "dateModified": "2025-07-23T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "little method&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "7 Days to Die のサーバーを構築する",
+          "item": "https://site.little-method.com/blog/build-7dtd-server/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>7 Days to Die のサーバーを構築する</h1>
+    <small>
+      Published on 2025&#x2F;07&#x2F;23
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/7dtd/">7dtd</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="gai-yao">概要</h1>
+<p><a href="https://github.com/Didstopia/7dtd-server">7dtd-server</a> を使って <a href="https://7daystodie.com/">7 Days to Die</a> のサーバー構築手順をまとめます。</p>
+<h1 id="qian-ti">前提</h1>
+<ul>
+<li><a href="https://www.docker.com/">Docker</a> および <a href="https://docs.docker.com/compose/install/">Docker Compose</a> が必要です。</li>
+</ul>
+<h1 id="sabanogou-zhu">サーバーの構築</h1>
+<p>以下の手順でサーバーを構築します。</p>
+<ol>
+<li>
+<p>サーバーに必要な次のフォルダを作成します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir -p</span><span> data steamcmd
+</span></code></pre>
+</li>
+<li>
+<p><code>7dtd.env</code> を作成し環境変数を設定します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>SEVEN_DAYS_TO_DIE_START_MODE=0
+</span></code></pre>
+</li>
+<li>
+<p><code>serverconfig.xml</code> の設定をおこなう場合は、環境変数 <code>SEVEN_DAYS_TO_DIE_SERVER_STARTUP_ARGUMENTS</code> に <code>serverconfig.xml</code> の property name と値を追記します。</p>
+<p>パスワードを設定する例:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>SEVEN_DAYS_TO_DIE_SERVER_STARTUP_ARGUMENTS=-quit -batchmode -nographics -dedicated -serverpassword=my_pw
+</span></code></pre>
+</li>
+<li>
+<p><code>docker-compose.yml</code></p>
+<pre data-lang="yml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yml "><code class="language-yml" data-lang="yml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.9</span><span>&quot;
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#bf616a;">7dtd</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">didstopia/7dtd-server
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">7dtd
+</span><span>    </span><span style="color:#bf616a;">env_file</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./7dtd.env
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - &quot;</span><span style="color:#a3be8c;">26900:26900/tcp</span><span>&quot;
+</span><span>      - &quot;</span><span style="color:#a3be8c;">26900:26900/udp</span><span>&quot;
+</span><span>      - &quot;</span><span style="color:#a3be8c;">26901:26901/udp</span><span>&quot;
+</span><span>      - &quot;</span><span style="color:#a3be8c;">26902:26902/udp</span><span>&quot;
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./data:/app/.local/share/7DaysToDie
+</span><span>      - </span><span style="color:#a3be8c;">./steamcmd:/steamcmd/7dtd
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span></code></pre>
+</li>
+</ol>
+<h1 id="sabanoqi-dong-ting-zhi">サーバーの起動/停止</h1>
+<ul>
+<li>
+<p>サーバーを起動する</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+</li>
+<li>
+<p>サーバーを停止する</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose down
+</span></code></pre>
+</li>
+</ul>
+<h1 id="sabanogong-kai">サーバーの公開</h1>
+<p>自宅サーバーを公開する場合は <a href="/tags/tunnel/">Tunnel を構築して自宅サーバーを公開する方法</a> を参考にしてください。</p>
+<h1 id="server-settings">Server Settings</h1>
+<p><code>serverconfig.xml</code> の項目を表でまとめています。値については公式ドキュメントやサーバー運用方針に合わせて調整してください。</p>
+<h2 id="general-server-settings">GENERAL SERVER SETTINGS</h2>
+<h3 id="server-representation">Server representation</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>ServerName</td><td>My Game Host</td><td>サーバー名（自由に設定可能）</td></tr>
+<tr><td>ServerDescription</td><td>A 7 Days to Die server</td><td>サーバーの説明（サーバーブラウザに表示される）</td></tr>
+<tr><td>ServerWebsiteURL</td><td></td><td>サーバーのウェブサイト URL（サーバーブラウザでクリック可能なリンクとして表示）</td></tr>
+<tr><td>ServerPassword</td><td></td><td>サーバー参加時のパスワード</td></tr>
+<tr><td>ServerLoginConfirmationText</td><td></td><td>サーバー参加時に表示される確認メッセージ（複雑な変更は XUi の&quot;serverjoinrulesdialog&quot;ウィンドウで可能）</td></tr>
+<tr><td>Region</td><td>NorthAmericaEast</td><td>サーバーの地域（例：NorthAmericaEast, Europe など）</td></tr>
+<tr><td>Language</td><td>English</td><td>サーバーの主言語（英語名で記載）</td></tr>
+</tbody></table>
+<h3 id="networking">Networking</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>ServerPort</td><td>26900</td><td>サーバーがリッスンするポート（LAN サーバーとして見つけるには指定範囲内で設定）</td></tr>
+<tr><td>ServerVisibility</td><td>2</td><td>サーバーの公開設定（2:公開, 1:友人のみ, 0:非公開）</td></tr>
+<tr><td>ServerDisabledNetworkProtocols</td><td>SteamNetworking</td><td>使用しないネットワークプロトコル（カンマ区切りで指定）</td></tr>
+<tr><td>ServerMaxWorldTransferSpeedKiBs</td><td>512</td><td>クライアントへのワールド転送最大速度（kiB/s 単位、最大約 1300kiB/s）</td></tr>
+</tbody></table>
+<h3 id="slots">Slots</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>ServerMaxPlayerCount</td><td>8</td><td>最大同時接続プレイヤー数</td></tr>
+<tr><td>ServerReservedSlots</td><td>0</td><td>特定権限レベルのプレイヤーのみ利用可能な予約スロット数</td></tr>
+<tr><td>ServerReservedSlotsPermission</td><td>100</td><td>予約スロット利用に必要な権限レベル</td></tr>
+<tr><td>ServerAdminSlots</td><td>0</td><td>管理者用スロット数（満員時でも管理者は参加可能）</td></tr>
+<tr><td>ServerAdminSlotsPermission</td><td>0</td><td>管理者スロット利用に必要な権限レベル</td></tr>
+</tbody></table>
+<h3 id="admin-interfaces">Admin interfaces</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>WebDashboardEnabled</td><td>false</td><td>Web ダッシュボードの有効/無効</td></tr>
+<tr><td>WebDashboardPort</td><td>8080</td><td>Web ダッシュボードのポート</td></tr>
+<tr><td>WebDashboardUrl</td><td></td><td>Web ダッシュボードの外部 URL（リバースプロキシ利用時など）</td></tr>
+<tr><td>EnableMapRendering</td><td>false</td><td>マップ探索時のタイル画像レンダリングの有効/無効（Web ダッシュボードでマップ表示に使用）</td></tr>
+<tr><td>TelnetEnabled</td><td>true</td><td>Telnet の有効/無効</td></tr>
+<tr><td>TelnetPort</td><td>8081</td><td>Telnet サーバーのポート</td></tr>
+<tr><td>TelnetPassword</td><td></td><td>Telnet インターフェースのパスワード（未設定の場合はローカルのみ）</td></tr>
+<tr><td>TelnetFailedLoginLimit</td><td>10</td><td>Telnet への誤パスワード入力回数制限</td></tr>
+<tr><td>TelnetFailedLoginsBlocktime</td><td>10</td><td>Telnet へのブロック持続時間（秒）</td></tr>
+<tr><td>TerminalWindowEnabled</td><td>true</td><td>ターミナルウィンドウでログ出力/コマンド入力を表示（Windows のみ）</td></tr>
+</tbody></table>
+<h3 id="folder-and-file-location">Folder and file location</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>AdminFileName</td><td>serveradmin.xml</td><td>サーバー管理ファイル名（UserDataFolder/Saves からの相対パス）</td></tr>
+</tbody></table>
+<h3 id="other-technical-settings">Other technical settings</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>ServerAllowCrossplay</td><td>false</td><td>クロスプレイの有効/無効</td></tr>
+<tr><td>EACEnabled</td><td>true</td><td>EasyAntiCheat の有効/無効</td></tr>
+<tr><td>IgnoreEOSSanctions</td><td>false</td><td>EOS 制裁を無視するかどうか</td></tr>
+<tr><td>HideCommandExecutionLog</td><td>0</td><td>コマンド実行ログの非表示設定（0:全て表示, 1:Telnet/ControlPanel のみ非表示, 2:リモートクライアントも非表示, 3:全て非表示）</td></tr>
+<tr><td>MaxUncoveredMapChunksPerPlayer</td><td>131072</td><td>プレイヤーごとのマップ解放可能チャンク数（最大マップファイルサイズは x<em>512 バイト、解放範囲は x</em>256m²）</td></tr>
+<tr><td>PersistentPlayerProfiles</td><td>false</td><td>プレイヤープロファイルの固定（false:自由に選択可能, true:最後に参加したプロファイルで参加）</td></tr>
+<tr><td>MaxChunkAge</td><td>-1</td><td>チャンクが元の状態にリセットされるまでに必要なゲーム内日数（訪問されていない場合や保護されていない場合）</td></tr>
+<tr><td>SaveDataLimit</td><td>-1</td><td>各セーブデータの最大ディスク容量（MB 単位）。制限を超えるとチャンクがリセットされる。負の値で制限なし。</td></tr>
+</tbody></table>
+<h2 id="gameplay">GAMEPLAY</h2>
+<h3 id="world">World</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>GameWorld</td><td>Navezgane</td><td>使用するワールド名（&quot;RWG&quot;または既存ワールド名）</td></tr>
+<tr><td>WorldGenSeed</td><td>MyGame</td><td>RWG の場合のワールド生成シード。既存ワールド名があればそれをロード。</td></tr>
+<tr><td>WorldGenSize</td><td>6144</td><td>RWG の場合のワールドサイズ（6144 ～ 10240、2048 の倍数）</td></tr>
+<tr><td>GameName</td><td>MyGame</td><td>ゲーム名（セーブ名や装飾配置のシードに影響）</td></tr>
+<tr><td>GameMode</td><td>GameModeSurvival</td><td>ゲームモード（サバイバル）</td></tr>
+</tbody></table>
+<h3 id="difficulty">Difficulty</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>GameDifficulty</td><td>1</td><td>ゲーム難易度（0:最も簡単、5:最も難しい）</td></tr>
+<tr><td>BlockDamagePlayer</td><td>100</td><td>プレイヤーによるブロックへのダメージ（%）</td></tr>
+<tr><td>BlockDamageAI</td><td>100</td><td>AI によるブロックへのダメージ（%）</td></tr>
+<tr><td>BlockDamageAIBM</td><td>100</td><td>血の月中の AI によるブロックへのダメージ（%）</td></tr>
+<tr><td>XPMultiplier</td><td>100</td><td>経験値獲得倍率（%）</td></tr>
+<tr><td>PlayerSafeZoneLevel</td><td>5</td><td>このレベル以下のプレイヤーは安全ゾーンを生成（敵なし）</td></tr>
+<tr><td>PlayerSafeZoneHours</td><td>5</td><td>安全ゾーンが存在するワールド時間（時間単位）</td></tr>
+</tbody></table>
+<h3 id="game-rules">Game Rules</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>BuildCreate</td><td>false</td><td>チートモードの有効/無効</td></tr>
+<tr><td>DayNightLength</td><td>60</td><td>1 ゲーム内日のリアルタイム分数（例: 60 分）</td></tr>
+<tr><td>DayLightLength</td><td>18</td><td>1 ゲーム内日の昼間時間（時間単位、例: 18 時間）</td></tr>
+<tr><td>BiomeProgression</td><td>true</td><td>バイオーム進行（ハザードや報酬の段階的解放）</td></tr>
+<tr><td>StormFreq</td><td>100</td><td>ストームの発生頻度（0%で無効、バニラ値: 0, 50, 100, ...）</td></tr>
+<tr><td>DeathPenalty</td><td>1</td><td>死亡時のペナルティ（0:なし, 1:XP ペナルティ, 2:負傷, 3:完全リセット）</td></tr>
+<tr><td>DropOnDeath</td><td>1</td><td>死亡時のアイテムドロップ（0:なし, 1:全て, 2:ツールベルトのみ, 3:バックパックのみ, 4:全削除）</td></tr>
+<tr><td>DropOnQuit</td><td>0</td><td>ゲーム終了時のアイテムドロップ（0:なし, 1:全て, 2:ツールベルトのみ, 3:バックパックのみ）</td></tr>
+<tr><td>BedrollDeadZoneSize</td><td>15</td><td>ベッドロールのデッドゾーンサイズ（半径、ゾンビがスポーンしない範囲）</td></tr>
+<tr><td>BedrollExpiryTime</td><td>45</td><td>ベッドロールが最後のオンラインから有効である日数（現実世界の日数）</td></tr>
+<tr><td>AllowSpawnNearFriend</td><td>2</td><td>新規参加プレイヤーが友人の近くにスポーンできるか（0:不可, 1:常に, 2:森林バイオームのみ）</td></tr>
+</tbody></table>
+<h3 id="performance-related">Performance related</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>MaxSpawnedZombies</td><td>64</td><td>マップ全体で同時にスポーン可能なゾンビ数（パフォーマンスに大きく影響）</td></tr>
+<tr><td>MaxSpawnedAnimals</td><td>50</td><td>同時にスポーン可能な動物数（プレイヤー数が多い場合は増やすと良い）</td></tr>
+<tr><td>ServerMaxAllowedViewDistance</td><td>12</td><td>クライアントが要求可能な最大視界距離（6 ～ 12、高いほど負荷増）</td></tr>
+<tr><td>MaxQueuedMeshLayers</td><td>1000</td><td>メッシュ生成時に同時処理可能なチャンクレイヤー数（減らすとメモリ節約）</td></tr>
+</tbody></table>
+<h3 id="zombie-settings">Zombie settings</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>EnemySpawnMode</td><td>true</td><td>敵のスポーン有効/無効</td></tr>
+<tr><td>EnemyDifficulty</td><td>0</td><td>敵の難易度（0:通常, 1:フェラル）</td></tr>
+<tr><td>ZombieFeralSense</td><td>0</td><td>フェラルセンス（0:オフ, 1:昼, 2:夜, 3:常時）</td></tr>
+<tr><td>ZombieMove</td><td>0</td><td>ゾンビの移動速度（0:歩く, 1:ジョグ, 2:走る, 3:スプリント, 4:ナイトメア）</td></tr>
+<tr><td>ZombieMoveNight</td><td>3</td><td>夜間のゾンビ移動速度（0:歩く, 1:ジョグ, 2:走る, 3:スプリント, 4:ナイトメア）</td></tr>
+<tr><td>ZombieFeralMove</td><td>3</td><td>フェラルゾンビの移動速度（0:歩く, 1:ジョグ, 2:走る, 3:スプリント, 4:ナイトメア）</td></tr>
+<tr><td>ZombieBMMove</td><td>3</td><td>血の月ゾンビの移動速度（0:歩く, 1:ジョグ, 2:走る, 3:スプリント, 4:ナイトメア）</td></tr>
+<tr><td>BloodMoonFrequency</td><td>7</td><td>血の月の発生頻度（日数単位、0 で無効）</td></tr>
+<tr><td>BloodMoonRange</td><td>0</td><td>血の月発生日のランダム範囲（日数単位、0 で正確に指定日）</td></tr>
+<tr><td>BloodMoonWarning</td><td>8</td><td>血の月警告が表示される時間（-1 で非表示）</td></tr>
+<tr><td>BloodMoonEnemyCount</td><td>8</td><td>血の月ホード時のプレイヤーごとの最大ゾンビ数（MaxSpawnedZombies で上限あり）</td></tr>
+</tbody></table>
+<h3 id="loot">Loot</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>LootAbundance</td><td>100</td><td>ルートの豊富さ（%）</td></tr>
+<tr><td>LootRespawnDays</td><td>7</td><td>ルートのリスポーン日数</td></tr>
+<tr><td>AirDropFrequency</td><td>72</td><td>エアドロップの発生頻度（ゲーム内時間、0 で無効）</td></tr>
+<tr><td>AirDropMarker</td><td>true</td><td>エアドロップのマーカー表示有無</td></tr>
+</tbody></table>
+<h3 id="multiplayer">Multiplayer</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>PartySharedKillRange</td><td>100</td><td>パーティ共有キル XP・クエスト範囲（距離単位）</td></tr>
+<tr><td>PlayerKillingMode</td><td>3</td><td>プレイヤーキル設定（0:不可, 1:味方のみ, 2:他人のみ, 3:全員）</td></tr>
+</tbody></table>
+<h3 id="land-claim-options">Land claim options</h3>
+<table><thead><tr><th>property name</th><th>value</th><th>説明</th></tr></thead><tbody>
+<tr><td>LandClaimCount</td><td>5</td><td>プレイヤーごとの最大ランドクレーム数</td></tr>
+<tr><td>LandClaimSize</td><td>41</td><td>キーストーンで保護される範囲（ブロック数）</td></tr>
+<tr><td>LandClaimDeadZone</td><td>30</td><td>キーストーン間の最小距離（ブロック数、友人は除外）</td></tr>
+<tr><td>LandClaimExpiryTime</td><td>7</td><td>プレイヤーがオフラインのままランドクレームが有効な日数（現実世界の日数）</td></tr>
+<tr><td>LandClaimDecayMode</td><td>0</td><td>オフライン時のランドクレームの劣化モード（0:遅い, 1:速い, 2:なし）</td></tr>
+<tr><td>LandClaimOnlineDurabilityModifier</td><td>4</td><td>オンライン時の保護範囲ブロック耐久倍率（0 で無限）</td></tr>
+<tr><td>LandClaimOfflineDurabilityModifier</td><td>4</td><td>オフライン時の保護範囲ブロック耐久倍率（0 で無限）</td></tr>
+<tr><td>LandClaimOfflineDelay</td><td>0</td><td>オフライン移行までの遅延（分単位）</td></tr>
+<tr><td>DynamicMeshEnabled</td><td>true</td><td>ダイナミックメッシュシステムの有効/無効</td></tr>
+<tr><td>DynamicMeshLandClaimOnly</td><td>true</td><td>ダイナミックメッシュをランドクレームエリアのみ有効化</td></tr>
+<tr><td>DynamicMeshLandClaimBuffer</td><td>3</td><td>ダイナミックメッシュ LCB チャンク半径</td></tr>
+<tr><td>DynamicMeshMaxItemCache</td><td>3</td><td>同時処理可能なアイテム数（RAM 使用量増加）</td></tr>
+<tr><td>TwitchServerPermission</td><td>90</td><td>Twitch 連携に必要な権限レベル</td></tr>
+<tr><td>TwitchBloodMoonAllowed</td><td>false</td><td>血の月中の Twitch アクション許可（ゾンビ追加でサーバー負荷増加の可能性）</td></tr>
+<tr><td>QuestProgressionDailyLimit</td><td>4</td><td>1 日にクエスト進行にカウントされるクエストの最大数（上限以降も報酬は獲得可能）</td></tr>
+</tbody></table>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 little method</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

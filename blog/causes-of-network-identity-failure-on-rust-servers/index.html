@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Rustサーバーの Steam 認証エラー対策。Reverse Proxy 環境で Outbound IP 不一致を、WireGuard で解消する方法をまとめました。" />
+        <meta name="twitter:description" content="Rustサーバーの Steam 認証エラー対策。Reverse Proxy 環境で Outbound IP 不一致を、WireGuard で解消する方法をまとめました。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Rust サーバーの「Steam Auth Error: NetworkIdentityFailure」の原因と対処">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Rust サーバーの「Steam Auth Error: NetworkIdentityFailure」の原因と対処
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/steam/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Rust サーバーの「Steam Auth Error: NetworkIdentityFailure」の原因と対処",
+      "image": [],
+      "datePublished": "2025-08-10T00:00:00+00:00",
+      "dateModified": "2025-08-10T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "little method&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rust サーバーの「Steam Auth Error: NetworkIdentityFailure」の原因と対処",
+          "item": "https://site.little-method.com/blog/causes-of-network-identity-failure-on-rust-servers/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Rust サーバーの「Steam Auth Error: NetworkIdentityFailure」の原因と対処</h1>
+    <small>
+      Published on 2025&#x2F;08&#x2F;10
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+            <a href="https://site.little-method.com/tags/steam/">steam</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="wen-ti-nogai-yao">問題の概要</h1>
+<p>Rust ゲームサーバーに、AWS 上のリバースプロキシサーバー (<a href="https://github.com/rathole-org/rathole">rapiz1/rathole</a>) 経由でクライアントが接続しようとすると、以下のエラーにより接続が拒否されます:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>Rejecting connection - Steam Auth Error: NetworkIdentityFailure
+</span><span>kicked: Steam Auth Failed
+</span></code></pre>
+<p>このエラーのため、クライアントはサーバーに参加できません。環境としては Linux 上の Docker (<a href="https://github.com/Didstopia/rust-server">didstopia/rust-server</a> イメージ使用) で Rust サーバーを稼働させ、AWS 側に公開 IP を持つリバースプロキシを立ててポート転送しています。必要なポート (例: 28015/UDP や Rust+アプリ用 28082 など) も AWS のファイアウォールで開放済みです。それでもなお上記エラーが発生します。</p>
+<h1 id="eranoyuan-yin-steam-ren-zheng-niokerunetutowakushi-bie-nobu-yi-zhi">エラーの原因：Steam 認証におけるネットワーク識別の不一致</h1>
+<p>「Steam Auth Error: NetworkIdentityFailure」 は、Rust サーバーが Steam によるクライアント認証に失敗したことを示しています。特にこのエラーは、サーバーが認識しているネットワーク上の自分の IP アドレス情報と、クライアントが接続に使用している IP アドレスが一致しない場合に発生することが報告されています。</p>
+<p>Rust サーバー (および Steam の認証システム) は、サーバーが Steam に対して登録・通信する際の送信元 IP と、クライアントが接続してくる宛先 IP が同一であることを前提にしています。しかし今回の構成では:</p>
+<ul>
+<li>サーバーから Steam への通信は自宅ネットワーク経由で行われるため、自宅側の外部 IP (または NAT 越しの IP) を使用している。
+クライアントからの接続は AWS の公開 IP 経由でトンネリングされており、サーバーから見ると AWS 経由の別 IP から来た接続として扱われる。</li>
+<li>このようにサーバーのアウトバウンド通信経路上の IP と、インバウンド接続経路上の IP が食い違っているため、Steam 認証でネットワーク識別情報が一致せず拒否されてしまうと考えられます。実際、類似のケース (例えば Starlink 等でグローバル IP を持たない環境で VPN やプロキシを使った場合) でも同様のエラーが報告されており、「Rust/Steam の認証プロセス上、クライアントから要求される IP と実際のサーバーのローカル IP が一致していないと認証が通らない」と指摘されています。 また Rust の開発元 Facepunch のフォーラムやコミュニティでも、Rust サーバーが複数の IP をまたいで接続を受け付ける状況に弱い (server.ip 0.0.0.0 で全インターフェイスにバインドしても一部 IP でしか動作しない) ことや、Steam 認証方式に起因する問題であることが示唆されています。つまりネットワーク設定やポート転送の問題ではなく、Rust の Steam 認証実装上の制約によって発生している現象です。</li>
+</ul>
+<h1 id="dui-chu-fang-fa">対処方法</h1>
+<p>この問題を根本的に解決するには、「サーバーが認識・使用する IP」と「クライアントから見えるサーバーの IP」を一致させる必要があります。</p>
+<p>具体的な対処策としては Rust サーバーから Outbound 通信も AWS 経由で行うようにネットワーク経路を次のように工夫してサーバーの外部 IP と通信経路の統一します。</p>
+<ul>
+<li>Rust サーバーから AWS への VPN トンネルを張り、Rust サーバーの Steam への通信をそのトンネル経由でおこないます。</li>
+<li>こうすることでクライアント受信 IP (AWS) とサーバー送信 IP (AWS 経由) が一致し、Steam 認証を通すことができます。</li>
+</ul>
+<h2 id="qian-ti-ip-if-ming">前提 (IP/IF 名)</h2>
+<ul>
+<li>Docker ブリッジ：br-rustnet (172.30.0.1/24)</li>
+<li>Rust コンテナ固定 IP:172.30.0.10</li>
+<li>Rust サーバー wg0:10.10.0.2/24</li>
+<li>AWS wg0:10.10.0.1/24</li>
+<li>AWS 外向き IF:ens5</li>
+</ul>
+<p>Rust サーバー LAN:192.168.210.0/24 (※実ネットに合わせて変更)</p>
+<h2 id="docker-ce-rust-saba-gu-ding-ip-burituziming-gu-ding">Docker 側 (Rust サーバー) 固定 IP &amp; ブリッジ名固定</h2>
+<ol>
+<li>
+<p>docker-compose.yml 内でカスタムネットワークを作り、固定 IP を割り当てます。</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#65737e;"># docker-compose.yml
+</span><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.7</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#bf616a;">rust</span><span>:
+</span><span>    </span><span style="color:#d08770;">...
+</span><span>    </span><span style="color:#bf616a;">networks</span><span>:
+</span><span>      </span><span style="color:#bf616a;">rustnet</span><span>:
+</span><span>        </span><span style="color:#bf616a;">ipv4_address</span><span>: </span><span style="color:#d08770;">172.30.0.10   </span><span style="color:#65737e;"># 固定 IP を指定
+</span><span>  </span><span style="color:#bf616a;">aws_reverse_proxy</span><span>:
+</span><span>    </span><span style="color:#d08770;">...
+</span><span>    </span><span style="color:#bf616a;">networks</span><span>:
+</span><span>      </span><span style="color:#bf616a;">rustnet</span><span>:
+</span><span style="color:#65737e;"># `networks:` セクションでサブネットを定義
+</span><span style="color:#bf616a;">networks</span><span>:
+</span><span>  </span><span style="color:#bf616a;">rustnet</span><span>:
+</span><span>    </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">rustnet
+</span><span>    </span><span style="color:#bf616a;">driver</span><span>: </span><span style="color:#a3be8c;">bridge
+</span><span>    </span><span style="color:#bf616a;">driver_opts</span><span>:
+</span><span>      </span><span style="color:#bf616a;">com.docker.network.bridge.name</span><span>: </span><span style="color:#a3be8c;">br-rustnet
+</span><span>    </span><span style="color:#bf616a;">ipam</span><span>:
+</span><span>      </span><span style="color:#bf616a;">config</span><span>:
+</span><span>        - </span><span style="color:#bf616a;">subnet</span><span>: </span><span style="color:#a3be8c;">172.30.0.0/24
+</span></code></pre>
+</li>
+<li>
+<p>固定 IP の確認をおこないます。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose up</span><span style="color:#bf616a;"> -d
+</span><span style="color:#bf616a;">ip</span><span> addr show br-rustnet   </span><span style="color:#65737e;"># 172.30.0.1/24 が付いていればOK
+</span></code></pre>
+</li>
+</ol>
+<h2 id="wireguard-insutoru-jian-zuo-cheng">WireGuard インストール &amp; 鍵作成</h2>
+<ol>
+<li>
+<p>AWS 側で WireGuard インストール &amp; 鍵の作成をおこないます。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt update &amp;&amp; </span><span style="color:#bf616a;">sudo</span><span> apt install</span><span style="color:#bf616a;"> -y</span><span> wireguard iproute2 iptables
+</span><span style="color:#96b5b4;">umask</span><span> 077
+</span><span style="color:#bf616a;">wg</span><span> genkey | </span><span style="color:#bf616a;">tee ~</span><span>/wg0_server.key | </span><span style="color:#bf616a;">wg</span><span> pubkey &gt; </span><span style="color:#bf616a;">~</span><span>/wg0_server.pub
+</span></code></pre>
+</li>
+<li>
+<p>Rust サーバー側で WireGuard インストール &amp; 鍵の作成をおこないます。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> apt update &amp;&amp; </span><span style="color:#bf616a;">sudo</span><span> apt install</span><span style="color:#bf616a;"> -y</span><span> wireguard iproute2 iptables
+</span><span style="color:#96b5b4;">umask</span><span> 077
+</span><span style="color:#bf616a;">wg</span><span> genkey | </span><span style="color:#bf616a;">tee ~</span><span>/wg0_client.key | </span><span style="color:#bf616a;">wg</span><span> pubkey &gt; </span><span style="color:#bf616a;">~</span><span>/wg0_client.pub
+</span></code></pre>
+</li>
+</ol>
+<h2 id="wireguard-she-ding">WireGuard 設定</h2>
+<ol>
+<li>
+<p>AWS 側で wg0.conf の作成をおこないます。</p>
+<p>SNAT 対象は 172.30.0.0/24 (Rust コンテナの実 IP 帯)</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#65737e;"># /etc/wireguard/wg0.conf
+</span><span style="color:#b48ead;">[Interface]
+</span><span style="color:#bf616a;">Address </span><span>= </span><span style="color:#d08770;">10.10.0.1/24
+</span><span style="color:#bf616a;">ListenPort </span><span>= </span><span style="color:#d08770;">51820
+</span><span style="color:#bf616a;">PrivateKey </span><span>= &lt;AWS の秘密鍵&gt;
+</span><span>
+</span><span style="color:#65737e;"># 受け口＆転送＆SNAT
+</span><span style="color:#bf616a;">PostUp </span><span>= sysctl -w net.ipv4.ip_forward=</span><span style="color:#d08770;">1
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -I FORWARD </span><span style="color:#d08770;">1 </span><span>-i wg0 -o ens5 -j ACCEPT
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -I FORWARD </span><span style="color:#d08770;">1 </span><span>-i ens5 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -t nat -A POSTROUTING -s </span><span style="color:#d08770;">172.30.0.0/24 </span><span>-o ens5 -j MASQUERADE
+</span><span>
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -D FORWARD -i wg0 -o ens5 -j ACCEPT
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -D FORWARD -i ens5 -o wg0 -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -t nat -D POSTROUTING -s </span><span style="color:#d08770;">172.30.0.0/24 </span><span>-o ens5 -j MASQUERADE
+</span><span>
+</span><span style="color:#b48ead;">[Peer]
+</span><span style="color:#bf616a;">PublicKey </span><span>= &lt;Rust サーバーの公開鍵&gt;
+</span><span style="color:#bf616a;">AllowedIPs </span><span>= </span><span style="color:#d08770;">10.10.0.2/32</span><span>, </span><span style="color:#d08770;">172.30.0.0/24
+</span></code></pre>
+<p>&lt;AWS の秘密鍵&gt; は <code>cat ~/wg0_server.key</code> の中身を指定します。</p>
+<p>&lt;Rust サーバーの公開鍵&gt; は Rust サーバー側 <code>cat ~/wg0_client.pub</code> の中身を指定します。</p>
+</li>
+<li>
+<p>AWS ファイアウォールに UDP 51820 を追加して開放します。</p>
+</li>
+<li>
+<p>Rust サーバー側で wg0.conf の作成をおこないます。</p>
+<p>AllowedIPs は 0.0.0.0/0 (重要:PBR で “誰を出すか” を制御します)</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#65737e;"># /etc/wireguard/wg0.conf
+</span><span style="color:#b48ead;">[Interface]
+</span><span style="color:#bf616a;">Address </span><span>= </span><span style="color:#d08770;">10.10.0.2/24
+</span><span style="color:#bf616a;">PrivateKey </span><span>= &lt;Rust サーバーの秘密鍵&gt;
+</span><span>DNS = </span><span style="color:#d08770;">1.1.1.1
+</span><span>
+</span><span style="color:#b48ead;">[Peer]
+</span><span style="color:#bf616a;">PublicKey </span><span>= &lt;AWS の公開鍵&gt;
+</span><span style="color:#bf616a;">Endpoint </span><span>= &lt;AWS のIPまたはドメイン&gt;:</span><span style="color:#d08770;">51820
+</span><span style="color:#bf616a;">AllowedIPs </span><span>= </span><span style="color:#d08770;">0.0.0.0/0
+</span><span style="color:#bf616a;">PersistentKeepalive </span><span>= </span><span style="color:#d08770;">25
+</span></code></pre>
+<p>&lt;Rust サーバーの秘密鍵&gt; は <code>cat ~/wg0_client.key</code> の中身を指定します。</p>
+<p>&lt;AWS の公開鍵&gt; は AWS 側 <code>cat ~/wg0_server.pub</code> の中身を指定します。</p>
+</li>
+</ol>
+<h2 id="wireguard-qi-dong-wo-shou-que-ren">WireGuard 起動 &amp; 握手確認</h2>
+<ol>
+<li>
+<p>AWS、Rust サーバーの両方で WireGuard を起動します。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> wg-quick down wg0 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">sudo</span><span> wg-quick up wg0
+</span></code></pre>
+</li>
+<li>
+<p>AWS、Rust サーバーの両方で握手確認をおこないます。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> wg show
+</span></code></pre>
+<p>AWS 側は <code>latest handshake</code> が表示されたら OK</p>
+<p>Rust サーバー側は <code>received</code> が 0 より大きければ OK</p>
+</li>
+</ol>
+<h2 id="rust-saba-porisiruteingu-pbr">Rust サーバー:ポリシールーティング (PBR)</h2>
+<ol>
+<li>
+<p>テーブル定義 &amp; ルート（table 200 = vpn）</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">200 vpn</span><span>&quot; | </span><span style="color:#bf616a;">sudo</span><span> tee</span><span style="color:#bf616a;"> -a</span><span> /etc/iproute2/rt_tables
+</span><span>
+</span><span style="color:#65737e;"># 既定は wg0 (AWS) へ
+</span><span style="color:#bf616a;">sudo</span><span> ip route replace default dev wg0 table 200
+</span><span style="color:#bf616a;">sudo</span><span> ip route add 10.10.0.0/24 dev wg0 table 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">sudo</span><span> ip route add 172.30.0.0/24 dev br-rustnet table 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">sudo</span><span> ip route add 192.168.210.0/24 dev eth0 table 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span>
+</span><span style="color:#bf616a;">ip</span><span> route show table 200
+</span><span style="color:#65737e;"># default dev wg0
+</span><span style="color:#65737e;"># 10.10.0.0/24 dev wg0
+</span><span style="color:#65737e;"># 172.30.0.0/24 dev br-rustnet
+</span><span style="color:#65737e;"># 192.168.210.0/24 dev eth0
+</span></code></pre>
+</li>
+<li>
+<p>ルール (優先度高め、転送でも確実ヒット)</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Rust コンテナ IP からの発信を table 200 へ
+</span><span style="color:#bf616a;">sudo</span><span> ip rule add pref 600 from 172.30.0.10 lookup 200
+</span><span>
+</span><span style="color:#65737e;"># br-rustnet から来た転送パケットも table 200 へ
+</span><span style="color:#bf616a;">sudo</span><span> ip rule add pref 590 iif br-rustnet lookup 200
+</span><span>
+</span><span style="color:#bf616a;">sudo</span><span> ip route flush cache
+</span><span style="color:#bf616a;">ip</span><span> rule | </span><span style="color:#bf616a;">sed -n </span><span>&#39;</span><span style="color:#a3be8c;">1,20p</span><span>&#39;
+</span></code></pre>
+</li>
+</ol>
+<h2 id="rust-saba-zhuan-song-xu-ke-rp-filter-diao-zheng">Rust サーバー:転送許可 &amp; rp_filter 調整</h2>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># ルーティング転送 ON (恒久化は後述)
+</span><span style="color:#bf616a;">sudo</span><span> sysctl</span><span style="color:#bf616a;"> -w</span><span> net.ipv4.ip_forward=1
+</span><span>
+</span><span style="color:#65737e;"># FORWARD 許可 (行きと戻り)
+</span><span style="color:#bf616a;">sudo</span><span> iptables</span><span style="color:#bf616a;"> -C</span><span> FORWARD</span><span style="color:#bf616a;"> -i</span><span> br-rustnet</span><span style="color:#bf616a;"> -o</span><span> wg0</span><span style="color:#bf616a;"> -j</span><span> ACCEPT || </span><span style="color:#bf616a;">sudo</span><span> iptables</span><span style="color:#bf616a;"> -I</span><span> FORWARD 1</span><span style="color:#bf616a;"> -i</span><span> br-rustnet</span><span style="color:#bf616a;"> -o</span><span> wg0</span><span style="color:#bf616a;"> -j</span><span> ACCEPT
+</span><span style="color:#bf616a;">sudo</span><span> iptables</span><span style="color:#bf616a;"> -C</span><span> FORWARD</span><span style="color:#bf616a;"> -i</span><span> wg0</span><span style="color:#bf616a;"> -o</span><span> br-rustnet</span><span style="color:#bf616a;"> -m</span><span> conntrack</span><span style="color:#bf616a;"> --ctstate</span><span> ESTABLISHED,RELATED</span><span style="color:#bf616a;"> -j</span><span> ACCEPT || \
+</span><span style="color:#bf616a;">sudo</span><span> iptables</span><span style="color:#bf616a;"> -I</span><span> FORWARD 1</span><span style="color:#bf616a;"> -i</span><span> wg0</span><span style="color:#bf616a;"> -o</span><span> br-rustnet</span><span style="color:#bf616a;"> -m</span><span> conntrack</span><span style="color:#bf616a;"> --ctstate</span><span> ESTABLISHED,RELATED</span><span style="color:#bf616a;"> -j</span><span> ACCEPT
+</span><span>
+</span><span style="color:#65737e;"># （必要に応じて）rp_filter の緩和
+</span><span style="color:#65737e;"># sudo sysctl -w net.ipv4.conf.all.rp_filter=2
+</span><span style="color:#65737e;"># sudo sysctl -w net.ipv4.conf.default.rp_filter=2
+</span></code></pre>
+<h2 id="dong-zuo-que-ren">動作確認</h2>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># ルート解決
+</span><span style="color:#bf616a;">ip</span><span> route get 1.1.1.1 from 172.30.0.10 iif br-rustnet   </span><span style="color:#65737e;"># → dev wg0 ... になればOK
+</span><span>
+</span><span style="color:#65737e;"># コンテナから TCP/80 を3秒テスト
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> rust-dedicated-server bash</span><span style="color:#bf616a;"> -lc </span><span>\
+</span><span>&#39;</span><span style="color:#a3be8c;">timeout 5 bash -c &quot;cat &lt;/dev/null &gt;/dev/tcp/93.184.216.34/80&quot; &amp;&amp; echo OK || echo FAIL</span><span>&#39;
+</span></code></pre>
+<p>AWS 側で SNAT カウンタが増えることも確認：</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">watch -n1 </span><span>&#39;</span><span style="color:#a3be8c;">sudo iptables -t nat -L POSTROUTING -n -v | egrep &quot;172\.30\.0\.0/24|10\.10\.0\.2/32&quot;</span><span>&#39;
+</span></code></pre>
+<p>増えれば コンテナ → wg0 → AWS → 外 が通っている確証</p>
+<h2 id="yong-sok-hua">永続化</h2>
+<ol>
+<li>
+<p>WireGuard の自動起動 (Rust サーバー &amp; AWS)</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> wg-quick down wg0 || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">sudo</span><span> systemctl enable wg-quick@wg0
+</span><span style="color:#bf616a;">sudo</span><span> systemctl start wg-quick@wg0
+</span><span style="color:#bf616a;">systemctl</span><span> status wg-quick@wg0</span><span style="color:#bf616a;"> --no-pager -l
+</span></code></pre>
+</li>
+<li>
+<p>PBR の自動適用 (Rust サーバー)</p>
+<p>/usr/local/sbin/rust-pbr.sh</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;">#!/usr/bin/env bash
+</span><span style="color:#96b5b4;">set </span><span style="color:#bf616a;">-e
+</span><span style="color:#bf616a;">RUST_IP</span><span>=&quot;</span><span style="color:#a3be8c;">172.30.0.10</span><span>&quot;
+</span><span style="color:#bf616a;">RUSTNET_BR</span><span>=&quot;</span><span style="color:#a3be8c;">br-rustnet</span><span>&quot;
+</span><span style="color:#bf616a;">LAN_IF</span><span>=&quot;$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">ip -4</span><span style="color:#a3be8c;"> route </span><span>| </span><span style="color:#bf616a;">awk </span><span>&#39;</span><span style="color:#a3be8c;">/default/ {print $5; exit}</span><span>&#39;</span><span style="color:#a3be8c;">)</span><span>&quot;
+</span><span style="color:#bf616a;">WG_NET</span><span>=&quot;</span><span style="color:#a3be8c;">10.10.0.0/24</span><span>&quot;
+</span><span style="color:#bf616a;">LAN_NET</span><span>=&quot;</span><span style="color:#a3be8c;">192.168.210.0/24</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">ip</span><span> route replace default dev wg0 table 200
+</span><span style="color:#bf616a;">ip</span><span> route add ${</span><span style="color:#bf616a;">WG_NET</span><span>} dev wg0 table 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">ip</span><span> route add 172.30.0.0/24 dev ${</span><span style="color:#bf616a;">RUSTNET_BR</span><span>} table 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">ip</span><span> route add ${</span><span style="color:#bf616a;">LAN_NET</span><span>} dev ${</span><span style="color:#bf616a;">LAN_IF</span><span>} table 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span>
+</span><span style="color:#bf616a;">ip</span><span> rule del from ${</span><span style="color:#bf616a;">RUST_IP</span><span>} lookup 200 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">ip</span><span> rule add pref 600 from ${</span><span style="color:#bf616a;">RUST_IP</span><span>} lookup 200
+</span><span>
+</span><span style="color:#bf616a;">ip</span><span> rule del pref 590 </span><span style="color:#d08770;">2</span><span>&gt;/dev/null || </span><span style="color:#bf616a;">true
+</span><span style="color:#bf616a;">ip</span><span> rule add pref 590 iif ${</span><span style="color:#bf616a;">RUSTNET_BR</span><span>} lookup 200
+</span></code></pre>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> chmod +x /usr/local/sbin/rust-pbr.sh
+</span></code></pre>
+<p>/etc/systemd/system/rust-pbr.service</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#b48ead;">[Unit]
+</span><span style="color:#bf616a;">Description</span><span>=Policy routing for Rust container via wg0
+</span><span style="color:#bf616a;">After</span><span>=wg-quick</span><span style="color:#b48ead;">@wg0</span><span>.service docker.service
+</span><span style="color:#bf616a;">Wants</span><span>=wg-quick</span><span style="color:#b48ead;">@wg0</span><span>.service docker.service
+</span><span>
+</span><span style="color:#b48ead;">[Service]
+</span><span style="color:#bf616a;">Type</span><span>=oneshot
+</span><span style="color:#bf616a;">ExecStart</span><span>=/usr/local/sbin/rust-pbr.sh
+</span><span style="color:#bf616a;">RemainAfterExit</span><span>=</span><span style="color:#d08770;">true
+</span><span>
+</span><span style="color:#b48ead;">[Install]
+</span><span style="color:#bf616a;">WantedBy</span><span>=multi-user.target
+</span></code></pre>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">sudo</span><span> systemctl daemon-reload
+</span><span style="color:#bf616a;">sudo</span><span> systemctl enable</span><span style="color:#bf616a;"> --now</span><span> rust-pbr.service
+</span></code></pre>
+</li>
+</ol>
+<h2 id="toraburushi-notietukuxiang-mu">トラブル時のチェック項目</h2>
+<ul>
+<li>鍵の対応:<br />
+Rust サーバー <code>[Peer].PublicKey</code> ＝ AWS 公開鍵 / AWS [Peer].PublicKey ＝ Rust サーバー公開鍵</li>
+<li>Rust サーバー <code>[Peer].AllowedIPs = 0.0.0.0/0</code></li>
+<li>AWS NAT:<code>POSTROUTING -s 172.30.0.0/24 -o ens5 -j MASQUERADE</code></li>
+<li>ルール優先度:<code>pref 590 iif br-rustnet</code> と <code>pref 600 from 172.30.0.10</code> が 998/999 より上</li>
+<li>ルート:<code>ip route show table 200</code> が「default dev wg0 …」の 4 行になっている</li>
+<li>経路確認:<code>ip route get 1.1.1.1 from 172.30.0.10 iif br-rustnet</code> → <code>dev wg0</code></li>
+<li>実疎通:コンテナから <code>/dev/tcp/93.184.216.34/80</code> → OK</li>
+</ul>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 little method</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

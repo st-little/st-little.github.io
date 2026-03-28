@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="Windows で Rust 専用サーバーを構築します。SteamCMD の導入・更新、サーバーのインストール、Oxide(uMod) 導入、BAT での自動起動まで解説します。" />
+        <meta name="twitter:description" content="Windows で Rust 専用サーバーを構築します。SteamCMD の導入・更新、サーバーのインストール、Oxide(uMod) 導入、BAT での自動起動まで解説します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Windows に Rust のサーバーを構築する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Windows に Rust のサーバーを構築する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/game/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/rust/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Windows に Rust のサーバーを構築する",
+      "image": [],
+      "datePublished": "2025-10-21T00:00:00+00:00",
+      "dateModified": "2025-10-21T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "little method&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Windows に Rust のサーバーを構築する",
+          "item": "https://site.little-method.com/blog/building-rust-server-on-windows/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Windows に Rust のサーバーを構築する</h1>
+    <small>
+      Published on 2025&#x2F;10&#x2F;21
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/game/">game</a>
+          
+            <a href="https://site.little-method.com/tags/rust/">rust</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <p>Windows で Rust 専用サーバーを構築します。SteamCMD の導入・更新、サーバーのインストール、Oxide(uMod) 導入、BAT での自動起動まで解説します。</p>
+<h2 id="steamcmd-noinsutorutoatupudeto">SteamCMD のインストールとアップデート</h2>
+<p>SteamCMD は、Steam 関連ファイルのインストールに使用されるコマンドライン コンソールであり、Rust サーバーをインストールおよび更新するメカニズムです。</p>
+<ol>
+<li>
+<p>SteamCMD 用のフォルダ <code>c:\steamcmd</code> を作成します。</p>
+</li>
+<li>
+<p>サーバ用のフォルダ <code>c:\rustserver</code> を作成します。</p>
+</li>
+<li>
+<p>Windows 用の <a href="https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip">SteamCMD</a> をダウンロードします。</p>
+</li>
+<li>
+<p>zip ファイルの内容を steamcmd 用に作成したフォルダーに抽出します。</p>
+</li>
+<li>
+<p>steamcmd.exe を実行し SteamCMD をインストールします。</p>
+<p><img src="https://drive.google.com/thumbnail?id=1c5kYkCUbQEWsdJ_5vOwGPAxl7wgnEIvV&amp;sz=w1000" alt="" /></p>
+</li>
+</ol>
+<h2 id="rust-zhuan-yong-sabanoinsutoru">Rust 専用サーバーのインストール</h2>
+<ol>
+<li>
+<p>アプリのインストールディレクトリを設定します。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>force_install_dir &quot;c:\rustserver\&quot;
+</span></code></pre>
+</li>
+<li>
+<p>ゲームサーバーをダウンロードするために、匿名でログインします。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>login anonymous
+</span></code></pre>
+</li>
+<li>
+<p><code>app_update</code> コマンド（Steam アプリケーション ID を指定）を使用してアプリをインストールします。</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>app_update 258550
+</span></code></pre>
+<p><img src="https://drive.google.com/thumbnail?id=1u_jeaYz34xcPjaw7KXSzQRUbCEmicOa6&amp;sz=w1000" alt="" /></p>
+</li>
+</ol>
+<h2 id="puraguinsapotoyong-no-oxide-noinsutoru">プラグインサポート用の Oxide のインストール</h2>
+<ol>
+<li>
+<p><a href="https://umod.org/games/rust">Umod/Rust</a>にアクセスし、Windows 版の Oxide.Rust.zip をダウンロードします。</p>
+</li>
+<li>
+<p>Oxide.Rust.zip を展開し <code>ダウンロード\Oxide.Rust\RustDedicated_Data</code> で <code>c:\rustserver\RustDedicated_Data</code> を上書きします。</p>
+</li>
+</ol>
+<h2 id="bat-huairuwoshi-yong-sitezi-dong-hua-simasu">Bat ファイルを使用して自動化します。</h2>
+<ol>
+<li>
+<p><code>c:\rustserver</code> に RunServer.BAT を作成します。</p>
+<pre data-lang="bat" style="background-color:#2b303b;color:#c0c5ce;" class="language-bat "><code class="language-bat" data-lang="bat"><span>:start
+</span><span>c:\steamcmd\steamcmd.exe +force_install_dir c:\rustserver\ +login anonymous +app_update </span><span style="color:#d08770;">258550</span><span> +quit
+</span><span>RustDedicated.exe -batchmode +server.port </span><span style="color:#d08770;">28015</span><span> +server.level &quot;</span><span style="color:#a3be8c;">Procedural Map</span><span>&quot; +server.seed </span><span style="color:#d08770;">1234</span><span> +server.worldsize </span><span style="color:#d08770;">4000</span><span> +server.maxplayers </span><span style="color:#d08770;">10</span><span>  +server.</span><span style="color:#b48ead;">hostname </span><span>&quot;</span><span style="color:#a3be8c;">Test server</span><span>&quot; +server.description &quot;</span><span style="color:#a3be8c;">Description shown on server connection window.</span><span>&quot; +server.identity &quot;</span><span style="color:#a3be8c;">server1</span><span>&quot; +rcon.port </span><span style="color:#d08770;">28016</span><span> +rcon.password letmein +rcon.web </span><span style="color:#d08770;">1</span><span> -logfile rustserverlog.txt
+</span><span style="color:#b48ead;">goto </span><span style="color:#bf616a;">start
+</span></code></pre>
+<p>RustDedicated 行はサーバーを起動するための行です。サーバーの設定については <a href="https://wiki.facepunch.com/rust/Creating-a-server#startingtheserver">Rust wiki/Creating a server/Starting the Server</a> を参照してください。</p>
+</li>
+<li>
+<p>RunServer.BAT を実行するとコマンドプロンプトが開いてサーバーの起動を開始します。</p>
+</li>
+<li>
+<p>サーバーが起動したら、コマンドプロンプトで <code>ownerid</code> などのコマンドを実行することができます。</p>
+</li>
+</ol>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 little method</p>
+
+      
+    
+    </footer>
+  </body>
+</html>

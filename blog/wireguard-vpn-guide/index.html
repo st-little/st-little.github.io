@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XFJ3PBXLY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7XFJ3PBXLY');
+    </script>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+        @media (prefers-color-scheme: dark) {
+          :root {
+            --accent-overlay-color: #dee2e6;
+            --body-bg: #212529;
+            --body-color: #abb2bf;
+            --heading-color: #dee2e6;
+            --table-bg-even: #2d3237;
+            --table-border-bottom: #697077;
+          }
+          img {
+            opacity: .75;
+            transition: opacity .5s ease-in-out;
+          }
+          img:hover {
+            opacity: 1;
+          }
+        }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="自宅サーバーを VPS 経由で公開するための Docker × WireGuard VPN 構築手順。サーバー側とクライアント側の設定を具体的に解説します。" />
+        <meta name="twitter:description" content="自宅サーバーを VPS 経由で公開するための Docker × WireGuard VPN 構築手順。サーバー側とクライアント側の設定を具体的に解説します。">
+      
+    
+
+    
+      <meta name="twitter:title" content="Docker × WireGuard で“自宅サーバー”を公開する">
+    
+
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Docker × WireGuard で“自宅サーバー”を公開する
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://site.little-method.com/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/vpn/">
+  
+    <link rel="prerender"  href="https://site.little-method.com/tags/wireguard/">
+  
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "Docker × WireGuard で“自宅サーバー”を公開する",
+      "image": [],
+      "datePublished": "2025-09-04T00:00:00+00:00",
+      "dateModified": "2025-09-04T00:00:00+00:00"
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        
+
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 1,
+          "name": "little method&#x27;s blog",
+          "item": "https://site.little-method.com/"
+        },
+        
+        {
+          
+          "@type": "ListItem",
+          "position": 2,
+          "name": "blog",
+          "item": "https://site.little-method.com/blog/"
+        },
+        
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Docker × WireGuard で“自宅サーバー”を公開する",
+          "item": "https://site.little-method.com/blog/wireguard-vpn-guide/"
+        }
+      ]
+    }
+  </script>
+
+  </head>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;site.little-method.com&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Docker × WireGuard で“自宅サーバー”を公開する</h1>
+    <small>
+      Published on 2025&#x2F;09&#x2F;04
+      
+      
+        <br>
+        Tags
+        <span class="tags">
+          
+            <a href="https://site.little-method.com/tags/vpn/">vpn</a>
+          
+            <a href="https://site.little-method.com/tags/wireguard/">wireguard</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="docker-x-wireguard-de-zi-zhai-saba-wogong-kai-suru">Docker × WireGuard で“自宅サーバー”を公開する</h1>
+<h2 id="li-minecraft-bedrock-udp-19132-wo-vpn-jing-you-depurei">― 例：Minecraft Bedrock（UDP/19132）を VPN 経由でプレイ</h2>
+<blockquote>
+<p><strong>対象</strong>: 「自宅ネットワーク（NAT 配下）にあるゲームサーバーを、VPS のグローバル IP 経由で公開したい」人。<br />
+<strong>完成像</strong>: VPS 上の **WireGuard サーバー（docker-wireguard）**を“公開窓口”にし、そこへ届いた <strong>Minecraft Bedrock の UDP/19132</strong> を <strong>WireGuard トンネル</strong>で自宅の Bedrock サーバーへ <strong>DNAT/SNAT</strong> 中継。クライアントは <code>mc.example.com:19132</code> に接続するだけで OK。</p>
+</blockquote>
+<hr />
+<h2 id="0-konoji-shi-nopointo">0. この記事のポイント</h2>
+<ul>
+<li><strong>自宅はポート開放不要</strong>。VPS が入口となり、VPN 内部で転送します。</li>
+<li>LinuxServer.io の <strong>docker-wireguard</strong> を使い、<strong>テンプレート運用</strong>で PostUp/Down（iptables）を自動適用します。</li>
+<li>自宅のゲームコンテナは <strong><code>network_mode: &quot;service:vpn&quot;</code></strong> を使って <strong>“VPN 経由のみ”</strong> の通信に固定します。</li>
+</ul>
+<hr />
+<h2 id="1-quan-ti-xiang-gou-cheng-tu">1. 全体像（構成図）</h2>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>インターネット
+</span><span>   │  (VPSのグローバルIP / 例: mc.example.com)
+</span><span>┌──▼───────────────┐
+</span><span>│ VPS              │  ← WireGuard “サーバ” (Docker)
+</span><span>│ Ubuntu + Docker  │     UDP/51820 (WG) / UDP/19132 (Bedrock公開口)
+</span><span>└──▲───────────────┘
+</span><span>   │  (WireGuard トンネル: 例 10.13.20.0/24)
+</span><span>┌──────────────────┐
+</span><span>│ Home Server      │  ← WireGuard “クライアント” (Docker)
+</span><span>│ Docker + Bedrock │     Bedrock は VPN ネット名前空間で待受
+</span><span>└──────────────────┘
+</span></code></pre>
+<ul>
+<li><strong>DNAT</strong>: VPS に来た 19132/udp を WG 内部アドレス（自宅）へ転送</li>
+<li><strong>SNAT</strong>: 返信パケットの送信元を VPS 側 WG IP にして、<strong>必ずトンネルに戻す</strong></li>
+</ul>
+<hr />
+<h2 id="2-qian-ti-tozhun-bei">2. 前提と準備</h2>
+<ul>
+<li><strong>VPS 側</strong>: Ubuntu 22.04/24.04 + Docker / Docker Compose v2</li>
+<li><strong>自宅側</strong>: Linux + Docker / Docker Compose v2（物理/VM どちらでも）</li>
+<li><strong>DNS（任意）</strong>: <code>mc.example.com</code> を VPS のグローバル IP に向けておくと便利</li>
+<li><strong>開放ポート（VPS）</strong>: UDP/51820（WireGuard）、UDP/19132（Bedrock 公開口）</li>
+<li><strong>本記事の IP 設計</strong>:
+<ul>
+<li>WG サブネット: <code>10.13.20.0/24</code></li>
+<li>VPS (WG サーバ): <code>10.13.20.1</code></li>
+<li>自宅 (WG クライアント): <code>10.13.20.2</code></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>以降、コマンドは <code>$</code> を省略。必要に応じて <code>sudo</code> を付けて実行してください。</p>
+</blockquote>
+<hr />
+<h2 id="3-vps-ce-nosetutoatupu-wireguard-saba">3. VPS 側のセットアップ（WireGuard サーバ）</h2>
+<h3 id="3-1-deirekutorito-compose">3.1 ディレクトリと Compose</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir -p ~</span><span>/wg-bedrock/config
+</span><span style="color:#96b5b4;">cd </span><span style="color:#bf616a;">~</span><span>/wg-bedrock
+</span></code></pre>
+<p><strong>docker-compose.yml</strong></p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#bf616a;">wireguard</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">lscr.io/linuxserver/wireguard:latest
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">wg-bedrock
+</span><span>    </span><span style="color:#bf616a;">cap_add</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">NET_ADMIN
+</span><span>      - </span><span style="color:#a3be8c;">SYS_MODULE
+</span><span>    </span><span style="color:#bf616a;">environment</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">PUID=1000
+</span><span>      - </span><span style="color:#a3be8c;">PGID=1000
+</span><span>      - </span><span style="color:#a3be8c;">TZ=Asia/Tokyo
+</span><span>      - </span><span style="color:#a3be8c;">SERVERURL=mc.example.com </span><span style="color:#65737e;"># あなたの VPS の FQDN または IP アドレス
+</span><span>      - </span><span style="color:#a3be8c;">SERVERPORT=51820 </span><span style="color:#65737e;"># WireGuard サーバーが待ち受ける UDP ポート
+</span><span>      - </span><span style="color:#a3be8c;">PEERS=bedrock </span><span style="color:#65737e;"># クライアント用のピア設定を生成する (名前は任意)
+</span><span>      - </span><span style="color:#a3be8c;">PEERDNS=1.1.1.1 </span><span style="color:#65737e;"># VPN 接続時にクライアントが使う DNS サーバ (例: Cloudflare)
+</span><span>      - </span><span style="color:#a3be8c;">INTERNAL_SUBNET=10.13.20.0 </span><span style="color:#65737e;"># WG サブネット (/24は後述テンプレ側で付与)
+</span><span>      - </span><span style="color:#a3be8c;">ALLOWEDIPS=0.0.0.0/0 </span><span style="color:#65737e;"># クライアントからの全トラフィックを VPN 経由にする
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./config:/config
+</span><span>      - </span><span style="color:#a3be8c;">/lib/modules:/lib/modules:ro </span><span style="color:#65737e;"># ホストのカーネルモジュールをマウント
+</span><span>    </span><span style="color:#bf616a;">ports</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">51820:51820/udp </span><span style="color:#65737e;"># WireGuard
+</span><span>      - </span><span style="color:#a3be8c;">19132:19132/udp </span><span style="color:#65737e;"># Bedrock 公開口 (VPS が受ける)
+</span><span>    </span><span style="color:#bf616a;">sysctls</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">net.ipv4.conf.all.src_valid_mark=1
+</span><span>      - </span><span style="color:#a3be8c;">net.ipv4.ip_forward=1 </span><span style="color:#65737e;"># 重要: IP 転送を有効化
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span></code></pre>
+<p>起動（初期生成）:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose up</span><span style="color:#bf616a;"> -d
+</span><span style="color:#bf616a;">docker</span><span> logs</span><span style="color:#bf616a;"> -n</span><span> 100 wg-bedrock
+</span></code></pre>
+<blockquote>
+<p>初回起動で <code>/config/peer_bedrock/peer_bedrock.conf</code> などの <strong>ピア設定</strong>が生成されます。これを後で自宅側に配布します。</p>
+</blockquote>
+<h3 id="3-2-tenpuretode-nat-ruruwozi-dong-hua">3.2 テンプレートで NAT ルールを自動化</h3>
+<p><code>/config/templates/server.conf</code> を使うと、<code>/config/wg_confs/wg0.conf</code> の<strong>再生成時にも自動で反映</strong>されます。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">nano</span><span> ./config/templates/server.conf
+</span></code></pre>
+<p><strong>./config/templates/server.conf</strong></p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#b48ead;">[Interface]
+</span><span style="color:#bf616a;">Address </span><span>= </span><span style="color:#b48ead;">${INTERFACE}</span><span>.</span><span style="color:#d08770;">1
+</span><span style="color:#bf616a;">ListenPort </span><span>= </span><span style="color:#d08770;">51820
+</span><span style="color:#bf616a;">PrivateKey </span><span>= $(cat /config/server/privatekey-server)
+</span><span>
+</span><span style="color:#65737e;"># 転送許可 + 外向きMasquerade（eth+ は外向きIF。eth0等でもOK）
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -A FORWARD -i </span><span style="color:#b48ead;">%i </span><span>-j ACCEPT
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -A FORWARD -o </span><span style="color:#b48ead;">%i </span><span>-j ACCEPT
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -t nat -A POSTROUTING -o eth+ -j MASQUERADE
+</span><span>
+</span><span style="color:#65737e;"># Bedrock UDP/19132 → 自宅WG(10.13.20.2) へ中継（DNAT）
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -t nat -A PREROUTING -i eth+ -p udp --dport </span><span style="color:#d08770;">19132 </span><span>-j DNAT --to-destination </span><span style="color:#d08770;">10.13.20.2
+</span><span>
+</span><span style="color:#65737e;"># 返信を必ずトンネルへ返す（SNAT）
+</span><span style="color:#bf616a;">PostUp </span><span>= iptables -t nat -A POSTROUTING -o </span><span style="color:#b48ead;">%i </span><span>-p udp -d </span><span style="color:#d08770;">10.13.20.2 </span><span>--dport </span><span style="color:#d08770;">19132 </span><span>-j SNAT --to-source </span><span style="color:#d08770;">10.13.20.1
+</span><span>
+</span><span style="color:#65737e;"># --- ここから PostDown（停止時にルールを削除する） ---
+</span><span style="color:#65737e;"># 上記 PostUp で追加したルールを「逆順」で削除する
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -D FORWARD -i </span><span style="color:#b48ead;">%i </span><span>-j ACCEPT
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -D FORWARD -o </span><span style="color:#b48ead;">%i </span><span>-j ACCEPT
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -t nat -D POSTROUTING -o eth+ -j MASQUERADE
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -t nat -D PREROUTING -i eth+ -p udp --dport </span><span style="color:#d08770;">19132 </span><span>-j DNAT --to-destination </span><span style="color:#d08770;">10.13.20.2
+</span><span style="color:#bf616a;">PostDown </span><span>= iptables -t nat -D POSTROUTING -o </span><span style="color:#b48ead;">%i </span><span>-p udp -d </span><span style="color:#d08770;">10.13.20.2 </span><span>--dport </span><span style="color:#d08770;">19132 </span><span>-j SNAT --to-source </span><span style="color:#d08770;">10.13.20.1
+</span></code></pre>
+<p><strong>テンプレ反映 (再生成)</strong></p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">rm -f</span><span> ./config/wg_confs/wg0.conf
+</span><span style="color:#bf616a;">docker</span><span> compose restart
+</span></code></pre>
+<h3 id="3-3-dong-zuo-que-ren-vps">3.3 動作確認 (VPS)</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># ハンドシェイク (後で自宅側が接続したら時刻が出る)
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-bedrock wg show
+</span><span>
+</span><span style="color:#65737e;"># NATルール（19132のDNAT/SNATが入っているか）
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-bedrock bash</span><span style="color:#bf616a;"> -lc </span><span>&#39;</span><span style="color:#a3be8c;">iptables -t nat -S | grep 19132 || true</span><span>&#39;
+</span></code></pre>
+<p><strong>VPS ファイアウォール</strong>で <code>udp/51820</code> と <code>udp/19132</code> を許可するのを忘れずに。</p>
+<hr />
+<h2 id="4-zi-zhai-ce-nosetutoatupu-wireguard-kuraianto-bedrock-saba">4. 自宅側のセットアップ（WireGuard クライアント + Bedrock サーバ）</h2>
+<h3 id="4-1-deirekutorito-compose">4.1 ディレクトリと Compose</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">mkdir -p ~</span><span>/bedrock-vpn/config </span><span style="color:#bf616a;">~</span><span>/bedrock-vpn/data
+</span><span style="color:#96b5b4;">cd </span><span style="color:#bf616a;">~</span><span>/bedrock-vpn
+</span></code></pre>
+<p><strong>VPS で生成されたピア設定</strong>（例 <code>peer_bedrock.conf</code>）をダウンロードし、<code>./config/wg_confs/bedrock.conf</code> として保存。<br />
+次の点を <strong>確認/必要なら追記</strong> してください：</p>
+<pre data-lang="ini" style="background-color:#2b303b;color:#c0c5ce;" class="language-ini "><code class="language-ini" data-lang="ini"><span style="color:#b48ead;">[Interface]
+</span><span style="color:#bf616a;">Address </span><span>= </span><span style="color:#d08770;">10.13.20.2/24
+</span><span style="color:#bf616a;">PrivateKey </span><span>= &lt;client_private&gt;
+</span><span>DNS = </span><span style="color:#d08770;">1.1.1.1
+</span><span>MTU = </span><span style="color:#d08770;">1380                     </span><span style="color:#65737e;"># ← 握手が不安定なら付けると安定しやすい
+</span><span>
+</span><span style="color:#b48ead;">[Peer]
+</span><span style="color:#bf616a;">PublicKey </span><span>= &lt;server_public&gt;
+</span><span style="color:#bf616a;">Endpoint </span><span>= mc.example.com:</span><span style="color:#d08770;">51820
+</span><span style="color:#bf616a;">AllowedIPs </span><span>= </span><span style="color:#d08770;">0.0.0.0/0         </span><span style="color:#65737e;"># ← &quot;すべてVPN経由&quot;にする（後述のnetns共有とセット）
+</span><span style="color:#bf616a;">PersistentKeepalive </span><span>= </span><span style="color:#d08770;">25       </span><span style="color:#65737e;"># ← NAT配下では必須
+</span></code></pre>
+<p><strong>docker-compose.yml（自宅）</strong></p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span style="color:#bf616a;">version</span><span>: &quot;</span><span style="color:#a3be8c;">3.9</span><span>&quot;
+</span><span style="color:#bf616a;">services</span><span>:
+</span><span>  </span><span style="color:#bf616a;">vpn</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">lscr.io/linuxserver/wireguard:latest
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">wg-client
+</span><span>    </span><span style="color:#bf616a;">cap_add</span><span>: [</span><span style="color:#a3be8c;">NET_ADMIN</span><span>, </span><span style="color:#a3be8c;">SYS_MODULE</span><span>]
+</span><span>    </span><span style="color:#bf616a;">environment</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">PUID=1000
+</span><span>      - </span><span style="color:#a3be8c;">PGID=1000
+</span><span>      - </span><span style="color:#a3be8c;">TZ=Asia/Tokyo
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./config:/config
+</span><span>      - </span><span style="color:#a3be8c;">/lib/modules:/lib/modules:ro
+</span><span>    </span><span style="color:#bf616a;">sysctls</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">net.ipv4.conf.all.src_valid_mark=1
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span><span>
+</span><span>  </span><span style="color:#bf616a;">bedrock</span><span>:
+</span><span>    </span><span style="color:#bf616a;">image</span><span>: </span><span style="color:#a3be8c;">itzg/minecraft-bedrock-server:latest
+</span><span>    </span><span style="color:#bf616a;">container_name</span><span>: </span><span style="color:#a3be8c;">bedrock
+</span><span>    </span><span style="color:#bf616a;">environment</span><span>:
+</span><span>      </span><span style="color:#bf616a;">EULA</span><span>: &quot;</span><span style="color:#a3be8c;">TRUE</span><span>&quot;
+</span><span>      </span><span style="color:#bf616a;">SERVER_NAME</span><span>: &quot;</span><span style="color:#a3be8c;">My VPN Bedrock</span><span>&quot;
+</span><span>      </span><span style="color:#bf616a;">GAMEMODE</span><span>: &quot;</span><span style="color:#a3be8c;">survival</span><span>&quot;
+</span><span>      </span><span style="color:#bf616a;">DIFFICULTY</span><span>: &quot;</span><span style="color:#a3be8c;">normal</span><span>&quot;
+</span><span>    </span><span style="color:#bf616a;">volumes</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">./data:/data
+</span><span>    </span><span style="color:#65737e;"># 重要：Bedrock の通信を&quot;必ず&quot;VPN経由に
+</span><span>    </span><span style="color:#bf616a;">network_mode</span><span>: &quot;</span><span style="color:#a3be8c;">service:vpn</span><span>&quot;
+</span><span>    </span><span style="color:#bf616a;">depends_on</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">vpn
+</span><span>    </span><span style="color:#bf616a;">restart</span><span>: </span><span style="color:#a3be8c;">unless-stopped
+</span></code></pre>
+<p>起動:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">docker</span><span> compose up</span><span style="color:#bf616a;"> -d
+</span></code></pre>
+<h3 id="4-2-dong-zuo-que-ren-zi-zhai">4.2 動作確認（自宅）</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># WireGuard の状態
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-client wg show
+</span><span>
+</span><span style="color:#65737e;"># Bedrock の待受（vpn 名前空間内で確認）
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-client bash</span><span style="color:#bf616a;"> -lc </span><span>&#39;</span><span style="color:#a3be8c;">ss -lunp | grep 19132 || true</span><span>&#39;
+</span></code></pre>
+<hr />
+<h2 id="5-jie-sok-tesutototoraburusiyuto">5. 接続テストとトラブルシュート</h2>
+<h3 id="5-1-kuraiantojie-sok">5.1 クライアント接続</h3>
+<ul>
+<li>Minecraft Bedrock で <strong>サーバーを追加</strong>: アドレス <code>mc.example.com</code>、ポート <code>19132</code></li>
+<li>入れない場合は以下を順に確認：</li>
+</ul>
+<h3 id="5-2-yokuaruhamaridokoro">5.2 よくあるハマりどころ</h3>
+<ol>
+<li>
+<p><strong>ハンドシェイクしない</strong></p>
+<ul>
+<li>VPS 側で <code>udp/51820</code> が未開放 / SG 未許可</li>
+<li>自宅側に <code>PersistentKeepalive=25</code> がない</li>
+<li>DNS 解決不可 → 一度 <code>Endpoint = &lt;VPSのIP&gt;:51820</code> で検証</li>
+<li>MTU 問題 → 両側 <code>[Interface] MTU = 1380</code></li>
+</ul>
+</li>
+<li>
+<p><strong>「サーバー情報が取得できませんでした」</strong></p>
+<ul>
+<li>VPS 側の <strong>DNAT/SNAT</strong> がテンプレに入っていない / 有効になっていない<br />
+→ <code>iptables -t nat -S | grep 19132</code> で確認</li>
+<li>自宅の Bedrock が <strong>VPN 名前空間で待受</strong>していない<br />
+→ <code>network_mode: &quot;service:vpn&quot;</code> を確認</li>
+<li>VPS 側で <code>udp/19132</code> が閉じている</li>
+</ul>
+</li>
+<li>
+<p><strong>外向きインターフェース名が不明</strong></p>
+<ul>
+<li><code>ip -4 route get 1.1.1.1</code> → <code>dev eth0</code> 等をテンプレの <code>eth+</code> と置換</li>
+</ul>
+</li>
+<li>
+<p><strong>切れる/不安定</strong></p>
+<ul>
+<li>VPS に <strong>スワップ（1〜5GB）</strong> や <strong>zram</strong> を導入して OOM を回避</li>
+<li>Docker ログのローテ（<code>max-size</code>/<code>max-file</code>）でログ膨張を抑制</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-3-guan-ce-nibian-li-nakomando">5.3 観測に便利なコマンド</h3>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># どこまで届いているかを観測（VPS側）
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-bedrock tcpdump</span><span style="color:#bf616a;"> -ni</span><span> any udp port 19132
+</span><span>
+</span><span style="color:#65737e;"># NATルールの確認
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-bedrock bash</span><span style="color:#bf616a;"> -lc </span><span>&#39;</span><span style="color:#a3be8c;">iptables -t nat -S | grep -E &quot;DNAT|SNAT|19132&quot;</span><span>&#39;
+</span><span>
+</span><span style="color:#65737e;"># ルーティング等の確認（自宅側）
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-client ip addr
+</span><span style="color:#bf616a;">docker</span><span> exec</span><span style="color:#bf616a;"> -it</span><span> wg-client wg show
+</span></code></pre>
+<hr />
+<h2 id="6-fu-shu-gemunikuo-zhang-suruniha">6. 複数ゲームに拡張するには</h2>
+<ul>
+<li><strong>同じコンテナのまま</strong>テンプレにポートを追加（例：Enshrouded UDP/15636-15637 を DNAT/SNAT で追記）。</li>
+<li>あるいは <strong>複数の WireGuard インターフェース（wg0, wg1, …）</strong> を 1 つのコンテナで管理し、IF ごとにポートを分ける（上級者向け）。</li>
+<li>影響分離を重視して <strong>コンテナを分けたい</strong>場合は、UDP ポートとサブネットをゲームごとに変えて運用。</li>
+</ul>
+<hr />
+<h2 id="7-sekiyuriteitoyun-yong-nozhu-yi">7. セキュリティと運用の注意</h2>
+<ul>
+<li>VPS 側の公開ポートは <strong>必要最小限</strong>（WG と使うゲームのポートのみ）</li>
+<li>鍵（PrivateKey）は <strong>漏らさない/公開しない</strong></li>
+<li>使わなくなったピアは <strong>設定から削除</strong>し、<code>wg syncconf</code>（または再起動）で反映</li>
+<li>バックアップ：<code>/config</code> と自宅側の <code>/data</code>（ゲームセーブ）は定期的に退避</li>
+</ul>
+<hr />
+<h2 id="8-matome">8. まとめ</h2>
+<ul>
+<li><strong>VPS を公開窓口</strong>に、<strong>WireGuard トンネル + DNAT/SNAT</strong> で自宅サーバーを公開できる</li>
+<li>Bedrock は <strong>UDP/19132</strong> を中継するだけ。自宅はポート開放不要</li>
+<li><strong>テンプレート運用</strong>にしておけば、再生成しても NAT 設定が自動で入り、保守がラク</li>
+</ul>
+<hr />
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+        <p>このサイトは Google アナリティクスを使用しており、データを収集するために Cookie を使用しています。<br>
+データが収集および処理される仕組みについては <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">こちら<span class="material-symbols-outlined">open_in_new</span></a> を参照してください。<br>
+© 2020 little method</p>
+
+      
+    
+    </footer>
+  </body>
+</html>
